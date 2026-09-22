@@ -59,3 +59,15 @@
   .demo-next-step{grid-template-columns:42px 1fr}
   .comparison-wrap{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
 }
+
+@media(max-width:1050px){
+  .plans-grid{grid-template-columns:repeat(2,1fr)}
+  .plans-intro,.upcoming-head{grid-template-columns:1fr;gap:20px}
+  .plans-bottom-inner{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:700px){
+  .plans-grid,.upcoming-grid{grid-template-columns:1fr}
+  .plan-card{padding:22px}
+  .plans-bottom-actions{display:grid;grid-template-columns:1fr}
+  .plans-bottom-actions .button{width:100%;justify-content:center}
+}
