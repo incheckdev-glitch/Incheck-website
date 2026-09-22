@@ -20,3 +20,23 @@
 .customer-story-section{background:linear-gradient(125deg,#07172d,#0b2f57 58%,#0b5591);color:#fff;position:relative;overflow:hidden}.customer-story-section:before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 85% 20%,rgba(56,166,255,.22),transparent 33%),linear-gradient(rgba(95,169,238,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(95,169,238,.05) 1px,transparent 1px);background-size:auto,48px 48px,48px 48px}.customer-story{position:relative;display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:center}.story-brand{font-family:var(--font-manrope);font-weight:900;font-size:clamp(54px,8vw,104px);line-height:.9;letter-spacing:-.065em;color:#fff;margin:5px 0 24px;text-shadow:0 0 45px rgba(65,170,255,.15)}.customer-story h2{font-family:var(--font-manrope);font-size:clamp(38px,4vw,58px);line-height:1.05;letter-spacing:-.045em;margin:0 0 18px}.customer-story-copy>p{font-size:17px;line-height:1.75;color:#c1d2e2;margin:0 0 14px}.story-note{color:#92b4d1!important;font-size:14px!important}.story-flow{border:1px solid rgba(122,186,245,.2);background:rgba(5,24,44,.45);border-radius:22px;padding:16px 24px;backdrop-filter:blur(10px)}.story-step{display:grid;grid-template-columns:54px 1fr;gap:18px;padding:21px 4px;border-bottom:1px solid rgba(255,255,255,.09)}.story-step:last-child{border-bottom:0}.story-step>span{width:44px;height:44px;border-radius:13px;background:rgba(48,157,255,.12);color:#66b7ff;display:grid;place-items:center;font-size:11px;letter-spacing:.1em;font-weight:850}.story-step strong{font-size:18px}.story-step p{margin:5px 0 0;color:#9eb6cc;line-height:1.5;font-size:13px}
 /* comparison */
 .compare-section{background:#fff}.comparison-wrap{overflow:auto;border:1px solid #dbe6f0;border-radius:22px;box-shadow:0 20px 55px rgba(15,55,92,.07)}.comparison-table{width:100%;border-collapse:collapse;min-width:940px;background:#fff}.comparison-table th,.comparison-table td{padding:20px 22px;text-align:left;border-bottom:1px solid #e8eef5;vertical-align:top;font-size:14px;line-height:1.55}.comparison-table thead th{background:#071b33;color:#dce9f6;font-size:11px;text-transform:uppercase;letter-spacing:.1em}.comparison-table thead th:last-child{background:#0b64c8;color:#fff}.comparison-table tbody th{width:185px;color:#193854;font-size:14px}.comparison-table tbody td{color:#718195}.comparison-table tbody td:last-child{background:#f3f8ff;color:#274863;font-weight:650}.comparison-table tbody tr:last-child th,.comparison-table tbody tr:last-child td{border-bottom:0}.incheck-cell{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#dff5ea;color:#0a9b66;font-size:10px;font-weight:900;margin-right:9px}
+
+/* client logo wall */
+.client-proof{padding:72px 0 82px;background:linear-gradient(180deg,#07192f,#0a223e);color:#fff;overflow:hidden}
+.client-proof .client-proof-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:30px}
+.client-proof .client-proof-head>div{max-width:700px}
+.client-proof .client-proof-head .eyebrow{margin-bottom:10px;color:#75bbff}
+.client-proof .client-proof-head h2{font-family:var(--font-manrope);font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-.045em;margin:0;color:#fff}
+.client-proof .client-proof-head p{margin:0;color:#9eb4c9;font-size:13px;max-width:290px;line-height:1.6;text-align:right}
+.client-logo-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.client-logo-card{aspect-ratio:2.47/1;border-radius:16px;overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.14);box-shadow:0 10px 28px rgba(0,0,0,.16);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.client-logo-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(0,0,0,.24);border-color:rgba(95,179,255,.5)}
+.client-logo-mark{display:block;width:100%;height:100%;background-repeat:no-repeat;background-size:500% 800%;background-color:#fff}
+@media(max-width:1050px){.client-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){
+  .client-proof{padding:56px 0 62px}
+  .client-proof .client-proof-head{display:block;margin-bottom:22px}
+  .client-proof .client-proof-head p{text-align:left;margin-top:9px}
+  .client-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .client-logo-card{border-radius:12px}
+}
