@@ -1,0 +1,185 @@
+export type ProductDetail = {
+  overview: string;
+  capabilities: { title: string; text: string }[];
+  workflow: { title: string; text: string }[];
+  useCases: string[];
+  management: string[];
+  connections: string[];
+  availability: string;
+};
+
+export const productDetails: Record<string, ProductDetail> = {
+  checklists: {
+    overview: 'Checklists are the execution engine of InCheck 360. A checklist can contain a few questions or a detailed operating routine with many tasks, validations and evidence requirements. Teams complete the work in the app while management keeps visibility across locations.',
+    capabilities: [
+      { title: 'Flexible checklist design', text: 'Build operational, quality and food-safety routines with yes/no, numeric, text, photo, signature, evidence and other structured inputs.' },
+      { title: 'Scheduling & recurrence', text: 'Run one-time or recurring checks around the location, shift, role and operating schedule.' },
+      { title: 'Assignment rules', text: 'Direct work to the right location, department, role, user or shift instead of relying on generic forms.' },
+      { title: 'Validation & limits', text: 'Use expected ranges and required evidence so abnormal answers can be identified at the point of execution.' },
+      { title: 'Conditional workflows', text: 'Show relevant follow-up questions or requirements based on previous answers.' },
+      { title: 'Due time & expiry', text: 'Track what is due, completed, missed or expired instead of reviewing forms after the fact.' },
+      { title: 'Evidence at source', text: 'Keep photos, signatures, comments, measured values and timestamps connected to the original control.' },
+      { title: 'Exception follow-through', text: 'Failed controls can move into corrective-action follow-up rather than disappearing inside a completed checklist.' },
+    ],
+    workflow: [
+      { title: 'Define the standard', text: 'Translate the operational requirement into questions, limits and required evidence.' },
+      { title: 'Schedule & assign', text: 'Deliver the checklist to the right team, location, role or shift.' },
+      { title: 'Execute', text: 'Frontline users complete the required tasks and capture evidence in the app.' },
+      { title: 'Identify exceptions', text: 'Out-of-range or failed answers are surfaced for attention.' },
+      { title: 'Act & verify', text: 'Follow through with ownership, corrective evidence and verified closure when required.' },
+    ],
+    useCases: ['Opening & closing routines','Receiving inspections','Food-temperature checks','Cleaning & sanitation','Hygiene controls','Shift handover','Equipment readiness','Operational compliance checks'],
+    management: ['Completion by location','Missed / expired activity','Failed answers and exceptions','Evidence history','User and location traceability','Linked corrective actions'],
+    connections: ['Corrective Actions','Reference Materials','Dashboards & Analytics','Reports & Audit Trail','Smart Detectors'],
+    availability: 'Available now. Included within InCheck Lite, Basic and Detect according to plan limits.',
+  },
+  journal: {
+    overview: 'Journal gives teams a structured place for operational observations that do not belong inside a recurring checklist. It keeps shift notes, incidents, recurring concerns and location updates in an accessible operating history instead of scattered notebooks or chat messages.',
+    capabilities: [
+      { title: 'Operational observations', text: 'Record events, observations and important context as they happen during daily operations.' },
+      { title: 'Shift & location updates', text: 'Preserve handover information and location-specific notes in one structured history.' },
+      { title: 'Incident records', text: 'Capture an issue or event with the context needed for later review and follow-up.' },
+      { title: 'Recurring concerns', text: 'Keep repeated observations visible over time rather than losing them in isolated messages.' },
+      { title: 'Narrative context', text: 'Use Journal when the operational record needs more context than a checklist answer alone.' },
+      { title: 'Management history', text: 'Give managers a searchable operational history that complements checklist and corrective-action records.' },
+    ],
+    workflow: [
+      { title: 'Observe', text: 'A team member identifies an event, issue or operational update.' },
+      { title: 'Record', text: 'The observation is captured against the relevant operating context.' },
+      { title: 'Review', text: 'Managers can review the history alongside other operational records.' },
+      { title: 'Follow up', text: 'Where action is needed, the observation can inform the next operational response.' },
+    ],
+    useCases: ['Shift notes','Operational incidents','Location updates','Recurring observations','Manager handover','Unplanned events'],
+    management: ['Chronological operating context','Location history','Recurring concerns','Shift-to-shift visibility','Supporting context for management review'],
+    connections: ['Checklists & Tasks','Corrective Actions','Dashboards & Analytics','Reports & Audit Trail'],
+    availability: 'Available now in InCheck Basic, InCheck Detect and relevant custom configurations. It can be added to Lite as an optional add-on.',
+  },
+  audits: {
+    overview: 'The dedicated Audit Management module is being developed for deeper structured audits, findings, evidence, corrective action and verification. Teams can already use structured checklists for inspection-style execution today; the dedicated audit workflow will add a purpose-built assurance layer.',
+    capabilities: [
+      { title: 'Structured audit programs', text: 'Planned support for organized audit sections, questions and repeatable inspection structures.' },
+      { title: 'Findings & evidence', text: 'Capture the finding together with notes, photos and supporting evidence.' },
+      { title: 'Scoring & review', text: 'Present audit performance in a structured review format.' },
+      { title: 'Corrective-action linkage', text: 'Move findings into owned follow-up instead of leaving them as report observations.' },
+      { title: 'Verification', text: 'Support confirmation of corrective evidence before a finding is considered closed.' },
+      { title: 'Audit reporting', text: 'Create a clear audit record from inspection through final status.' },
+    ],
+    workflow: [
+      { title: 'Plan the audit', text: 'Select the audit structure, location and scope.' },
+      { title: 'Inspect & capture', text: 'Record answers, findings, notes and evidence.' },
+      { title: 'Assign findings', text: 'Route required corrections to an accountable owner.' },
+      { title: 'Verify closure', text: 'Review the corrective evidence before final closure.' },
+      { title: 'Report', text: 'Keep the audit trail and result available for management review.' },
+    ],
+    useCases: ['Internal food-safety audits','Brand-standard audits','Operational inspections','Multi-location assurance reviews','Supplier / site inspections'],
+    management: ['Audit status','Findings by location','Open corrective actions','Evidence trail','Closure status','Audit reports'],
+    connections: ['Corrective Actions','Checklists & Tasks','Reference Materials','Reports & Audit Trail','Dashboards & Analytics'],
+    availability: 'Coming Soon. The dedicated Audit Management module is not presented as generally available today.',
+  },
+  'corrective-actions': {
+    overview: 'Corrective Actions keeps the response connected to the original problem. Instead of leaving a failed control inside a report or chat thread, teams can assign ownership, set a due date, capture proof of correction and verify the outcome before closure.',
+    capabilities: [
+      { title: 'Ownership', text: 'Assign the required action to the person or team responsible for correction.' },
+      { title: 'Priority & due date', text: 'Make urgency and expected completion visible instead of relying on informal follow-up.' },
+      { title: 'Evidence of correction', text: 'Capture comments, photos, timestamps and other proof against the corrective record.' },
+      { title: 'Status tracking', text: 'See what is open, in progress, overdue or ready for review.' },
+      { title: 'Verification before closure', text: 'Require review of the response where verification is part of the operating process.' },
+      { title: 'Linked history', text: 'Preserve the relationship between the original exception, the response and the final outcome.' },
+    ],
+    workflow: [
+      { title: 'Exception identified', text: 'A failed check, observation or finding requires action.' },
+      { title: 'Owner assigned', text: 'Responsibility and due date are made explicit.' },
+      { title: 'Correction completed', text: 'The owner records what was done and supplies the required evidence.' },
+      { title: 'Verification', text: 'A manager or authorized reviewer confirms the response where required.' },
+      { title: 'Closure', text: 'The issue is closed with the full response history retained.' },
+    ],
+    useCases: ['Failed food-safety controls','Cleaning failures','Temperature exceptions','Operational non-conformities','Repeated checklist failures','Management follow-up'],
+    management: ['Open actions','Overdue actions','Owner accountability','Correction evidence','Verification status','Recurring issues'],
+    connections: ['Checklists & Tasks','Journal','Audit Management','Dashboards & Analytics','Reports & Audit Trail','Smart Detectors'],
+    availability: 'Available now as part of the operational follow-through layer.',
+  },
+  sops: {
+    overview: 'Reference Materials gives teams a controlled operational library for SOPs, procedures, manuals, standards, training documents and supporting guidance. The goal is to put the current standard close to the work instead of leaving it in shared drives and binders.',
+    capabilities: [
+      { title: 'Central reference library', text: 'Keep approved operational documents and guidance in one accessible location.' },
+      { title: 'Role & location relevance', text: 'Organize material around the teams, departments and locations that need it.' },
+      { title: 'SOP access at work', text: 'Make procedures and supporting references easier to consult during execution.' },
+      { title: 'Training material', text: 'Store guides and training references alongside operational standards.' },
+      { title: 'Operational consistency', text: 'Reduce dependence on outdated local copies and informal instructions.' },
+      { title: 'Checklist support', text: 'Use reference material to support the standards teams are expected to execute in checklists.' },
+    ],
+    workflow: [
+      { title: 'Publish the standard', text: 'Add the SOP, procedure, guide or supporting document.' },
+      { title: 'Organize access', text: 'Make the material relevant to the appropriate operating context.' },
+      { title: 'Use in execution', text: 'Teams consult the standard while completing operational work.' },
+      { title: 'Maintain one source', text: 'Keep guidance centralized as procedures evolve.' },
+    ],
+    useCases: ['Food-safety SOPs','Cleaning procedures','Equipment instructions','Brand standards','Training references','Emergency / operating guides'],
+    management: ['Central document visibility','Consistent operating standards','Reduced local-document fragmentation','Support for onboarding and training'],
+    connections: ['Checklists & Tasks','Journal','Corrective Actions','Audit Management'],
+    availability: 'Available now. Reference Materials is included across the current plan structure.',
+  },
+  analytics: {
+    overview: 'Dashboards & Analytics turns day-to-day execution data into a management view. Teams can review completion, exceptions, open follow-up and operational patterns across locations without reading individual records one by one.',
+    capabilities: [
+      { title: 'Cross-location visibility', text: 'Review operating status across multiple sites from a central management view.' },
+      { title: 'Completion analysis', text: 'See where recurring work is being completed, missed or delayed.' },
+      { title: 'Exception visibility', text: 'Surface failed controls and areas that need management attention.' },
+      { title: 'Corrective-action status', text: 'Keep open and overdue follow-up visible alongside execution data.' },
+      { title: 'Trend review', text: 'Compare operational patterns over time instead of relying on one-day snapshots.' },
+      { title: 'Filterable reporting', text: 'Narrow the view around locations, activities and relevant operating dimensions.' },
+    ],
+    workflow: [
+      { title: 'Capture', text: 'Operational teams generate structured records through normal execution.' },
+      { title: 'Aggregate', text: 'The platform brings completion, exceptions and follow-up into management views.' },
+      { title: 'Review', text: 'Managers identify where standards are holding and where attention is required.' },
+      { title: 'Act', text: 'Insights feed operational follow-up, coaching and process improvement.' },
+    ],
+    useCases: ['Daily operations review','Multi-location comparison','Checklist performance','Exception tracking','Corrective-action review','Management meetings'],
+    management: ['Completion trends','Location performance','Exception patterns','Open / overdue action visibility','Operational history'],
+    connections: ['Checklists & Tasks','Journal','Corrective Actions','Smart Detectors','Reports & Audit Trail'],
+    availability: 'Available now. This is the current reporting and operational visibility layer, separate from the upcoming AI Data Analytics module.',
+  },
+  reports: {
+    overview: 'Reports & Audit Trail preserves the structured history behind the dashboard. It gives management a record of what happened, who performed the work, when and where it happened, what evidence was captured and how exceptions were handled.',
+    capabilities: [
+      { title: 'Time-stamped history', text: 'Retain the chronology of operational activity and follow-up.' },
+      { title: 'Location records', text: 'Review the operating history for a specific site or group of sites.' },
+      { title: 'Evidence-linked records', text: 'Keep photos, measured values, notes and relevant proof tied to the original record.' },
+      { title: 'User traceability', text: 'Maintain visibility of who completed, reviewed or followed up on the work.' },
+      { title: 'Exportable records', text: 'Prepare structured records for management review, audit support and internal documentation.' },
+      { title: 'Closure history', text: 'Keep corrective action and verification history connected to the original exception.' },
+    ],
+    workflow: [
+      { title: 'Work is completed', text: 'A checklist, journal entry, reading or follow-up creates a structured record.' },
+      { title: 'Evidence is linked', text: 'The supporting data remains connected to the operating event.' },
+      { title: 'History accumulates', text: 'The platform preserves the activity over time by user and location.' },
+      { title: 'Review or export', text: 'Management can review the record when operational or audit evidence is required.' },
+    ],
+    useCases: ['Management reviews','Food-safety evidence','Internal audits','Customer / stakeholder reviews','Location history','Corrective-action documentation'],
+    management: ['Who / when / where traceability','Evidence history','Closed and open follow-up','Location records','Exportable operational evidence'],
+    connections: ['Checklists & Tasks','Journal','Corrective Actions','Dashboards & Analytics','Smart Detectors','Audit Management'],
+    availability: 'Available now. InCheck 360 supports operational evidence and audit readiness; it does not itself certify regulatory or ISO compliance.',
+  },
+  'ai-intelligence': {
+    overview: 'AI Data Analytics is an upcoming intelligence layer intended to help teams extract more value from the structured operational data already collected in InCheck 360. It is being positioned as decision support, not as a replacement for qualified operational or food-safety judgment.',
+    capabilities: [
+      { title: 'Recurring-issue detection', text: 'Identify repeated operational problems and non-conformities across records.' },
+      { title: 'Trend summaries', text: 'Summarize meaningful changes and patterns across locations and periods.' },
+      { title: 'Risk signals', text: 'Highlight areas that may deserve management attention based on available operational data.' },
+      { title: 'Performance patterns', text: 'Help teams see where execution quality is improving or deteriorating.' },
+      { title: 'Operational summaries', text: 'Turn larger volumes of structured data into easier management review.' },
+      { title: 'Evidence intelligence roadmap', text: 'The roadmap includes deeper analysis of operational evidence where technically and operationally appropriate.' },
+    ],
+    workflow: [
+      { title: 'Collect structured data', text: 'Operational records continue to come from the normal InCheck 360 workflow.' },
+      { title: 'Analyze patterns', text: 'The intelligence layer reviews the available history for meaningful signals.' },
+      { title: 'Surface insights', text: 'Management receives clearer summaries and areas for review.' },
+      { title: 'Human decision', text: 'Qualified teams decide what action is appropriate in the real operation.' },
+    ],
+    useCases: ['Recurring non-conformities','Multi-location trend review','Management summaries','Operational risk review','Performance-pattern detection'],
+    management: ['Summarized patterns','Priority areas for review','Recurring issue visibility','Cross-location signals'],
+    connections: ['Dashboards & Analytics','Reports & Audit Trail','Checklists & Tasks','Corrective Actions','Smart Detectors'],
+    availability: 'Coming Soon. AI Data Analytics is not presented as a generally available production module today.',
+  },
+};
