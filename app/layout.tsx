@@ -4,13 +4,27 @@ import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: { default: 'InCheck 360 | Operational Control. Food Safety. Verified.', template: '%s | InCheck 360' },
-  description: 'InCheck 360 connects digital operations, food safety, audits, corrective actions, smart detectors and real-time visibility across multi-location teams.',
   metadataBase: new URL('https://incheck360.com'),
+  applicationName: 'InCheck 360',
+  title: { default: 'InCheck 360 | Operational Control Platform', template: '%s | InCheck 360' },
+  description: 'InCheck 360 connects human checks, corrective actions, verification, evidence, analytics and IoT monitoring across multi-location operations.',
+  openGraph: {
+    type: 'website',
+    siteName: 'InCheck 360',
+    title: 'InCheck 360 | Operational Control Platform',
+    description: 'Operational control across people, processes and equipment—from checks and exceptions to corrective action and verification.',
+    url: '/',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'InCheck 360 | Operational Control Platform',
+    description: 'Operational control across people, processes and equipment.',
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
