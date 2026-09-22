@@ -61,7 +61,7 @@ export default function SmartDetectors(){return <>
       {['Normal operating conditions','Warning / threshold conditions','Critical exceptions','No-reading / connectivity visibility','Current reading and history','Location and equipment context'].map(x=><div key={x}><span>✓</span>{x}</div>)}
     </div>
   </div>
-</section>
+</div></section>
 
 <section className="content-section detector-deep-section"><div className="shell">
   <span className="eyebrow">HOW IT CONNECTS</span>
