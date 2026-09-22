@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CTA } from '@/components/cta';
 import { Icon } from '@/components/icon';
@@ -9,10 +10,20 @@ export function generateStaticParams() {
   return industries.map((item) => ({ slug: item.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
-  return { title: industry?.title ?? 'Solutions' };
+  if (!industry) return {};
+  return {
+    title: industry.title,
+    description: industry.description,
+    alternates: { canonical: `/solutions/${industry.slug}` },
+    openGraph: {
+      title: `${industry.title} | InCheck 360`,
+      description: industry.description,
+      url: `/solutions/${industry.slug}`,
+    },
+  };
 }
 
 const workflows: Record<string, string[]> = {
