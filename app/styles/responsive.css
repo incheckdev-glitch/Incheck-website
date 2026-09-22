@@ -27,3 +27,35 @@
   .food-monitor-grid{grid-template-columns:1fr}.food-monitor-plus,.food-monitor-equals{height:35px}.food-monitor-plus{font-size:30px}.food-monitor-card.result{grid-column:auto}
   .food-assurance-grid{grid-template-columns:1fr}.customer-proof-mini{padding:58px 0}
 }
+
+
+/* final responsive QA */
+@media(max-width:1050px){
+  .footer-grid{grid-template-columns:repeat(3,1fr);gap:38px}
+  .footer-brand{grid-column:1/-1}
+  .footer-grid>div:last-child{grid-column:auto}
+  .resource-grid{grid-template-columns:repeat(2,1fr)}
+  .resource-library-head{grid-template-columns:1fr;gap:20px}
+  .resource-article-layout{grid-template-columns:minmax(0,1fr) 270px;gap:40px}
+  .case-study-head{grid-template-columns:1fr;gap:24px}
+  .case-study-result{max-width:360px}
+}
+@media(max-width:700px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px 24px}
+  .footer-brand{grid-column:1/-1}
+  .resource-grid{grid-template-columns:1fr}
+  .resource-library-head h2{font-size:38px}
+  .resource-article-hero{padding:115px 0 60px}
+  .resource-article-hero h1{font-size:43px}
+  .resource-article-layout{grid-template-columns:1fr;padding-top:55px;padding-bottom:70px;gap:35px}
+  .resource-takeaways{position:static}
+  .resource-intro{font-size:18px!important}
+  .case-study-section{padding-top:115px}
+  .case-study-grid{grid-template-columns:1fr}
+  .case-study-head h1{font-size:43px}
+  .legal-page{padding:115px 0 75px}
+  .legal-layout h1{font-size:44px}
+  .legal-company-card{grid-template-columns:1fr}
+  .demo-next-step{grid-template-columns:42px 1fr}
+  .comparison-wrap{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+}
