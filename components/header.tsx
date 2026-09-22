@@ -6,7 +6,17 @@ import { Brand } from './brand';
 import { Icon } from './icon';
 
 const productLinks = [
-  ['Platform overview', '/platform'], ['Checklists & tasks', '/product/checklists'], ['Audits & inspections', '/product/audits'], ['Corrective actions', '/product/corrective-actions'], ['Smart detectors', '/smart-detectors'], ['Analytics & reports', '/product/analytics'],
+  ['Platform overview', '/platform'],
+  ['Checklists & tasks', '/product/checklists'],
+  ['Journal', '/product/journal'],
+  ['Corrective actions', '/product/corrective-actions'],
+  ['Reference Materials', '/product/sops'],
+  ['Smart detectors', '/smart-detectors'],
+  ['Dashboards & analytics', '/product/analytics'],
+  ['Reports & audit trail', '/product/reports'],
+  ['Integrations', '/integrations'],
+  ['Audit Management · Coming soon', '/product/audits'],
+  ['AI Data Analytics · Coming soon', '/product/ai-intelligence'],
 ];
 const solutionLinks = [
   ['Restaurants & QSR', '/solutions/restaurants'], ['Hotels & hospitality', '/solutions/hospitality'], ['Central kitchens', '/solutions/central-kitchens'], ['Food manufacturing', '/solutions/food-manufacturing'], ['Retail', '/solutions/retail'], ['Multi-site operations', '/solutions/multi-site'],
@@ -43,7 +53,7 @@ export function Header() {
       </div>
       {open && <div className="mobile-menu" id="mobile-navigation">
         <div className="shell">
-          <strong>Product</strong>{productLinks.slice(0,5).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
+          <strong>Product</strong>{productLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
           <strong>Solutions</strong>{solutionLinks.slice(0,4).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
           <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/smart-detectors">Smart Detectors</Link><Link onClick={()=>setOpen(false)} href="/plans">Plans</Link><Link onClick={()=>setOpen(false)} href="/resources">Resources</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link><Link onClick={()=>setOpen(false)} href="/contact">Contact</Link>
         </div>
