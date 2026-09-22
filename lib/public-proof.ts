@@ -59,9 +59,9 @@ export const operationalUseCases = [
     items: ['Receiving inspections', 'Storage checks', 'Temperature logs', 'Hygiene routines', 'Corrective actions'],
   },
   {
-    area: 'Audit & compliance',
-    title: 'Evidence from finding to closure',
-    items: ['Structured audits', 'Scoring', 'Photos & notes', 'Assigned findings', 'Verified closure'],
+    area: 'Assurance & follow-through',
+    title: 'Evidence from exception to closure',
+    items: ['Structured inspections', 'Photos & notes', 'Assigned follow-up', 'Corrective evidence', 'Verified closure'],
   },
   {
     area: 'Monitoring',
@@ -74,7 +74,7 @@ export const comparisonRows = [
   ['Task execution', 'Manual tracking', 'Basic completion', 'Scheduled workflows, due time, expiry and ownership'],
   ['Data quality', 'Free text / paper', 'Limited validation', 'Photos, signatures, ranges, QR and structured inputs'],
   ['Visibility', 'After-the-fact', 'Limited dashboards', 'Cross-location status, exceptions and performance'],
-  ['Corrective action', 'Email / chat follow-up', 'Separate task', 'Finding → owner → evidence → verified closure'],
+  ['Corrective action', 'Email / chat follow-up', 'Separate task', 'Exception → owner → evidence → verified closure'],
   ['Food safety evidence', 'Folders and forms', 'Stored records', 'Connected checks, readings, actions and history'],
   ['SOP access', 'Binders / shared drives', 'Document library', 'Reference material inside the operational workflow'],
   ['Equipment monitoring', 'Manual readings only', 'Usually separate', 'Connected detector readings and threshold alerts'],
