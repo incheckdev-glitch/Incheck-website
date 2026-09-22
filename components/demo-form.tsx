@@ -8,25 +8,20 @@ type FormState = {
   email: string;
   company: string;
   locations: string;
-  interest: string;
-  message: string;
 };
 
-const initial: FormState = {
-  name: '',
-  email: '',
-  company: '',
-  locations: '',
-  interest: 'Food safety & operations',
-  message: '',
-};
+type SubmitState = 'idle' | 'submitting' | 'sent' | 'email' | 'error';
+
+const initial: FormState = { name: '', email: '', company: '', locations: '' };
 
 export function DemoForm() {
-  const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormState>(initial);
+  const [status, setStatus] = useState<SubmitState>('idle');
+  const endpoint = process.env.NEXT_PUBLIC_DEMO_FORM_ENDPOINT;
+  const calendarUrl = process.env.NEXT_PUBLIC_DEMO_CALENDAR_URL;
 
   const ready = useMemo(
-    () => Boolean(form.name.trim() && form.email.trim() && form.company.trim()),
+    () => Boolean(form.name.trim() && form.email.trim() && form.company.trim() && form.locations.trim()),
     [form],
   );
 
@@ -34,84 +29,86 @@ export function DemoForm() {
     setForm((current) => ({ ...current, [key]: value }));
   }
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const subject = encodeURIComponent(`InCheck 360 demo request — ${form.company}`);
-    const body = encodeURIComponent(
-      [
-        `Name: ${form.name}`,
-        `Email: ${form.email}`,
-        `Company: ${form.company}`,
-        `Locations: ${form.locations || 'Not specified'}`,
-        `Primary interest: ${form.interest}`,
-        '',
-        form.message || 'Please contact me to arrange an InCheck 360 demo.',
-      ].join('\n'),
+    if (!ready || status === 'submitting') return;
+
+    if (!endpoint) {
+      const subject = encodeURIComponent(`InCheck 360 demo request — ${form.company}`);
+      const body = encodeURIComponent(
+        [
+          `Name: ${form.name}`,
+          `Work email: ${form.email}`,
+          `Company: ${form.company}`,
+          `Number of locations: ${form.locations}`,
+          '',
+          'Please contact me to arrange an InCheck 360 demo.',
+        ].join('\n'),
+      );
+      window.location.href = `mailto:info@incheck360.nl?subject=${subject}&body=${body}`;
+      setStatus('email');
+      return;
+    }
+
+    setStatus('submitting');
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!response.ok) throw new Error('Request failed');
+      setStatus('sent');
+      setForm(initial);
+    } catch {
+      setStatus('error');
+    }
+  }
+
+  if (status === 'sent') {
+    return (
+      <div className="demo-form-shell demo-success" role="status">
+        <span className="demo-success-icon"><Icon name="check" size={26}/></span>
+        <span className="eyebrow">REQUEST RECEIVED</span>
+        <h2>Thank you. Your request has been received.</h2>
+        <p>Our team will review the information and contact you to arrange a suitable meeting time.</p>
+        {calendarUrl && (
+          <a className="button primary" href={calendarUrl} target="_blank" rel="noreferrer">
+            Choose a meeting time <Icon name="arrow" size={16}/>
+          </a>
+        )}
+      </div>
     );
-    window.location.href = `mailto:info@incheck360.nl?subject=${subject}&body=${body}`;
   }
 
   return (
     <div className="demo-form-shell">
-      <div className="demo-progress" aria-label="Demo request progress">
-        <span className={step >= 1 ? 'active' : ''}>1</span>
-        <i />
-        <span className={step >= 2 ? 'active' : ''}>2</span>
-      </div>
-
       <form className="demo-form" onSubmit={submit}>
-        {step === 1 ? (
-          <div className="demo-step">
-            <span className="eyebrow">ABOUT YOU</span>
-            <h2>Start with your operation.</h2>
-            <div className="contact-form">
-              <label className="full">Name
-                <input value={form.name} onChange={(e) => update('name', e.target.value)} required />
-              </label>
-              <label>Work email
-                <input type="email" value={form.email} onChange={(e) => update('email', e.target.value)} required />
-              </label>
-              <label>Company
-                <input value={form.company} onChange={(e) => update('company', e.target.value)} required />
-              </label>
-              <label className="full">Number of locations
-                <input value={form.locations} onChange={(e) => update('locations', e.target.value)} placeholder="e.g. 12" />
-              </label>
-            </div>
-            <button className="button primary large" type="button" disabled={!ready} onClick={() => setStep(2)}>
-              Continue <Icon name="arrow" size={18} />
-            </button>
+        <div className="demo-step">
+          <span className="eyebrow">REQUEST A DEMO</span>
+          <h2>Tell us about your operation.</h2>
+          <p className="demo-form-intro">Four details are enough to start. We will use them to focus the conversation on the workflows that matter to you.</p>
+          <div className="contact-form">
+            <label className="full">Name
+              <input autoComplete="name" value={form.name} onChange={(e) => update('name', e.target.value)} required />
+            </label>
+            <label>Work email
+              <input autoComplete="email" type="email" value={form.email} onChange={(e) => update('email', e.target.value)} required />
+            </label>
+            <label>Company
+              <input autoComplete="organization" value={form.company} onChange={(e) => update('company', e.target.value)} required />
+            </label>
+            <label className="full">Number of locations
+              <input inputMode="numeric" value={form.locations} onChange={(e) => update('locations', e.target.value)} placeholder="e.g. 12" required />
+            </label>
           </div>
-        ) : (
-          <div className="demo-step">
-            <span className="eyebrow">WHAT MATTERS MOST</span>
-            <h2>Show us where to focus the demo.</h2>
-            <div className="contact-form">
-              <label className="full">Primary interest
-                <select value={form.interest} onChange={(e) => update('interest', e.target.value)}>
-                  <option>Food safety & operations</option>
-                  <option>Digital checklists & audits</option>
-                  <option>Corrective actions & verification</option>
-                  <option>Smart detectors & temperature monitoring</option>
-                  <option>Multi-location dashboards & reporting</option>
-                  <option>Integrations</option>
-                </select>
-              </label>
-              <label className="full">Anything we should know?
-                <textarea
-                  value={form.message}
-                  onChange={(e) => update('message', e.target.value)}
-                  placeholder="Tell us about your current process, pain points or what you want to improve."
-                />
-              </label>
-            </div>
-            <div className="demo-actions">
-              <button className="button ghost" type="button" onClick={() => setStep(1)}>Back</button>
-              <button className="button primary large" type="submit">Prepare demo request <Icon name="arrow" size={18} /></button>
-            </div>
-            <p className="demo-note">Submitting opens your email application with the request pre-filled so you can review it before sending.</p>
-          </div>
-        )}
+          <button className="button primary large" type="submit" disabled={!ready || status === 'submitting'}>
+            {status === 'submitting' ? 'Sending…' : 'Request Demo'} {status !== 'submitting' && <Icon name="arrow" size={18}/>}
+          </button>
+          {status === 'email' && <p className="demo-note" role="status">Your email application has opened with the request prepared. Send the email to complete your request.</p>}
+          {status === 'error' && <p className="demo-note error" role="alert">We could not send the request. Please email info@incheck360.nl and we will arrange the demo directly.</p>}
+          {!endpoint && status === 'idle' && <p className="demo-note">Submitting prepares an email to info@incheck360.nl. A direct form endpoint can be enabled later without changing this page.</p>}
+        </div>
       </form>
     </div>
   );
