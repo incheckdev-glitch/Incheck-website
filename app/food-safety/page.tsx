@@ -1,10 +1,15 @@
+import type { Metadata } from 'next';
 import { CTA } from '@/components/cta';
 import { Icon } from '@/components/icon';
 import { PageHero } from '@/components/page-hero';
 import { Reveal } from '@/components/reveal';
 import { foodSafetyControls } from '@/lib/public-proof';
 
-export const metadata = { title: 'Food Safety' };
+export const metadata: Metadata = {
+  title: 'Food Safety Management & HACCP Execution',
+  description: 'Support HACCP-related execution, food-safety checks, corrective actions, temperature monitoring and audit readiness with InCheck 360.',
+  alternates: { canonical: '/food-safety' },
+};
 
 export default function FoodSafety(){return <>
 <PageHero eyebrow="FOOD SAFETY" title="Make food-safety controls part of the work—not a separate paperwork exercise." text="Digitize recurring checks, temperature controls, receiving inspections, sanitation, corrective actions, SOP access and audit evidence across every location.">
