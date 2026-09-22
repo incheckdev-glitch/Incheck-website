@@ -1,31 +1,48 @@
+import type { Metadata } from 'next';
 import { DemoForm } from '@/components/demo-form';
 import { PageHero } from '@/components/page-hero';
 
-export const metadata = { title: 'Book a Demo' };
+export const metadata: Metadata = {
+  title: 'Book a Demo',
+  description: 'Request a focused InCheck 360 demo around your locations, operational workflows, food-safety controls and monitoring needs.',
+  alternates: { canonical: '/book-demo' },
+};
+
+const nextSteps = [
+  ['01', 'Tell us about your operation', 'Share your company and number of locations.'],
+  ['02', 'We review your requirements', 'We look at the operating context before the meeting.'],
+  ['03', 'We show the relevant workflow', 'The demo focuses on the capabilities that match your use case.'],
+  ['04', 'Discuss implementation if there is a fit', 'If the platform matches the requirement, we outline practical next steps.'],
+];
 
 export default function BookDemoPage() {
   return <>
     <PageHero
       eyebrow="BOOK A DEMO"
       title="See InCheck 360 around your real operation."
-      text="Tell us how your locations, food-safety controls and daily workflows work today. We’ll focus the conversation on the operational gaps that matter to you."
-      primary="Contact our team"
+      text="A focused conversation around your locations, current controls, operational gaps and the workflows you want to improve."
+      primary="Email our team"
       primaryHref="mailto:info@incheck360.nl"
       secondary="Explore the Platform"
       secondaryHref="/platform"
     />
-    <section className="content-section" style={{background:'#f5f9fd'}}>
+    <section className="content-section demo-section">
       <div className="shell demo-layout">
-        <div>
-          <span className="eyebrow">A FOCUSED CONVERSATION</span>
-          <h2 className="demo-heading">No generic product tour.</h2>
-          <p className="demo-copy">We’ll shape the demo around your number of locations, current checklist and audit process, food-safety controls, corrective-action workflow and monitoring needs.</p>
-          <div className="simple-card-grid demo-benefits">
-            {[
-              ['01','Your operation first','Start with your current workflow and control points.'],
-              ['02','Relevant modules','Focus only on the capabilities that solve the real problem.'],
-              ['03','Clear next step','Leave with a concrete picture of fit, setup and rollout.'],
-            ].map(([no,title,text]) => <div className="simple-card" key={no}><small>{no}</small><h3>{title}</h3><p>{text}</p></div>)}
+        <div className="demo-context">
+          <span className="eyebrow">WHAT HAPPENS NEXT</span>
+          <h2 className="demo-heading">A clear process. No generic product tour.</h2>
+          <p className="demo-copy">We use the information you provide to prepare a relevant walkthrough rather than showing every module.</p>
+          <div className="demo-next-steps">
+            {nextSteps.map(([no,title,text]) => (
+              <div className="demo-next-step" key={no}>
+                <span>{no}</span>
+                <div><strong>{title}</strong><p>{text}</p></div>
+              </div>
+            ))}
+          </div>
+          <div className="demo-scheduling-note">
+            <strong>Scheduling</strong>
+            <p>The page is ready for a Microsoft Teams / Outlook scheduling link when your calendar integration is available. No placeholder calendar is shown today.</p>
           </div>
         </div>
         <DemoForm />
