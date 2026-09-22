@@ -1,5 +1,10 @@
+import type { Metadata } from 'next';
 import { PageHero } from '@/components/page-hero';
 
-export const metadata = { title: 'Contact' };
+export const metadata: Metadata = {
+  title: 'Contact InCheck 360',
+  description: 'Contact InCheck 360 to discuss operational control, food safety, audits, corrective actions, monitoring or multi-location workflows.',
+  alternates: { canonical: '/contact' },
+};
 
 export default function Contact(){return <><PageHero eyebrow="CONTACT" title="Tell us how your operation works." text="We’ll focus the conversation on your workflows, locations, food-safety controls, monitoring needs and the operational gaps you want to solve." primary="Email our team" primaryHref="mailto:info@incheck360.nl" secondary="Platform overview" secondaryHref="/platform"/><section className="content-section"><div className="shell contact-grid"><div><span className="eyebrow">GET IN TOUCH</span><h2 style={{fontFamily:'var(--font-manrope)',fontSize:48,letterSpacing:'-.04em'}}>Start with the operational problem—not a generic software pitch.</h2><p style={{color:'#64778b',lineHeight:1.7}}>Send us a short description of your business, number of locations and the workflow or compliance challenge you want to improve.</p><div className="contact-card" style={{marginTop:30}}><strong>Email</strong><p><a href="mailto:info@incheck360.nl">info@incheck360.nl</a></p><strong>Company</strong><p>InCheck 360 Holding B.V.<br/>Enschede, The Netherlands</p></div></div><div className="contact-card"><h3 style={{fontSize:26,marginTop:0}}>Book a conversation</h3><form className="contact-form" action="mailto:info@incheck360.nl" method="post" encType="text/plain"><label>First name<input name="firstName" required/></label><label>Last name<input name="lastName" required/></label><label>Work email<input type="email" name="email" required/></label><label>Company<input name="company"/></label><label className="full">What would you like to improve?<textarea name="message" placeholder="Tell us about your locations, workflows, food-safety controls or monitoring needs." required/></label><div className="contact-note">Submitting opens your email application so you can review the message before sending.</div><div><button className="button primary" type="submit">Prepare email</button></div></form></div></div></section></>}
