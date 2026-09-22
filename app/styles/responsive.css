@@ -14,3 +14,16 @@
   .usecase-card{min-height:0}.customer-story{grid-template-columns:1fr}.story-brand{font-size:58px}.customer-story h2{font-size:39px}.story-flow{padding:10px 16px}.story-step{grid-template-columns:45px 1fr;gap:13px;padding:17px 2px}
   .comparison-table th,.comparison-table td{padding:16px}.comparison-wrap{border-radius:16px}
 }
+
+@media(max-width:1050px){
+  .platform-architecture{grid-template-columns:repeat(2,1fr)}
+  .food-monitor-grid{grid-template-columns:1fr 44px 1fr}
+  .food-monitor-equals{display:none}.food-monitor-card.result{grid-column:1/-1}
+  .customer-proof-mini-inner{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:700px){
+  .platform-architecture{grid-template-columns:1fr}.architecture-card{min-height:0}
+  .input-control-grid{grid-template-columns:1fr}.input-preview-row{grid-template-columns:1fr auto}.input-preview-row em{grid-column:1/-1;width:max-content}
+  .food-monitor-grid{grid-template-columns:1fr}.food-monitor-plus,.food-monitor-equals{height:35px}.food-monitor-plus{font-size:30px}.food-monitor-card.result{grid-column:auto}
+  .food-assurance-grid{grid-template-columns:1fr}.customer-proof-mini{padding:58px 0}
+}
