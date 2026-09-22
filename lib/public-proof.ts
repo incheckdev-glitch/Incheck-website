@@ -26,11 +26,25 @@ export const publicClients = [
   'Zahret',
 ];
 
-export const proofStats = [
+export type ProofStat = {
+  value: string;
+  label: string;
+  detail: string;
+  href?: string;
+  linkLabel?: string;
+};
+
+export const proofStats: ProofStat[] = [
   { value: '7+', label: 'countries', detail: 'Operational footprint published by InCheck 360' },
   { value: '3+', label: 'continents', detail: 'Supporting distributed hospitality and F&B teams' },
   { value: '25+', label: 'featured client brands', detail: 'Publicly showcased across the InCheck 360 customer roster' },
-  { value: '72%', label: 'fewer checklist violations', detail: 'Published result: up to 72% reduction in 30 days' },
+  {
+    value: '72%',
+    label: 'fewer checklist violations',
+    detail: 'Observed in selected customer operations after implementing structured digital checks, corrective actions and follow-up.',
+    href: '/case-studies/checklist-violations-reduction',
+    linkLabel: 'View Case Study',
+  },
 ];
 
 export const operationalUseCases = [
