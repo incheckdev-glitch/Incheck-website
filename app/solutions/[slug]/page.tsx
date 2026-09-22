@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CTA } from '@/components/cta';
 import { Icon } from '@/components/icon';
 import { PageHero } from '@/components/page-hero';
 import { Reveal } from '@/components/reveal';
 import { industries } from '@/lib/site-data';
+import { solutionDetails } from '@/lib/solution-details';
 
 export function generateStaticParams() {
   return industries.map((item) => ({ slug: item.slug }));
@@ -26,30 +28,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-const workflows: Record<string, string[]> = {
-  restaurants: ['Opening & closing checks','Food storage & temperatures','Cleaning & hygiene','Corrective actions','Multi-location visibility'],
-  hospitality: ['Department checks','Food & beverage controls','SOP access','Issue follow-up','Property-level visibility'],
-  'central-kitchens': ['Receiving inspections','Production controls','Storage temperatures','Sanitation verification','Corrective actions'],
-  'food-manufacturing': ['Production inspections','Environmental monitoring','Operational evidence','Corrective actions','Audit readiness'],
-  retail: ['Store opening checks','Hygiene & safety','Equipment monitoring','Issue ownership','Network visibility'],
-  'multi-site': ['Central standards','Location workflows','Cross-site dashboards','Open action tracking','Evidence & reporting'],
-};
-
 export default async function SolutionDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
-  if (!industry) notFound();
-  const items = workflows[slug] ?? workflows['multi-site'];
+  const detail = solutionDetails[slug];
+  if (!industry || !detail) notFound();
 
   return <>
-    <PageHero eyebrow="INDUSTRY SOLUTION" title={industry.title} text={industry.description}>
+    <PageHero
+      eyebrow="INDUSTRY SOLUTION"
+      title={industry.title}
+      text={industry.description}
+      primary="Book a Demo"
+      primaryHref="/book-demo"
+      secondary="Explore the Platform"
+      secondaryHref="/platform"
+    >
       <div className="mini-console">
         <div className="mini-console-head"><strong>{industry.title}</strong><span>Operational view</span></div>
         <div className="mini-console-grid">
           <div className="mini-console-card"><span>Standards</span><strong>Central</strong></div>
           <div className="mini-console-card"><span>Execution</span><strong>Local</strong></div>
           <div className="mini-console-card"><span>Exceptions</span><strong>Visible</strong></div>
-          <div className="mini-console-card"><span>Closure</span><strong>Verified</strong></div>
+          <div className="mini-console-card"><span>Closure</span><strong>Traceable</strong></div>
         </div>
       </div>
     </PageHero>
@@ -60,36 +61,67 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
           <div>
             <span className="eyebrow">DESIGNED AROUND THE OPERATION</span>
             <h2>{industry.subtitle}</h2>
-            <p>{industry.description}</p>
+            <p>{detail.intro}</p>
             <div className="bullet-grid">
-              {items.map((item) => <div className="bullet-item" key={item}><span>✓</span>{item}</div>)}
+              {detail.teams.map((item) => <div className="bullet-item" key={item}><span>✓</span>{item}</div>)}
             </div>
           </div>
         </Reveal>
         <Reveal delay={90}>
-          <div className="content-panel">
-            <span className="eyebrow">ONE OPERATING MODEL</span>
+          <div className="content-panel dark">
+            <span className="eyebrow light">ONE OPERATING MODEL</span>
             {[
-              ['01','Set the standard','Define what should happen and when.'],
-              ['02','Execute consistently','Guide site teams through repeatable workflows.'],
-              ['03','Act on exceptions','Assign issues instead of leaving them inside reports.'],
-              ['04','Verify the outcome','Keep evidence and closure tied to the original finding.'],
-            ].map(([no,title,text]) => <div className="simple-card" style={{marginTop:10}} key={no}><small>{no}</small><h3>{title}</h3><p>{text}</p></div>)}
+              ['01','Set the standard','Define what should happen, where and when.'],
+              ['02','Execute locally','Guide teams through repeatable workflows and evidence capture.'],
+              ['03','Surface exceptions','Identify failed controls, missed work and abnormal conditions.'],
+              ['04','Assign follow-up','Move required action to a clear owner and due date.'],
+              ['05','Review & verify','Keep the response and evidence visible to management.'],
+            ].map(([no,title,text]) => <div className="detector-row" key={no}><div><Icon name={no==='01'?'book':no==='03'?'alert':no==='05'?'shield':'check'}/><span><small>STEP {no}</small><b style={{fontSize:16}}>{title}</b></span></div><em>{no==='05'?'Review':'Recorded'}</em></div>)}
           </div>
         </Reveal>
       </div>
     </section>
 
-    <section className="content-section" style={{background:'#f5f9fd'}}>
+    <section className="content-section industry-workflows-section">
       <div className="shell">
-        <span className="eyebrow">CONNECTED CAPABILITIES</span>
-        <h2 style={{fontFamily:'var(--font-manrope)',fontSize:48,letterSpacing:'-.04em',maxWidth:780}}>People, process and equipment in the same operational picture.</h2>
-        <div className="simple-card-grid" style={{marginTop:35}}>
-          {[
-            ['Checklists & audits','Digitize recurring work and deeper inspections.','check'],
-            ['Corrective actions','Create accountability from finding to closure.','alert'],
-            ['Smart detectors','Add continuous environmental visibility.','thermo'],
-          ].map(([title,text,icon]) => <div className="simple-card" key={title}><Icon name={icon as 'check'|'alert'|'thermo'} /><h3>{title}</h3><p>{text}</p></div>)}
+        <span className="eyebrow">OPERATIONAL WORKFLOWS</span>
+        <h2 className="platform-rich-heading">Go beyond a generic checklist template.</h2>
+        <p className="platform-rich-copy">The platform can be configured around the actual operating areas that matter in this environment.</p>
+        <div className="industry-workflow-grid">
+          {detail.workflows.map((group, i) => <Reveal key={group.title} delay={i*60}>
+            <div className="industry-workflow-card">
+              <span className="product-detail-index">{String(i+1).padStart(2,'0')}</span>
+              <h3>{group.title}</h3>
+              <div className="deep-list compact">
+                {group.items.map((item) => <div key={item}><span>✓</span>{item}</div>)}
+              </div>
+            </div>
+          </Reveal>)}
+        </div>
+      </div>
+    </section>
+
+    <section className="content-section" style={{background:'#f5f9fd'}}>
+      <div className="shell product-two-column">
+        <div>
+          <span className="eyebrow">WHAT TEAMS CAN CONTROL</span>
+          <h2 className="product-section-title">Execution at site level.</h2>
+          <div className="deep-list">{detail.controls.map((item)=><div key={item}><span>✓</span>{item}</div>)}</div>
+        </div>
+        <div>
+          <span className="eyebrow">WHAT MANAGEMENT CAN SEE</span>
+          <h2 className="product-section-title">Visibility across the operation.</h2>
+          <div className="deep-list">{detail.management.map((item)=><div key={item}><span>✓</span>{item}</div>)}</div>
+        </div>
+      </div>
+    </section>
+
+    <section className="content-section">
+      <div className="shell">
+        <span className="eyebrow">RECOMMENDED PLATFORM AREAS</span>
+        <h2 className="platform-rich-heading">Explore the capabilities most relevant to this operation.</h2>
+        <div className="recommended-grid">
+          {detail.recommended.map((item)=><Link className="simple-card recommended-card" href={item.href} key={item.title}><h3>{item.title}</h3><p>{item.text}</p><span className="text-link">Explore <Icon name="arrow" size={16}/></span></Link>)}
         </div>
       </div>
     </section>
