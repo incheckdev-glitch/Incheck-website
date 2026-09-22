@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CTA } from '@/components/cta';
 import { Icon, type IconName } from '@/components/icon';
@@ -6,7 +7,11 @@ import { Reveal } from '@/components/reveal';
 import { features } from '@/lib/site-data';
 import { proofStats } from '@/lib/public-proof';
 
-export const metadata = { title: 'Platform' };
+export const metadata: Metadata = {
+  title: 'Operational Control Platform',
+  description: 'Explore the InCheck 360 operational control platform for checklists, audits, corrective actions, SOPs, IoT monitoring, analytics and audit-ready records.',
+  alternates: { canonical: '/platform' },
+};
 
 const architecture = [
   { icon:'check', layer:'Execution', title:'Checklists & tasks', text:'Recurring, shift-based and location-based execution with due times, expiry and structured inputs.' },
