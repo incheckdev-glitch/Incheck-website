@@ -123,7 +123,7 @@ export const industries = [
 ];
 
 export const faqs = [
-  ['What is InCheck 360?', 'InCheck 360 is an operations and compliance platform that connects digital checklists, audits, corrective actions, SOPs, smart detectors and reporting across multi-location teams.'],
+  ['What is InCheck 360?', 'InCheck 360 is an operational control platform that connects digital checks, audits, corrective actions, SOPs, smart detectors and reporting across multi-location teams.'],
   ['Is InCheck 360 only for restaurants?', 'No. The platform is particularly strong in food service and hospitality, but the same structured execution model can support retail, food manufacturing and other multi-site operations.'],
   ['Can workflows differ by location or role?', 'Yes. Checklists, tasks and operational references can be configured around locations, roles and operational needs.'],
   ['How do smart detectors fit with manual checks?', 'They complement each other. Human checks capture process and context, while connected detectors provide continuous environmental readings between those checks.'],
