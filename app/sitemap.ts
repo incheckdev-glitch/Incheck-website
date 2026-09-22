@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries',
     '/resources',
     '/plans',
+    '/integrations',
     '/about',
     '/contact',
     '/book-demo',
