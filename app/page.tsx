@@ -91,11 +91,12 @@ export default function Home() {
         <div className="client-logo-line">
           {clientLogos.map((client) => (
             <div className="client-logo-card" key={client.name} title={client.name}>
-              <span
-                className="client-logo-mark"
-                role="img"
-                aria-label={client.name}
-                style={{ backgroundPosition: `${client.x}% ${client.y}%` }}
+              <img
+                className="client-logo-image"
+                src={client.src}
+                alt={client.name}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}
