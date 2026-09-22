@@ -5,7 +5,8 @@ import { Icon, type IconName } from '@/components/icon';
 import { Reveal } from '@/components/reveal';
 import { SectionHeading } from '@/components/section-heading';
 import { faqs, features, industries } from '@/lib/site-data';
-import { comparisonRows, operationalUseCases, proofStats, publicClients } from '@/lib/public-proof';
+import { comparisonRows, operationalUseCases, proofStats } from '@/lib/public-proof';
+import { clientLogos } from '@/lib/client-logos';
 
 const featureIcons: Record<string, IconName> = {
   checklists:'check',
@@ -79,13 +80,25 @@ export default function Home() {
     </section>
 
     <section className="client-proof">
-      <div className="shell client-proof-head">
-        <span className="eyebrow">TRUSTED BY LEADING BUSINESSES</span>
-        <p>Selected brands publicly featured by InCheck 360.</p>
-      </div>
-      <div className="client-marquee" aria-label="Selected InCheck 360 customer brands">
-        <div className="client-track">
-          {[...publicClients, ...publicClients].map((client, i) => <span className="client-name" key={`${client}-${i}`}>{client}</span>)}
+      <div className="shell">
+        <div className="client-proof-head">
+          <div>
+            <span className="eyebrow">TRUSTED ACROSS REAL OPERATIONS</span>
+            <h2>Brands using InCheck 360.</h2>
+          </div>
+          <p>One appearance per client. No duplicated logo tiles.</p>
+        </div>
+        <div className="client-logo-grid" aria-label="InCheck 360 client brands">
+          {clientLogos.map((client) => (
+            <div className="client-logo-card" key={client.name} title={client.name}>
+              <span
+                className="client-logo-mark"
+                role="img"
+                aria-label={client.name}
+                style={{ backgroundPosition: `${client.x}% ${client.y}%` }}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
