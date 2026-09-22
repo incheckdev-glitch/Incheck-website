@@ -31,6 +31,7 @@ export function Header() {
           <div className="nav-group"><button>Solutions <span>⌄</span></button><div className="mega-menu compact">{solutionLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>View →</small></Link>)}</div></div>
           <Link href="/food-safety">Food Safety</Link>
           <Link href="/smart-detectors">Smart Detectors</Link>
+          <Link href="/plans">Plans</Link>
           <Link href="/resources">Resources</Link>
           <Link href="/about">About</Link>
         </nav>
