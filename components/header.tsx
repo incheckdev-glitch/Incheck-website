@@ -37,14 +37,14 @@ export function Header() {
         <div className="nav-actions">
           <a className="button ghost small desktop-only" href="https://app.incheck360.com/" target="_blank" rel="noreferrer">Login</a>
           <Link className="button primary small" href="/book-demo">Book a Demo</Link>
-          <button className="mobile-toggle" aria-label="Toggle navigation" onClick={() => setOpen(!open)}><Icon name={open ? 'close' : 'menu'} /></button>
+          <button className="mobile-toggle" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}><Icon name={open ? 'close' : 'menu'} /></button>
         </div>
       </div>
-      {open && <div className="mobile-menu">
+      {open && <div className="mobile-menu" id="mobile-navigation">
         <div className="shell">
           <strong>Product</strong>{productLinks.slice(0,5).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
           <strong>Solutions</strong>{solutionLinks.slice(0,4).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
-          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/resources">Resources</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link>
+          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/smart-detectors">Smart Detectors</Link><Link onClick={()=>setOpen(false)} href="/resources">Resources</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link><Link onClick={()=>setOpen(false)} href="/contact">Contact</Link>
         </div>
       </div>}
     </header>
