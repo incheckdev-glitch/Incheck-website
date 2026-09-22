@@ -1,0 +1,52 @@
+'use client';
+
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Brand } from './brand';
+import { Icon } from './icon';
+
+const productLinks = [
+  ['Platform overview', '/platform'], ['Checklists & tasks', '/product/checklists'], ['Audits & inspections', '/product/audits'], ['Corrective actions', '/product/corrective-actions'], ['Smart detectors', '/smart-detectors'], ['Analytics & reports', '/product/analytics'],
+];
+const solutionLinks = [
+  ['Restaurants & QSR', '/solutions/restaurants'], ['Hotels & hospitality', '/solutions/hospitality'], ['Central kitchens', '/solutions/central-kitchens'], ['Food manufacturing', '/solutions/food-manufacturing'], ['Retail', '/solutions/retail'], ['Multi-site operations', '/solutions/multi-site'],
+];
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
+      <div className="shell nav-shell">
+        <Brand />
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          <div className="nav-group"><button>Product <span>⌄</span></button><div className="mega-menu">{productLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>Explore →</small></Link>)}</div></div>
+          <div className="nav-group"><button>Solutions <span>⌄</span></button><div className="mega-menu compact">{solutionLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>View →</small></Link>)}</div></div>
+          <Link href="/food-safety">Food Safety</Link>
+          <Link href="/smart-detectors">Smart Detectors</Link>
+          <Link href="/resources">Resources</Link>
+          <Link href="/about">About</Link>
+        </nav>
+        <div className="nav-actions">
+          <a className="button ghost small desktop-only" href="https://app.incheck360.com/" target="_blank" rel="noreferrer">Login</a>
+          <Link className="button primary small" href="/book-demo">Book a Demo</Link>
+          <button className="mobile-toggle" aria-label="Toggle navigation" onClick={() => setOpen(!open)}><Icon name={open ? 'close' : 'menu'} /></button>
+        </div>
+      </div>
+      {open && <div className="mobile-menu">
+        <div className="shell">
+          <strong>Product</strong>{productLinks.slice(0,5).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
+          <strong>Solutions</strong>{solutionLinks.slice(0,4).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
+          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/resources">Resources</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link>
+        </div>
+      </div>}
+    </header>
+  );
+}
