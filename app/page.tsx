@@ -7,6 +7,10 @@ import { SectionHeading } from '@/components/section-heading';
 import { faqs, features, industries } from '@/lib/site-data';
 import { comparisonRows, operationalUseCases, proofStats } from '@/lib/public-proof';
 import { clientLogos } from '@/lib/client-logos';
+import { CLIENT_SPRITE_1 } from '@/lib/client-sprite-1';
+import { CLIENT_SPRITE_2 } from '@/lib/client-sprite-2';
+import { CLIENT_SPRITE_3 } from '@/lib/client-sprite-3';
+import { CLIENT_SPRITE_4 } from '@/lib/client-sprite-4';
 
 const featureIcons: Record<string, IconName> = {
   checklists:'check',
@@ -20,6 +24,7 @@ const featureIcons: Record<string, IconName> = {
 };
 
 const useCaseIcons: IconName[] = ['check','shield','search','thermo'];
+const CLIENT_LOGO_SPRITE = `data:image/webp;base64,${CLIENT_SPRITE_1}${CLIENT_SPRITE_2}${CLIENT_SPRITE_3}${CLIENT_SPRITE_4}`;
 
 export default function Home() {
   return <>
@@ -95,7 +100,10 @@ export default function Home() {
                 className="client-logo-mark"
                 role="img"
                 aria-label={client.name}
-                style={{ backgroundPosition: `${client.x}% ${client.y}%` }}
+                style={{
+                  backgroundImage: `url("${CLIENT_LOGO_SPRITE}")`,
+                  backgroundPosition: `${client.x}% ${client.y}%`,
+                }}
               />
             </div>
           ))}
