@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CTA } from '@/components/cta';
 import { Icon, type IconName } from '@/components/icon';
@@ -19,10 +20,20 @@ export function generateStaticParams() {
   return features.filter((f) => f.slug !== 'smart-detectors').map((f) => ({ slug: f.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const feature = features.find((f) => f.slug === slug);
-  return { title: feature?.title ?? 'Product' };
+  if (!feature) return {};
+  return {
+    title: feature.title,
+    description: feature.description,
+    alternates: { canonical: `/product/${feature.slug}` },
+    openGraph: {
+      title: `${feature.title} | InCheck 360`,
+      description: feature.description,
+      url: `/product/${feature.slug}`,
+    },
+  };
 }
 
 export default async function ProductDetail({ params }: { params: Promise<{ slug: string }> }) {
