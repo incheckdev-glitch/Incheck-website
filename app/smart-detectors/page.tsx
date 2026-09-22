@@ -1,9 +1,14 @@
+import type { Metadata } from 'next';
 import { CTA } from '@/components/cta';
 import { Icon } from '@/components/icon';
 import { PageHero } from '@/components/page-hero';
 import { Reveal } from '@/components/reveal';
 
-export const metadata = { title: 'Smart Detectors' };
+export const metadata: Metadata = {
+  title: 'IoT Temperature Monitoring & Smart Detectors',
+  description: 'Continuous temperature and environmental monitoring for multi-location operations, connected with checks, alerts and operational follow-up.',
+  alternates: { canonical: '/smart-detectors' },
+};
 
 export default function SmartDetectors(){return <>
 <PageHero eyebrow="SMART DETECTORS" title="Continuous monitoring between every manual check." text="Bring connected temperature and environmental readings into the same operational view as your checklists, actions and reports.">
