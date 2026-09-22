@@ -9,19 +9,23 @@ import { proofStats } from '@/lib/public-proof';
 
 export const metadata: Metadata = {
   title: 'Operational Control Platform',
-  description: 'Explore the InCheck 360 operational control platform for checklists, audits, corrective actions, SOPs, IoT monitoring, analytics and audit-ready records.',
+  description: 'Explore the InCheck 360 operational control platform for checklists, Journal records, corrective actions, Reference Materials, smart detectors, analytics, evidence and integrations.',
   alternates: { canonical: '/platform' },
 };
 
 const architecture = [
-  { icon:'check', layer:'Execution', title:'Checklists & tasks', text:'Recurring, shift-based and location-based execution with due times, expiry and structured inputs.' },
-  { icon:'search', layer:'Assurance', title:'Audits & inspections', text:'Structured inspections, scoring, evidence, findings and review across locations.' },
-  { icon:'alert', layer:'Follow-through', title:'Corrective actions', text:'Turn failed checks and audit findings into owned actions with deadlines and evidence.' },
-  { icon:'book', layer:'Standards', title:'SOPs & references', text:'Keep operational procedures and brand standards accessible where the work happens.' },
-  { icon:'thermo', layer:'Monitoring', title:'Smart detectors', text:'Bring continuous environmental readings, thresholds and trends into the same operational context.' },
+  { icon:'check', layer:'Execution', title:'Checklists & tasks', text:'Recurring, shift-based and location-based execution with due times, expiry, structured inputs and evidence.' },
+  { icon:'report', layer:'Operational context', title:'Journal', text:'Capture shift notes, incidents, observations and location context that sits between recurring checks.' },
+  { icon:'alert', layer:'Follow-through', title:'Corrective actions', text:'Turn failed controls and findings into owned actions with deadlines, evidence and verification.' },
+  { icon:'book', layer:'Standards', title:'Reference Materials', text:'Keep SOPs, procedures, manuals and training references accessible where the work happens.' },
+  { icon:'thermo', layer:'Monitoring', title:'Smart detectors', text:'Bring continuous environmental readings, device status, thresholds and trends into the same operational context.' },
   { icon:'chart', layer:'Visibility', title:'Dashboards & analytics', text:'Track completion, exceptions, trends and cross-location performance from one management view.' },
-  { icon:'report', layer:'Evidence', title:'Reports & audit trails', text:'Preserve time-stamped records, history and exportable operational evidence.' },
-  { icon:'spark', layer:'Intelligence', title:'AI intelligence', text:'A growing intelligence layer for surfacing patterns, risk signals and operational insights.' },
+  { icon:'report', layer:'Evidence', title:'Reports & audit trail', text:'Preserve time-stamped records, user and location history, linked evidence and exportable operational records.' },
+] as const;
+
+const roadmap = [
+  { icon:'search', title:'Audit Management', text:'A dedicated audit layer for structured audits, findings, corrective-action linkage, verification and reporting.' },
+  { icon:'spark', title:'AI Data Analytics', text:'An upcoming intelligence layer for recurring issues, trends, risk signals and management summaries.' },
 ] as const;
 
 const inputControls = [
@@ -34,7 +38,7 @@ const inputControls = [
 ];
 
 export default function PlatformPage(){return <>
-  <PageHero eyebrow="THE INCHECK 360 PLATFORM" title="One operational layer from daily checks to verified closure." text="Bring checklists, audits, SOPs, corrective actions, continuous monitoring, evidence and reporting into one connected operational record.">
+  <PageHero eyebrow="THE INCHECK 360 PLATFORM" title="One operational layer from daily checks to verified closure." text="Bring checklists, Journal records, Reference Materials, corrective actions, continuous monitoring, evidence and reporting into one connected operational record.">
     <div className="mini-console"><div className="mini-console-head"><strong>Operations overview</strong><span>All locations</span></div><div className="mini-console-grid"><div className="mini-console-card"><span>Checklist completion</span><strong>92%</strong></div><div className="mini-console-card"><span>Open actions</span><strong>12</strong></div><div className="mini-console-card"><span>Detector status</span><strong>Normal</strong></div><div className="mini-console-card"><span>Audit trail</span><strong>Ready</strong></div></div></div>
   </PageHero>
 
@@ -54,8 +58,8 @@ export default function PlatformPage(){return <>
   <section className="content-section" style={{background:'#f5f9fd'}}>
     <div className="shell">
       <span className="eyebrow">PLATFORM ARCHITECTURE</span>
-      <h2 className="platform-rich-heading">Eight connected layers. One operating picture.</h2>
-      <p className="platform-rich-copy">Use only the modules you need, or connect them into a broader execution and compliance system across your locations.</p>
+      <h2 className="platform-rich-heading">Seven current operating layers. One connected picture.</h2>
+      <p className="platform-rich-copy">Use only the modules you need, or connect them into a broader execution, food-safety and operational-control system across your locations.</p>
       <div className="platform-architecture">
         {architecture.map((item,i) => <Reveal key={item.title} delay={(i%4)*50}>
           <div className="architecture-card">
@@ -66,6 +70,15 @@ export default function PlatformPage(){return <>
             <p>{item.text}</p>
           </div>
         </Reveal>)}
+      </div>
+      <div className="platform-roadmap">
+        <div className="platform-roadmap-head">
+          <div><span className="eyebrow">PRODUCT ROADMAP</span><h3>Dedicated Audit Management and AI Data Analytics are coming soon.</h3></div>
+          <p>They are shown separately so customers can understand the direction of the platform without confusing roadmap capabilities with modules available today.</p>
+        </div>
+        <div className="upcoming-grid">
+          {roadmap.map((item) => <div className="upcoming-card" key={item.title}><span>COMING SOON</span><Icon name={item.icon as IconName}/><h3>{item.title}</h3><p>{item.text}</p></div>)}
+        </div>
       </div>
     </div>
   </section>
@@ -112,6 +125,13 @@ export default function PlatformPage(){return <>
           </div>
         </div>
       </Reveal>
+    </div>
+  </section>
+
+  <section className="content-section platform-integration-section">
+    <div className="shell content-grid">
+      <Reveal><div><span className="eyebrow">INTEGRATIONS</span><h2>Keep business transactions in the ERP and operational evidence in InCheck 360.</h2><p>Selected master and transaction data can be exchanged with ERP or other business systems while InCheck remains the operational layer for checks, evidence, non-conformities, corrective actions and verification.</p><Link className="button ghost" href="/integrations">Explore Integrations <Icon name="arrow" size={16}/></Link></div></Reveal>
+      <Reveal delay={80}><div className="content-panel"><span className="eyebrow">EXAMPLE</span><h3>Microsoft Dynamics receiving workflow</h3><p>Supplier, item and warehouse data can flow into InCheck. Teams complete receiving and food-safety controls in InCheck, while only agreed mapped transaction fields return to Dynamics.</p></div></Reveal>
     </div>
   </section>
 
