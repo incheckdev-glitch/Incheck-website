@@ -84,10 +84,10 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       )}
     </PageHero>
 
-    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : slug === 'journal' ? 'journal-overview-section' : slug === 'sops' ? 'reference-overview-section' : ''}`}>
-      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : slug === 'journal' ? 'journal-overview-grid' : slug === 'sops' ? 'reference-overview-grid' : ''}`}>
+    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : slug === 'journal' ? 'journal-overview-section' : slug === 'sops' ? 'reference-overview-section' : slug === 'reports' ? 'reports-overview-section' : ''}`}>
+      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : slug === 'journal' ? 'journal-overview-grid' : slug === 'sops' ? 'reference-overview-grid' : slug === 'reports' ? 'reports-overview-grid' : ''}`}>
         <Reveal>
-          <div className={slug === 'checklists' ? 'checklist-overview-copy' : slug === 'journal' ? 'journal-overview-copy' : slug === 'sops' ? 'reference-overview-copy' : undefined}>
+          <div className={slug === 'checklists' ? 'checklist-overview-copy' : slug === 'journal' ? 'journal-overview-copy' : slug === 'sops' ? 'reference-overview-copy' : slug === 'reports' ? 'reports-overview-copy' : undefined}>
             <span className="eyebrow">{comingSoon ? 'PRODUCT ROADMAP' : 'WHAT IT DOES'}</span>
             <h2>{feature.short}</h2>
             <p>{detail.overview}</p>
@@ -155,6 +155,26 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
                     <p>{item.text}</p>
                   </div>
                   <em>{['Structured','Published','Accessible','Current'][i]}</em>
+                </div>
+              )}
+            </div>
+          ) : slug === 'reports' ? (
+            <div className="reports-workflow-panel">
+              <div className="reports-workflow-head">
+                <span className="eyebrow light">REPORTING WORKFLOW</span>
+                <strong>From daily execution to review-ready evidence</strong>
+              </div>
+              {detail.workflow.map((item, i) =>
+                <div className="reports-workflow-row" key={item.title}>
+                  <span className="reports-workflow-icon">
+                    <Icon name={i === 0 ? 'check' : i === 1 ? 'report' : i === 2 ? 'search' : 'shield'} />
+                  </span>
+                  <div className="reports-workflow-copy">
+                    <small>STEP {String(i + 1).padStart(2, '0')}</small>
+                    <strong>{item.title}</strong>
+                    <p>{item.text}</p>
+                  </div>
+                  <em>{['Captured','Linked','Traceable','Exportable'][i]}</em>
                 </div>
               )}
             </div>
