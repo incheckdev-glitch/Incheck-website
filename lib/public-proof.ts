@@ -71,7 +71,7 @@ export const operationalUseCases = [
 export const comparisonRows = [
   ['Task execution', 'Manual tracking', 'Basic completion', 'Scheduled workflows, due time, expiry and ownership'],
   ['Reminders & escalation', 'Manual follow-up', 'Basic notifications', 'Configured reminders, exception visibility and corrective follow-up'],
-  ['Multi-user flexibility', 'Paper handover', 'Often device-limited', 'Personal and shared-device workflows with QR-based access where configured'],
+  ['Multi-user flexibility', 'Paper handover', 'Often device-limited', 'Personal and shared workflows with QR access'],
   ['Data quality', 'Free text / paper', 'Limited validation', 'Photos, signatures, ranges, QR and structured inputs'],
   ['Visibility', 'After-the-fact', 'Limited dashboards', 'Cross-location status, exceptions and performance'],
   ['Corrective action', 'Email / chat follow-up', 'Separate task', 'Exception → owner → evidence → verified closure'],
