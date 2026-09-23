@@ -119,18 +119,7 @@
 .data-node.people:before{right:-8px;top:52%}
 .data-node.equipment:before{left:-8px;top:50%}
 .data-node.standards:before{right:-8px;top:50%}
-.data-node:after{
-  content:'';
-  position:absolute;
-  height:2px;
-  background:linear-gradient(90deg,transparent,rgba(80,171,255,.85),rgba(80,171,255,.2));
-  box-shadow:0 0 14px rgba(80,171,255,.52);
-  transform-origin:left center;
-  z-index:1;
-}
-.data-node.people:after{width:98px;right:-98px;top:63%;transform:rotate(30deg)}
-.data-node.equipment:after{width:84px;left:-84px;top:50%;transform:rotate(0deg)}
-.data-node.standards:after{width:94px;right:-94px;top:36%;transform:rotate(-36deg)}
+.data-node:after{display:none}
 .data-core{
   width:232px;
   height:232px;
