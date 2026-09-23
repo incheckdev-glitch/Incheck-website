@@ -103,19 +103,8 @@ export default function PlatformPage(){return <>
         </div>
       </Reveal>
       <Reveal delay={100}>
-        <div className="operational-record-panel">
-          <div className="operational-record-head"><strong>Operational record</strong><span>Connected</span></div>
-          {[
-            {title:'Checklist completed', icon:'check', status:'Recorded'},
-            {title:'Exception identified', icon:'alert', status:'Recorded'},
-            {title:'Corrective action assigned', icon:'report', status:'Recorded'},
-            {title:'Evidence uploaded', icon:'report', status:'Recorded'},
-            {title:'Manager verified', icon:'shield', status:'Closed'},
-          ].map((item,i)=><div className="operational-record-row" key={item.title}>
-            <span className="operational-record-icon"><Icon name={item.icon as IconName}/></span>
-            <div className="operational-record-copy"><small>STEP {String(i+1).padStart(2,'0')}</small><strong>{item.title}</strong></div>
-            <em className={item.status==='Closed'?'is-closed':''}>{item.status}</em>
-          </div>)}
+        <div className="platform-mobile-checklist-visual">
+          <img src="/images/platform/incheck360-mobile-checklist.webp" alt="InCheck 360 mobile checklist showing receiving temperature and food item fields." />
         </div>
       </Reveal>
     </div>
