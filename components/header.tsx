@@ -12,7 +12,6 @@ const productLinks = [
   ['Reference Materials', '/product/sops'],
   ['Smart detectors', '/smart-detectors'],
   ['Reports & audit trail', '/product/reports'],
-  ['Integrations', '/integrations'],
   ['Audit Management · Coming soon', '/product/audits'],
   ['AI Data Analytics · Coming soon', '/product/ai-intelligence'],
 ];
