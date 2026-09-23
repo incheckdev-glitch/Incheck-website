@@ -55,16 +55,46 @@
   transform:scale(1.75) !important;
 }
 
-/* General rescue for other small square/vertical logos */
+/* Logos with small artwork or large transparent margins */
+.client-logo-card .client-logo-image[src$="mrkt-beirut-souks.png"]{
+  width:210px !important;
+  height:82px !important;
+  transform:scale(2.15) !important;
+}
+
 .client-logo-card .client-logo-image[src$="advanced-food.jpeg"],
+.client-logo-card .client-logo-image[src$="angelina-paris.png"],
 .client-logo-card .client-logo-image[src$="bab-mansour.png"],
+.client-logo-card .client-logo-image[src$="bachir-ice-cream.png"],
+.client-logo-card .client-logo-image[src$="beirut-khanum.png"],
+.client-logo-card .client-logo-image[src$="beit-wared.png"],
+.client-logo-card .client-logo-image[src$="black-spoon.png"],
+.client-logo-card .client-logo-image[src$="boubess-group.png"],
+.client-logo-card .client-logo-image[src$="box-for-less.jpeg"],
+.client-logo-card .client-logo-image[src$="bunny.png"],
+.client-logo-card .client-logo-image[src$="butcheria.png"],
+.client-logo-card .client-logo-image[src$="cafe-centreville.png"],
 .client-logo-card .client-logo-image[src$="faddoul.png"],
 .client-logo-card .client-logo-image[src$="globals-fb-house.jpeg"],
 .client-logo-card .client-logo-image[src$="ibn-al-bahr.png"],
-.client-logo-card .client-logo-image[src$="shababeek.jpeg"]{
-  width:180px !important;
-  height:76px !important;
-  transform:scale(1.25) !important;
+.client-logo-card .client-logo-image[src$="immersive-xperiences.png"],
+.client-logo-card .client-logo-image[src$="kcal.png"],
+.client-logo-card .client-logo-image[src$="le-relais-de-lentrecote.png"],
+.client-logo-card .client-logo-image[src$="lebanese-roaster.png"],
+.client-logo-card .client-logo-image[src$="maison-dada.png"],
+.client-logo-card .client-logo-image[src$="maitre-choux.jpeg"],
+.client-logo-card .client-logo-image[src$="mamaesh.png"],
+.client-logo-card .client-logo-image[src$="maryool.png"],
+.client-logo-card .client-logo-image[src$="meat-the-fish.jpeg"],
+.client-logo-card .client-logo-image[src$="met-brasserie-metropolitaine.png"],
+.client-logo-card .client-logo-image[src$="metropole-brasserie.png"],
+.client-logo-card .client-logo-image[src$="pizzeria-napoletana.png"],
+.client-logo-card .client-logo-image[src$="shababeek.jpeg"],
+.client-logo-card .client-logo-image[src$="sibon.png"],
+.client-logo-card .client-logo-image[src$="skirt.png"]{
+  width:188px !important;
+  height:78px !important;
+  transform:scale(1.38) !important;
 }
 
 @media(max-width:700px){
@@ -78,5 +108,11 @@
   .client-logo-card .client-logo-image[src$="zahret-lebanan.png"]{
     width:154px !important;
     height:60px !important;
+  }
+
+  .client-logo-card .client-logo-image[src$="mrkt-beirut-souks.png"]{
+    width:170px !important;
+    height:66px !important;
+    transform:scale(1.9) !important;
   }
 }
