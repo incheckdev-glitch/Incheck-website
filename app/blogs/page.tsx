@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/page-hero';
+import { blogLinks } from '@/lib/blog-links';
 
 export const metadata: Metadata = {
   title: 'Blogs',
-  description: 'Articles and updates from InCheck 360 on food safety, operational execution, monitoring and multi-location management.',
+  description: 'Latest InCheck 360 news and articles on food safety, operational execution, environmental monitoring and restaurant operations.',
   alternates: { canonical: '/blogs' },
 };
 
@@ -12,15 +13,34 @@ export default function Blogs() {
     <>
       <PageHero
         eyebrow="BLOGS"
-        title="Practical thinking for stronger daily operations."
-        text="Articles and updates on food safety, operational execution, monitoring and multi-location management."
+        title="Our latest news and articles."
+        text="Updates and practical perspectives from InCheck 360 on food safety, operations, monitoring and hospitality technology."
       />
-      <section className="content-section">
+      <section className="content-section resource-library">
         <div className="shell">
-          <div className="content-panel" style={{maxWidth: 820, margin: '0 auto', textAlign: 'center'}}>
-            <span className="eyebrow">NEW BLOGS COMING SOON</span>
-            <h2>We’re preparing a new set of articles.</h2>
-            <p>Previous articles have been removed while the blog is refreshed with clearer, more useful operational content.</p>
+          <div className="resource-library-head">
+            <div>
+              <span className="eyebrow">BLOGS</span>
+              <h2>Latest from InCheck 360.</h2>
+            </div>
+            <p>Company updates, operational thinking and practical articles for hospitality and food-service teams.</p>
+          </div>
+          <div className="resource-grid">
+            {blogLinks.map((article) => (
+              <article className="resource-card" key={article.title}>
+                <div className="resource-top">
+                  <span>InCheck 360</span>
+                  <small>{article.date}</small>
+                </div>
+                <div className="resource-body">
+                  <h3>{article.title}</h3>
+                  <p>{article.excerpt}</p>
+                  <a className="text-link" href={article.href}>
+                    Read article →
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
