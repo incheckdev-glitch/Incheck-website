@@ -71,6 +71,14 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <div className="reports-product-hero">
           <img src="/images/reports/incheck360-reports-audit-hero.webp" alt="Reports and audit trail dashboard showing structured histories, exportable reports and audit-ready evidence." />
         </div>
+      ) : slug === 'ai-intelligence' ? (
+        <div className="roadmap-product-hero ai-product-hero">
+          <img src="/images/ai/incheck360-ai-data-analytics-hero.png" alt="AI Data Analytics interface showing operational trends, risk signals, recommendations and management insights." />
+        </div>
+      ) : slug === 'audits' ? (
+        <div className="roadmap-product-hero audit-product-hero">
+          <img src="/images/audits/incheck360-audit-management-hero.png" alt="Audit Management interface showing structured audit execution, evidence capture, findings, verification and reporting." />
+        </div>
       ) : (
         <div className="mini-console">
           <div className="mini-console-head"><strong>{feature.title}</strong><span>{comingSoon ? 'Roadmap' : 'InCheck 360'}</span></div>
