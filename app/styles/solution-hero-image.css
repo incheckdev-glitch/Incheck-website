@@ -383,3 +383,43 @@
     max-height:430px;
   }
 }
+
+
+/* Checklists product hero */
+.checklist-product-hero{
+  width:100%;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+.checklist-product-hero img{
+  display:block;
+  width:112%;
+  max-width:720px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 26px 42px rgba(0,0,0,.22));
+}
+
+@media(max-width:1050px){
+  .checklist-product-hero{
+    min-height:340px;
+  }
+  .checklist-product-hero img{
+    width:100%;
+    max-width:700px;
+  }
+}
+
+@media(max-width:640px){
+  .checklist-product-hero{
+    min-height:250px;
+  }
+  .checklist-product-hero img{
+    width:108%;
+    max-width:560px;
+  }
+}
