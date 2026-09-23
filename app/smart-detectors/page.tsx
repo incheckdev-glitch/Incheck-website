@@ -17,7 +17,7 @@ const capabilities = [
   ['Device status','Keep visibility of detector connectivity and no-reading conditions instead of assuming silence means normal.'],
   ['Historical trends','Review what happened over time, not only the latest reading.'],
   ['Multi-location view','Centralize monitored equipment and environments across different sites.'],
-  ['Operational context','Use detector history alongside manual checks, corrective actions and reporting.'],
+  ['Operational context','Use detector history alongside manual checks, documented follow-up and reporting.'],
 ];
 
 const useCases = ['Walk-in chillers','Walk-in freezers','Reach-in chillers and freezers','Cold-storage areas','Preparation / monitored rooms','Other temperature- or humidity-sensitive environments'];
@@ -26,13 +26,15 @@ export default function SmartDetectors(){return <>
 <PageHero
   eyebrow="SMART DETECTORS"
   title="Continuous monitoring between every manual check."
-  text="Bring connected temperature and environmental readings into the same operational view as your checklists, actions and reports."
+  text="Bring connected temperature and environmental readings into the same operational view as your checklists, Reference Materials and reports."
   primary="Book a Demo"
   primaryHref="/book-demo"
   secondary="View Detect Plan"
   secondaryHref="/plans"
 >
-  <div className="mini-console"><div className="mini-console-head"><strong>Live temperatures</strong><span>● Monitoring</span></div>{[['Walk-in Freezer','-18.4°C','Normal'],['Chiller','3.1°C','Normal'],['Prep Room','8.7°C','Alert']].map((x,i)=><div className={`detector-row ${i===2?'danger':''}`} key={x[0]}><div><Icon name="thermo"/><span><small>{x[0]}</small><b>{x[1]}</b></span></div><em>{x[2]}</em></div>)}</div>
+  <div className="detectors-product-hero">
+    <img src="/images/detectors/incheck360-detectors-hero.webp" alt="Smart detector monitoring overview with live temperature, humidity, alerts, trends and operational insights." />
+  </div>
 </PageHero>
 
 <section className="content-section"><div className="shell content-grid">
