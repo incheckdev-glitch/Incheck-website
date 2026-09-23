@@ -1022,3 +1022,45 @@
     margin-top:-2px;
   }
 }
+
+
+/* Smart Detectors product hero */
+.detectors-product-hero{
+  width:100%;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+.detectors-product-hero img{
+  display:block;
+  width:118%;
+  max-width:780px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 26px 42px rgba(0,0,0,.24));
+}
+
+@media(max-width:1050px){
+  .detectors-product-hero{
+    min-height:340px;
+  }
+
+  .detectors-product-hero img{
+    width:100%;
+    max-width:740px;
+  }
+}
+
+@media(max-width:640px){
+  .detectors-product-hero{
+    min-height:250px;
+  }
+
+  .detectors-product-hero img{
+    width:108%;
+    max-width:580px;
+  }
+}
