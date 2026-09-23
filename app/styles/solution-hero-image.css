@@ -1347,3 +1347,53 @@
     margin-top:-2px;
   }
 }
+
+
+/* Coming-soon AI & Audit product heroes */
+.roadmap-product-hero{
+  width:100%;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+.roadmap-product-hero img{
+  display:block;
+  width:118%;
+  max-width:790px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 26px 42px rgba(0,0,0,.22));
+}
+
+.ai-product-hero img{
+  max-width:800px;
+}
+
+.audit-product-hero img{
+  max-width:800px;
+}
+
+@media(max-width:1050px){
+  .roadmap-product-hero{
+    min-height:340px;
+  }
+
+  .roadmap-product-hero img{
+    width:100%;
+    max-width:750px;
+  }
+}
+
+@media(max-width:640px){
+  .roadmap-product-hero{
+    min-height:250px;
+  }
+
+  .roadmap-product-hero img{
+    width:108%;
+    max-width:580px;
+  }
+}
