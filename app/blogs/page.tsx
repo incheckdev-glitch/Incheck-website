@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Icon } from '@/components/icon';
 import { PageHero } from '@/components/page-hero';
-import { blogLinks } from '@/lib/blog-links';
+import { blogArticles } from '@/lib/blogs';
 
 export const metadata: Metadata = {
   title: 'Blogs',
@@ -26,18 +28,18 @@ export default function Blogs() {
             <p>Company updates, operational thinking and practical articles for hospitality and food-service teams.</p>
           </div>
           <div className="resource-grid">
-            {blogLinks.map((article) => (
-              <article className="resource-card" key={article.title}>
+            {blogArticles.map((article) => (
+              <article className="resource-card" key={article.slug}>
                 <div className="resource-top">
-                  <span>InCheck 360</span>
+                  <span>{article.category}</span>
                   <small>{article.date}</small>
                 </div>
                 <div className="resource-body">
                   <h3>{article.title}</h3>
-                  <p>{article.excerpt}</p>
-                  <a className="text-link" href={article.href}>
-                    Read article →
-                  </a>
+                  <p>{article.summary}</p>
+                  <Link className="text-link" href={`/blogs/${article.slug}`}>
+                    Read article <Icon name="arrow" size={15} />
+                  </Link>
                 </div>
               </article>
             ))}
