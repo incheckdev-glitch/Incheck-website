@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 const useCaseIcons: IconName[] = ['check','shield','search','thermo'];
+const faqIcons: IconName[] = ['book','thermo','users','alert','thermo','shield','spark','layers','check','report'];
 
 export default function Home() {
   return <>
@@ -165,7 +166,41 @@ export default function Home() {
       <div className="industry-grid">{industries.map((x,i)=><Reveal delay={i*50} key={x.slug}><Link href={`/solutions/${x.slug}`} className={`industry-card industry-${i}`}><span className="industry-index">0{i+1}</span><div><h3>{x.title}</h3><p>{x.subtitle}</p></div><span className="round-arrow"><Icon name="arrow" size={16}/></span></Link></Reveal>)}</div>
     </div></section>
 
-    <section className="section faq-section"><div className="shell faq-layout"><Reveal><div><span className="eyebrow">QUESTIONS, ANSWERED</span><h2>What teams usually ask first.</h2><p>Need something more specific? We can walk through your operation and show how the platform fits.</p><Link className="text-link big" href="/book-demo">Book a Demo <Icon name="arrow" size={18}/></Link></div></Reveal><div className="faq-list">{faqs.map(([q,a],i)=><Reveal delay={i*40} key={q}><details><summary>{q}<span>+</span></summary><p>{a}</p></details></Reveal>)}</div></div></section>
+    <section className="section faq-section faq-redesign">
+      <div className="shell">
+        <div className="faq-redesign-card">
+          <div className="faq-redesign-grid">
+            <Reveal>
+              <div className="faq-left-panel">
+                <img src="/brand/incheck360-logo.png" alt="InCheck 360" className="faq-brand-logo" loading="lazy" decoding="async"/>
+                <span className="eyebrow">QUESTIONS, ANSWERED</span>
+                <h2>Questions teams ask before getting started.</h2>
+                <p>Get quick answers to common questions about InCheck 360, so you can feel confident about what comes next.</p>
+                <Link className="faq-demo-btn" href="/book-demo">Book a Demo <Icon name="arrow" size={18}/></Link>
+                <div className="faq-mini-points">
+                  <div className="faq-mini-point"><span className="faq-mini-icon"><Icon name="users" size={19}/></span><span>Tailored to your operation</span></div>
+                  <div className="faq-mini-point"><span className="faq-mini-icon"><Icon name="layers" size={19}/></span><span>Quick onboarding</span></div>
+                  <div className="faq-mini-point"><span className="faq-mini-icon"><Icon name="clock" size={19}/></span><span>Ongoing support</span></div>
+                </div>
+                <div className="faq-hand-note">Safer<br/>Operations<br/>Every Day</div>
+              </div>
+            </Reveal>
+
+            <div className="faq-right-panel">
+              {faqs.map(([q,a],i) => <Reveal delay={i*40} key={q}>
+                <details className="faq-item-modern">
+                  <summary>
+                    <span className="faq-item-left"><span className="faq-item-icon"><Icon name={faqIcons[i] ?? 'check'} size={20}/></span><span className="faq-question-text">{q}</span></span>
+                    <span className="faq-plus">+</span>
+                  </summary>
+                  <div className="faq-answer"><p>{a}</p></div>
+                </details>
+              </Reveal>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <CTA/>
   </>;
 }
