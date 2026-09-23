@@ -25,19 +25,11 @@ export default function DownloadAppPage() {
         secondary="Get it on Google Play"
         secondaryHref={GOOGLE_PLAY_URL}
       >
-        <div className="download-app-visual">
-          <div className="download-app-phone">
-            <div className="download-app-phone-top"><span></span></div>
-            <div className="download-app-screen">
-              <div className="download-app-brand">InCheck 360</div>
-              <strong>Daily operations</strong>
-              <small>Everything your team needs, in one place.</small>
-              <div className="download-app-screen-card"><span>Checklists & Tasks</span><b>12</b></div>
-              <div className="download-app-screen-card"><span>Journal</span><b>Live</b></div>
-              <div className="download-app-screen-card"><span>Reference Materials</span><b>Open</b></div>
-              <div className="download-app-screen-card"><span>Smart Detectors</span><b>Online</b></div>
-            </div>
-          </div>
+        <div className="download-app-real-visual">
+          <img
+            src="/images/platform/incheck360-mobile-checklist.webp"
+            alt="InCheck 360 mobile checklist interface"
+          />
         </div>
       </PageHero>
 
