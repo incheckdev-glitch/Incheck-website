@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/platform',
     '/food-safety',
     '/smart-detectors',
+    '/download-app',
     '/industries',
     '/blogs',
     '/plans',
