@@ -137,3 +137,18 @@
   filter:drop-shadow(0 30px 38px rgba(0,0,0,.28));
   transform:translateX(3%);
 }
+
+
+/* Brand contrast: white on dark/blue backgrounds, original on light */
+.brand-logo{
+  transition:filter .25s ease,opacity .25s ease;
+}
+
+.site-header:not(.scrolled) .brand-logo,
+.site-footer .brand-logo{
+  filter:brightness(0) invert(1);
+}
+
+.site-header.scrolled .brand-logo{
+  filter:none;
+}
