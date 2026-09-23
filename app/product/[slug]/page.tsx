@@ -57,15 +57,21 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       secondary={comingSoon ? 'See Current Plans' : 'View Plans'}
       secondaryHref="/plans"
     >
-      <div className="mini-console">
-        <div className="mini-console-head"><strong>{feature.title}</strong><span>{comingSoon ? 'Roadmap' : 'InCheck 360'}</span></div>
-        <div className="mini-console-grid">
-          <div className="mini-console-card"><span>Status</span><strong>{comingSoon ? 'Soon' : 'Live'}</strong></div>
-          <div className="mini-console-card"><span>Operational context</span><strong>Connected</strong></div>
-          <div className="mini-console-card"><span>Evidence</span><strong>Linked</strong></div>
-          <div className="mini-console-card"><span>Management view</span><strong>Clear</strong></div>
+      {slug === 'checklists' ? (
+        <div className="checklist-product-hero">
+          <img src="/images/checklists/incheck360-checklist-hero.webp" alt="Checklist builder and mobile checklist execution shown together." />
         </div>
-      </div>
+      ) : (
+        <div className="mini-console">
+          <div className="mini-console-head"><strong>{feature.title}</strong><span>{comingSoon ? 'Roadmap' : 'InCheck 360'}</span></div>
+          <div className="mini-console-grid">
+            <div className="mini-console-card"><span>Status</span><strong>{comingSoon ? 'Soon' : 'Live'}</strong></div>
+            <div className="mini-console-card"><span>Operational context</span><strong>Connected</strong></div>
+            <div className="mini-console-card"><span>Evidence</span><strong>Linked</strong></div>
+            <div className="mini-console-card"><span>Management view</span><strong>Clear</strong></div>
+          </div>
+        </div>
+      )}
     </PageHero>
 
     <section className="content-section product-overview-section">
