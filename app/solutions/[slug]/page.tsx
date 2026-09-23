@@ -34,7 +34,11 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
   const detail = solutionDetails[slug];
   if (!industry || !detail) notFound();
 
-  const heroImage = slug === 'restaurants' ? '/images/solutions/restaurants-qsr-hero.webp' : null;
+  const heroImages: Record<string, string> = {
+    restaurants: '/images/solutions/restaurants-qsr-hero.webp',
+    hospitality: '/images/solutions/hotels-hospitality-hero.webp',
+  };
+  const heroImage = heroImages[slug] ?? null;
 
   return <>
     <PageHero
