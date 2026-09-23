@@ -163,3 +163,142 @@
   font-size:16px;
   line-height:1.7;
 }
+
+
+/* About page */
+.about-resolution-section{
+  background:linear-gradient(180deg,#071d37,#0a294a);
+  color:#fff;
+}
+
+.about-resolution-section .eyebrow,
+.about-resolution-section .platform-rich-heading{
+  color:#fff;
+}
+
+.about-resolution-section .platform-rich-copy{
+  color:#b8cce0;
+}
+
+.about-resolution-section .architecture-card{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.12);
+  box-shadow:none;
+}
+
+.about-resolution-section .architecture-card h3{
+  color:#fff;
+}
+
+.about-resolution-section .architecture-card p{
+  color:#b8cce0;
+}
+
+.about-resolution-section .architecture-index{
+  color:#7fb9ec;
+}
+
+.about-dual-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.about-focus-card{
+  min-height:380px;
+  border:1px solid #dce7f1;
+  border-radius:26px;
+  padding:34px;
+  background:#f8fbfe;
+  box-shadow:0 18px 44px rgba(13,55,93,.06);
+}
+
+.about-focus-card .feature-icon{
+  margin-bottom:26px;
+}
+
+.about-focus-card h2{
+  font-family:var(--font-manrope);
+  font-size:clamp(32px,3vw,46px);
+  line-height:1.06;
+  letter-spacing:-.04em;
+  margin:12px 0 16px;
+}
+
+.about-focus-card p{
+  color:#66798d;
+  font-size:16px;
+  line-height:1.75;
+}
+
+.about-focus-card-dark{
+  color:#fff;
+  background:linear-gradient(145deg,#071d37,#0a2d50);
+  border-color:#143d63;
+}
+
+.about-focus-card-dark h2{
+  color:#fff;
+}
+
+.about-focus-card-dark p{
+  color:#b6c9dc;
+}
+
+.about-focus-card-dark .feature-icon{
+  color:#8bcaff;
+}
+
+.about-comparison-wrap{
+  box-shadow:0 24px 65px rgba(15,55,92,.08);
+}
+
+.about-mission-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:42px;
+}
+
+.about-mission-card{
+  min-height:300px;
+  border:1px solid #dce7f1;
+  border-radius:24px;
+  padding:32px;
+  background:#fff;
+  box-shadow:0 14px 40px rgba(12,51,90,.05);
+}
+
+.about-mission-card h3{
+  font-family:var(--font-manrope);
+  font-size:28px;
+  line-height:1.12;
+  letter-spacing:-.03em;
+  margin:14px 0 14px;
+}
+
+.about-mission-card p{
+  margin:0;
+  color:#66798d;
+  font-size:15px;
+  line-height:1.72;
+}
+
+@media(max-width:900px){
+  .about-dual-grid,
+  .about-mission-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-focus-card{
+    min-height:0;
+  }
+}
+
+@media(max-width:640px){
+  .about-focus-card,
+  .about-mission-card{
+    padding:24px;
+    border-radius:20px;
+  }
+}
