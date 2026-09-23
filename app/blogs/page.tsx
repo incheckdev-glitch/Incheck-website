@@ -31,7 +31,10 @@ export default function Blogs() {
           </div>
           <div className="resource-grid">
             {sortedBlogs.map((article) => (
-              <article className="resource-card" key={article.slug}>
+              <article className="resource-card blog-card" key={article.slug}>
+                <div className={`blog-card-visual blog-${article.slug}`}>
+                  <span>{article.category}</span>
+                </div>
                 <div className="resource-top">
                   <span>{article.category}</span>
                   <small>{article.date}</small>
