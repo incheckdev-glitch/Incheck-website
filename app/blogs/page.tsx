@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function Blogs() {
+  const sortedBlogs = [...blogArticles].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+
   return (
     <>
       <PageHero
@@ -28,7 +30,7 @@ export default function Blogs() {
             </div>
           </div>
           <div className="resource-grid">
-            {blogArticles.map((article) => (
+            {sortedBlogs.map((article) => (
               <article className="resource-card" key={article.slug}>
                 <div className="resource-top">
                   <span>{article.category}</span>
