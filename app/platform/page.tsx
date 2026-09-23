@@ -9,22 +9,20 @@ import { proofStats } from '@/lib/public-proof';
 
 export const metadata: Metadata = {
   title: 'Operational Control Platform',
-  description: 'Explore the InCheck 360 operational control platform for checklists, Journal records, corrective actions, Reference Materials, smart detectors, analytics, evidence and integrations.',
+  description: 'Explore the InCheck 360 operational control platform for checklists, Journal records, Reference Materials, smart detectors, reports, evidence and integrations.',
   alternates: { canonical: '/platform' },
 };
 
 const architecture = [
   { icon:'check', layer:'Execution', title:'Checklists & tasks', text:'Recurring, shift-based and location-based execution with due times, expiry, structured inputs and evidence.' },
   { icon:'report', layer:'Operational context', title:'Journal', text:'Capture shift notes, incidents, observations and location context that sits between recurring checks.' },
-  { icon:'alert', layer:'Follow-through', title:'Corrective actions', text:'Turn failed controls and findings into owned actions with deadlines, evidence and verification.' },
   { icon:'book', layer:'Standards', title:'Reference Materials', text:'Keep SOPs, procedures, manuals and training references accessible where the work happens.' },
   { icon:'thermo', layer:'Monitoring', title:'Smart detectors', text:'Bring continuous environmental readings, device status, thresholds and trends into the same operational context.' },
-  { icon:'chart', layer:'Visibility', title:'Dashboards & analytics', text:'Track completion, exceptions, trends and cross-location performance from one management view.' },
   { icon:'report', layer:'Evidence', title:'Reports & audit trail', text:'Preserve time-stamped records, user and location history, linked evidence and exportable operational records.' },
 ] as const;
 
 const roadmap = [
-  { icon:'search', title:'Audit Management', text:'A dedicated audit layer for structured audits, findings, corrective-action linkage, verification and reporting.' },
+  { icon:'search', title:'Audit Management', text:'A dedicated audit layer for structured audits, findings, follow-up, verification and reporting.' },
   { icon:'spark', title:'AI Data Analytics', text:'An upcoming intelligence layer for recurring issues, trends, risk signals and management summaries.' },
 ] as const;
 
@@ -47,8 +45,8 @@ const executionControls = [
 ];
 
 export default function PlatformPage(){return <>
-  <PageHero eyebrow="THE INCHECK 360 PLATFORM" title="One operational layer from daily checks to verified closure." text="Bring checklists, Journal records, Reference Materials, corrective actions, continuous monitoring, evidence and reporting into one connected operational record.">
-    <div className="solution-hero-image-card"><img src="/images/platform/incheck360-platform-hero.webp" alt="InCheck 360 platform shown across desktop, laptop and mobile screens with checklists, detectors, corrective actions, reports and multi-location visibility." /></div>
+  <PageHero eyebrow="THE INCHECK 360 PLATFORM" title="One operational layer from daily checks to verified closure." text="Bring checklists, Journal records, Reference Materials, continuous monitoring, evidence and reporting into one connected operational record.">
+    <div className="solution-hero-image-card"><img src="/images/platform/incheck360-platform-hero.webp" alt="InCheck 360 platform shown across desktop, laptop and mobile screens with checklists, detectors, reports and multi-location visibility." /></div>
   </PageHero>
 
   <section className="content-section">
@@ -67,7 +65,7 @@ export default function PlatformPage(){return <>
   <section className="content-section" style={{background:'#f5f9fd'}}>
     <div className="shell">
       <span className="eyebrow">PLATFORM ARCHITECTURE</span>
-      <h2 className="platform-rich-heading">Seven current operating layers. One connected picture.</h2>
+      <h2 className="platform-rich-heading">Five current operating layers. One connected picture.</h2>
       <p className="platform-rich-copy">Use only the modules you need, or connect them into a broader execution, food-safety and operational-control system across your locations.</p>
       <div className="platform-architecture">
         {architecture.map((item,i) => <Reveal key={item.title} delay={(i%4)*50}>
@@ -108,7 +106,7 @@ export default function PlatformPage(){return <>
           {[
             {title:'Checklist completed', icon:'check', status:'Recorded'},
             {title:'Exception identified', icon:'alert', status:'Recorded'},
-            {title:'Corrective action assigned', icon:'report', status:'Recorded'},
+            {title:'Follow-up documented', icon:'report', status:'Recorded'},
             {title:'Evidence uploaded', icon:'report', status:'Recorded'},
             {title:'Manager verified', icon:'shield', status:'Closed'},
           ].map((item,i)=><div className="operational-record-row" key={item.title}>
@@ -154,7 +152,7 @@ export default function PlatformPage(){return <>
 
   <section className="content-section platform-integration-section">
     <div className="shell content-grid">
-      <Reveal><div><span className="eyebrow">INTEGRATIONS</span><h2>Keep business transactions in the ERP and operational evidence in InCheck 360.</h2><p>Selected master and transaction data can be exchanged with ERP or other business systems while InCheck remains the operational layer for checks, evidence, non-conformities, corrective actions and verification.</p><Link className="button ghost" href="/integrations">Explore Integrations <Icon name="arrow" size={16}/></Link></div></Reveal>
+      <Reveal><div><span className="eyebrow">INTEGRATIONS</span><h2>Keep business transactions in the ERP and operational evidence in InCheck 360.</h2><p>Selected master and transaction data can be exchanged with ERP or other business systems while InCheck remains the operational layer for checks, evidence, non-conformities, operational follow-up and verification.</p><Link className="button ghost" href="/integrations">Explore Integrations <Icon name="arrow" size={16}/></Link></div></Reveal>
       <Reveal delay={80}><div className="content-panel"><span className="eyebrow">EXAMPLE</span><h3>Microsoft Dynamics receiving workflow</h3><p>Supplier, item and warehouse data can flow into InCheck. Teams complete receiving and food-safety controls in InCheck, while only agreed mapped transaction fields return to Dynamics.</p></div></Reveal>
     </div>
   </section>
