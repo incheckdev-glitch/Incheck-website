@@ -39,6 +39,7 @@ export function Header() {
           <Link href="/food-safety">Food Safety</Link>
           <Link href="/smart-detectors">Smart Detectors</Link>
           <Link href="/plans">Plans</Link>
+          <Link href="/partners">Partners</Link>
           <Link href="/blogs">Blogs</Link>
           <Link href="/about">About</Link>
         </nav>
@@ -52,7 +53,7 @@ export function Header() {
         <div className="shell">
           <strong>Product</strong>{productLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
           <strong>Industries</strong>{industryLinks.slice(0,4).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
-          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/smart-detectors">Smart Detectors</Link><Link onClick={()=>setOpen(false)} href="/plans">Plans</Link><Link onClick={()=>setOpen(false)} href="/blogs">Blogs</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link><Link onClick={()=>setOpen(false)} href="/contact">Contact</Link>
+          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/smart-detectors">Smart Detectors</Link><Link onClick={()=>setOpen(false)} href="/plans">Plans</Link><Link onClick={()=>setOpen(false)} href="/partners">Partners</Link><Link onClick={()=>setOpen(false)} href="/blogs">Blogs</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link><Link onClick={()=>setOpen(false)} href="/contact">Contact</Link>
         </div>
       </div>}
     </header>
