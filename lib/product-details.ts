@@ -163,7 +163,7 @@ export const productDetails: Record<string, ProductDetail> = {
     useCases: ['Management reviews','Food-safety evidence','Internal audits','Customer / stakeholder reviews','Location history','Corrective-action documentation'],
     management: ['Who / when / where traceability','Evidence history','Closed and open follow-up','Location records','Exportable operational evidence'],
     connections: ['Checklists & Tasks','Journal','Corrective Actions','Dashboards & Analytics','Smart Detectors','Audit Management'],
-    availability: 'Available now. InCheck 360 supports operational evidence and audit readiness; it does not itself certify regulatory or ISO compliance.',
+    availability: 'Available now. InCheck 360 supports operational evidence, audit readiness and international standards-aligned workflows; it does not itself certify regulatory compliance.',
   },
   'ai-intelligence': {
     overview: 'AI Data Analytics is an upcoming intelligence layer intended to help teams extract more value from the structured operational data already collected in InCheck 360. It is being positioned as decision support, not as a replacement for qualified operational or food-safety judgment.',

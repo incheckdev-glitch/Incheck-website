@@ -58,12 +58,12 @@ export const resourceArticles: ResourceArticle[] = [
     takeaways: ['Digitize recurring execution', 'Match evidence to the control', 'Escalate out-of-range results', 'Do not confuse software with certification'],
   },
   {
-    slug: 'iso-22000-operational-execution',
-    category: 'ISO 22000',
-    title: 'Supporting ISO 22000-related operational execution',
-    summary: 'Where an operational platform can help with recurring execution, evidence, follow-up and management visibility around a food-safety management system.',
+    slug: 'international-standards-operational-execution',
+    category: 'International Standards Support',
+    title: 'Supporting international standards-related operational execution',
+    summary: 'Where an operational platform can help with recurring execution, evidence, follow-up and management visibility around international standards-aligned food-safety and operational programs.',
     readingTime: '5 min read',
-    intro: 'An operational platform can support the execution and evidence layers around an ISO 22000-aligned food-safety management system. Certification and conformity decisions remain outside the software.',
+    intro: 'An operational platform can support the execution, documentation and evidence layers around international standards-aligned food-safety and operational programs. Certification and conformity decisions remain outside the software.',
     sections: [
       {
         title: 'Translate requirements into recurring work',

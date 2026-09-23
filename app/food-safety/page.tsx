@@ -105,9 +105,9 @@ export default function FoodSafety(){return <>
   <div className="shell content-grid">
     <Reveal>
       <div>
-        <span className="eyebrow">SUPPORTING HACCP & ISO 22000 OPERATIONS</span>
+        <span className="eyebrow">HACCP & INTERNATIONAL STANDARDS SUPPORT</span>
         <h2>Digital evidence around the controls your food-safety system already requires.</h2>
-        <p>InCheck 360 can support the execution, monitoring and evidence layers around HACCP-based processes and ISO 22000-aligned food-safety management systems. Certification, legal compliance and final control design remain the responsibility of the organization and its qualified food-safety professionals.</p>
+        <p>InCheck 360 can support the execution, monitoring, documentation and evidence layers around HACCP-based controls and international standards-aligned food-safety and operational management processes. Certification, legal compliance and final control design remain the responsibility of the organization and its qualified professionals.</p>
       </div>
     </Reveal>
     <Reveal delay={90}>
