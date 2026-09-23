@@ -1,0 +1,66 @@
+/* Industry image cards */
+.industries-section .industry-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.industries-section .industry-card{
+  min-height:unset !important;
+  aspect-ratio:1000/599;
+  padding:0 !important;
+  border-radius:24px;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  box-shadow:0 18px 45px rgba(7,27,51,.10);
+}
+
+.industries-section .industry-card:before{
+  display:none !important;
+}
+
+.industries-section .industry-card > *{
+  opacity:0 !important;
+  pointer-events:none;
+}
+
+.industries-section .industry-0{
+  background-image:url('/images/industries/restaurants-qsr-card.webp') !important;
+}
+
+.industries-section .industry-1{
+  background-image:url('/images/industries/hotels-hospitality-card.webp') !important;
+}
+
+.industries-section .industry-2{
+  background-image:url('/images/industries/central-kitchens-card.webp') !important;
+}
+
+.industries-section .industry-3{
+  background-image:url('/images/industries/food-manufacturing-card.webp') !important;
+}
+
+.industries-section .industry-4{
+  background-image:url('/images/industries/retail-card.webp') !important;
+}
+
+.industries-section .industry-5{
+  background-image:url('/images/industries/multi-site-operations-card.webp') !important;
+}
+
+@media(max-width:980px){
+  .industries-section .industry-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:640px){
+  .industries-section .industry-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .industries-section .industry-card{
+    border-radius:18px;
+  }
+}
