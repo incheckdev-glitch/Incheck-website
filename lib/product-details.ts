@@ -10,7 +10,7 @@ export type ProductDetail = {
 
 export const productDetails: Record<string, ProductDetail> = {
   checklists: {
-    overview: 'Checklists are the execution engine of InCheck 360. A checklist can contain a few questions or a detailed operating routine with many tasks, validations and evidence requirements. Teams complete the work in the app while management keeps visibility across locations.',
+    overview: 'Build checklists around locations, roles and shifts. Use structured questions, limits, due times and evidence requirements to guide frontline execution. Exceptions stay visible and can move directly into corrective action and verification.',
     capabilities: [
       { title: 'Flexible checklist design', text: 'Build operational, quality and food-safety routines with yes/no, numeric, text, photo, signature, evidence and other structured inputs.' },
       { title: 'Scheduling & recurrence', text: 'Run one-time or recurring checks around the location, shift, role and operating schedule.' },
@@ -25,16 +25,16 @@ export const productDetails: Record<string, ProductDetail> = {
       { title: 'Exception follow-through', text: 'Failed controls can move into corrective-action follow-up rather than disappearing inside a completed checklist.' },
     ],
     workflow: [
-      { title: 'Define the standard', text: 'Translate the operational requirement into questions, limits and required evidence.' },
-      { title: 'Schedule & assign', text: 'Deliver the checklist to the right team, location, role or shift.' },
-      { title: 'Execute', text: 'Frontline users complete the required tasks and capture evidence in the app.' },
-      { title: 'Identify exceptions', text: 'Out-of-range or failed answers are surfaced for attention.' },
-      { title: 'Act & verify', text: 'Follow through with ownership, corrective evidence and verified closure when required.' },
+      { title: 'Define the standard', text: 'Turn procedures and operating requirements into structured questions, limits and required evidence.' },
+      { title: 'Schedule & assign', text: 'Deliver the right checklist to the right location, role, user or shift at the right time.' },
+      { title: 'Execute', text: 'Frontline teams complete tasks in the app and capture the required values, photos, signatures or comments.' },
+      { title: 'Identify exceptions', text: 'Failed, missed or out-of-range responses are surfaced instead of disappearing inside a completed form.' },
+      { title: 'Act & verify', text: 'Assign follow-up, capture corrective evidence and verify closure with a clear operational record.' },
     ],
     useCases: ['Opening & closing routines','Receiving inspections','Food-temperature checks','Cleaning & sanitation','Hygiene controls','Shift handover','Equipment readiness','Operational compliance checks'],
     management: ['Completion by location','Due, missed and expired activity','Failed answers and exceptions','Evidence history','User and location traceability','Linked corrective actions','Repeated execution patterns'],
     connections: ['Corrective Actions','Reference Materials','Dashboards & Analytics','Reports & Audit Trail','Smart Detectors'],
-    availability: 'Available now. Included within InCheck Lite, Basic and Detect according to plan limits.',
+    availability: 'Included in InCheck Lite, Basic and Detect, subject to each plan’s limits.',
   },
   journal: {
     overview: 'Journal gives teams a structured place for operational observations that do not belong inside a recurring checklist. It keeps shift notes, incidents, recurring concerns and location updates in an accessible operating history instead of scattered notebooks or chat messages.',
