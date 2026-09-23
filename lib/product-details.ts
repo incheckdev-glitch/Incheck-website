@@ -93,7 +93,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Included across the current plan structure.'
   },
   reports: {
-    overview: 'Reports & Audit Trail preserves the structured history behind the dashboard. It gives management a record of what happened, who performed the work, when and where it happened, what evidence was captured and how exceptions were handled.',
+    overview: 'Reports & Audit Trail turns day-to-day execution into a traceable operational record. Management can review what happened, who completed the work, when and where it occurred, what evidence was captured and how follow-up was documented—without rebuilding the story from separate files or messages.',
     capabilities: [
       { title: 'Time-stamped history', text: 'Retain the chronology of operational activity and follow-up.' },
       { title: 'Location records', text: 'Review the operating history for a specific site or group of sites.' },
@@ -102,14 +102,14 @@ export const productDetails: Record<string, ProductDetail> = {
       { title: 'Exportable records', text: 'Prepare structured records for management review, audit support and internal documentation.' },
       { title: 'Closure history', text: 'Keep follow-up and verification history connected to the original exception.' }],
     workflow: [
-      { title: 'Work is completed', text: 'A checklist, journal entry, reading or follow-up creates a structured record.' },
-      { title: 'Evidence is linked', text: 'The supporting data remains connected to the operating event.' },
-      { title: 'History accumulates', text: 'The platform preserves the activity over time by user and location.' },
-      { title: 'Review or export', text: 'Management can review the record when operational or audit evidence is required.' }],
+      { title: 'Capture the record', text: 'Completed checklists, Journal entries, detector activity and documented follow-up create time-stamped operational records.' },
+      { title: 'Link the evidence', text: 'Measured values, photos, notes, users, locations and timestamps stay connected to the original operating event.' },
+      { title: 'Preserve the history', text: 'Records accumulate into a searchable history that keeps user, location and follow-up context traceable over time.' },
+      { title: 'Review or export', text: 'Management can filter, review and export the record when operational, management or audit evidence is required.' }],
     useCases: ['Management reviews','Food-safety evidence','Internal audits','Customer / stakeholder reviews','Location history','Follow-up documentation'],
     management: ['Who / when / where traceability','Evidence history','Closed and open follow-up','Location records','Exportable operational evidence'],
     connections: ['Checklists & Tasks','Journal','Smart Detectors','Audit Management'],
-    availability: 'Available now. InCheck 360 supports operational evidence, audit readiness and international standards-aligned workflows; it does not itself certify regulatory compliance.',
+    availability: 'Supports operational evidence and audit readiness across the platform. Certification and regulatory compliance remain the responsibility of the operating organization.'
   },
   'ai-intelligence': {
     overview: 'AI Data Analytics is an upcoming intelligence layer intended to help teams extract more value from the structured operational data already collected in InCheck 360. It is being positioned as decision support, not as a replacement for qualified operational or food-safety judgment.',
