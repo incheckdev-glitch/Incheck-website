@@ -54,7 +54,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Included in InCheck Basic, InCheck Detect and relevant custom configurations. Available for Lite as an optional add-on.',
   },
   audits: {
-    overview: 'Audit Management is being developed as a dedicated assurance workflow for planning audits, recording findings, capturing evidence, assigning follow-up and verifying closure. Inspection-style execution is already possible through Checklists today; this module will add a purpose-built audit layer with a clearer end-to-end record.'
+    overview: 'Audit Management is being developed as a dedicated assurance workflow for planning audits, recording findings, capturing evidence, assigning follow-up and verifying closure. Inspection-style execution is already possible through Checklists today; this module will add a purpose-built audit layer with a clearer end-to-end record.',
     capabilities: [
       { title: 'Structured audit programs', text: 'Planned support for organized audit sections, questions and repeatable inspection structures.' },
       { title: 'Findings & evidence', text: 'Capture the finding together with notes, photos and supporting evidence.' },
@@ -112,7 +112,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Supports operational evidence and audit readiness across the platform. Certification and regulatory compliance remain the responsibility of the operating organization.'
   },
   'ai-intelligence': {
-    overview: 'AI Data Analytics is being developed to turn InCheck 360 operational data into clearer management signals. It will help surface recurring issues, changing patterns and areas that deserve attention, while keeping the final operational decision with qualified teams.'
+    overview: 'AI Data Analytics is being developed to turn InCheck 360 operational data into clearer management signals. It will help surface recurring issues, changing patterns and areas that deserve attention, while keeping the final operational decision with qualified teams.',
     capabilities: [
       { title: 'Recurring-issue detection', text: 'Identify repeated operational problems and non-conformities across records.' },
       { title: 'Trend summaries', text: 'Summarize meaningful changes and patterns across locations and periods.' },
