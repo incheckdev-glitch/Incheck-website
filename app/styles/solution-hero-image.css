@@ -1580,3 +1580,46 @@
     margin-top:-2px;
   }
 }
+
+
+/* Food Safety hero */
+.food-safety-product-hero{
+  width:100%;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.food-safety-product-hero img{
+  display:block;
+  width:112%;
+  max-width:760px;
+  height:auto;
+  object-fit:cover;
+  border-radius:28px;
+  box-shadow:0 28px 70px rgba(0,0,0,.24);
+}
+
+@media(max-width:1050px){
+  .food-safety-product-hero{
+    min-height:340px;
+  }
+
+  .food-safety-product-hero img{
+    width:100%;
+    max-width:740px;
+  }
+}
+
+@media(max-width:640px){
+  .food-safety-product-hero{
+    min-height:240px;
+  }
+
+  .food-safety-product-hero img{
+    width:100%;
+    max-width:580px;
+    border-radius:22px;
+  }
+}
