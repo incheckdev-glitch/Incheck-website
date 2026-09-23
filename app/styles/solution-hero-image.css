@@ -142,3 +142,180 @@
     min-height:240px;
   }
 }
+
+
+/* Platform "How it connects" section */
+.platform-connect-grid{
+  grid-template-columns:minmax(0,1.05fr) minmax(470px,.95fr);
+  gap:72px;
+  align-items:center;
+}
+
+.platform-connect-copy{
+  max-width:610px;
+}
+
+.platform-connect-copy h2{
+  max-width:590px;
+}
+
+.platform-connect-copy > p{
+  max-width:600px;
+}
+
+.platform-connect-points{
+  gap:14px 30px;
+  margin-top:28px;
+}
+
+.platform-connect-points .bullet-item{
+  align-items:center;
+  font-size:16px;
+  line-height:1.4;
+}
+
+.operational-record-panel{
+  width:100%;
+  max-width:560px;
+  justify-self:end;
+  border:1px solid rgba(103,167,227,.24);
+  border-radius:26px;
+  background:linear-gradient(145deg,#071d37,#082744 74%,#06213b);
+  padding:24px 28px 18px;
+  box-shadow:0 28px 70px rgba(7,29,55,.14);
+  color:#fff;
+}
+
+.operational-record-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:4px 0 18px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.operational-record-head strong{
+  font-size:17px;
+  letter-spacing:-.01em;
+}
+
+.operational-record-head span{
+  color:#c7d8e9;
+  font-size:14px;
+  font-weight:700;
+}
+
+.operational-record-row{
+  display:grid;
+  grid-template-columns:52px minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  min-height:92px;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+
+.operational-record-row:last-child{
+  border-bottom:0;
+}
+
+.operational-record-icon{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  color:#83c6ff;
+  background:rgba(88,169,242,.08);
+  border:1px solid rgba(131,198,255,.18);
+}
+
+.operational-record-icon svg{
+  width:25px;
+  height:25px;
+}
+
+.operational-record-copy{
+  min-width:0;
+}
+
+.operational-record-copy small{
+  display:block;
+  margin-bottom:4px;
+  color:#84bdf0;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.operational-record-copy strong{
+  display:block;
+  color:#fff;
+  font-size:17px;
+  line-height:1.22;
+  letter-spacing:-.015em;
+}
+
+.operational-record-row em{
+  min-width:70px;
+  text-align:center;
+  white-space:nowrap;
+  font-style:normal;
+  color:#39dfa6;
+  background:rgba(31,210,148,.11);
+  border:1px solid rgba(31,210,148,.12);
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:800;
+}
+
+.operational-record-row em.is-closed{
+  color:#4ee3b1;
+  background:rgba(31,210,148,.14);
+}
+
+@media(max-width:1050px){
+  .platform-connect-grid{
+    grid-template-columns:1fr;
+    gap:48px;
+  }
+
+  .platform-connect-copy{
+    max-width:760px;
+  }
+
+  .operational-record-panel{
+    max-width:760px;
+    justify-self:start;
+  }
+}
+
+@media(max-width:640px){
+  .platform-connect-points{
+    grid-template-columns:1fr;
+  }
+
+  .operational-record-panel{
+    padding:20px 20px 14px;
+    border-radius:22px;
+  }
+
+  .operational-record-row{
+    grid-template-columns:44px minmax(0,1fr);
+    gap:14px;
+    padding:16px 0;
+  }
+
+  .operational-record-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+  }
+
+  .operational-record-row em{
+    grid-column:2;
+    justify-self:start;
+    margin-top:-4px;
+  }
+}
