@@ -67,6 +67,10 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <div className="reference-material-product-hero">
           <img src="/images/reference-material/incheck360-reference-material-hero.webp" alt="Reference Materials library shown across desktop and mobile views." />
         </div>
+      ) : slug === 'reports' ? (
+        <div className="reports-product-hero">
+          <img src="/images/reports/incheck360-reports-audit-hero.webp" alt="Reports and audit trail dashboard showing structured histories, exportable reports and audit-ready evidence." />
+        </div>
       ) : (
         <div className="mini-console">
           <div className="mini-console-head"><strong>{feature.title}</strong><span>{comingSoon ? 'Roadmap' : 'InCheck 360'}</span></div>
