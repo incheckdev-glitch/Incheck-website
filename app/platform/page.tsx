@@ -92,20 +92,30 @@ export default function PlatformPage(){return <>
     </div>
   </section>
 
-  <section className="content-section">
-    <div className="shell content-grid">
+  <section className="content-section platform-connect-section">
+    <div className="shell content-grid platform-connect-grid">
       <Reveal>
-        <div>
+        <div className="platform-connect-copy">
           <span className="eyebrow">HOW IT CONNECTS</span>
           <h2>Standards become workflows. Workflows become evidence.</h2>
           <p>Management defines the operating standard. Teams execute it at site level. Exceptions become actions. Connected devices add continuous context. Reporting brings the record back together.</p>
-          <div className="bullet-grid">{['Central standards','Local execution','Exception handling','Ownership & deadlines','Evidence capture','Management visibility'].map(x=><div className="bullet-item" key={x}><span>✓</span>{x}</div>)}</div>
+          <div className="bullet-grid platform-connect-points">{['Central standards','Local execution','Exception handling','Ownership & deadlines','Evidence capture','Management visibility'].map(x=><div className="bullet-item" key={x}><span>✓</span>{x}</div>)}</div>
         </div>
       </Reveal>
       <Reveal delay={100}>
-        <div className="content-panel dark">
-          <div className="mini-console-head"><strong>Operational record</strong><span>Connected</span></div>
-          {['Checklist completed','Exception identified','Corrective action assigned','Evidence uploaded','Manager verified'].map((x,i)=><div className="detector-row" key={x}><div><Icon name={i===0?'check':i===1?'alert':i===4?'shield':'report'}/><span><small>STEP 0{i+1}</small><b style={{fontSize:16}}>{x}</b></span></div><em>{i===4?'Closed':'Recorded'}</em></div>)}
+        <div className="operational-record-panel">
+          <div className="operational-record-head"><strong>Operational record</strong><span>Connected</span></div>
+          {[
+            {title:'Checklist completed', icon:'check', status:'Recorded'},
+            {title:'Exception identified', icon:'alert', status:'Recorded'},
+            {title:'Corrective action assigned', icon:'report', status:'Recorded'},
+            {title:'Evidence uploaded', icon:'report', status:'Recorded'},
+            {title:'Manager verified', icon:'shield', status:'Closed'},
+          ].map((item,i)=><div className="operational-record-row" key={item.title}>
+            <span className="operational-record-icon"><Icon name={item.icon as IconName}/></span>
+            <div className="operational-record-copy"><small>STEP {String(i+1).padStart(2,'0')}</small><strong>{item.title}</strong></div>
+            <em className={item.status==='Closed'?'is-closed':''}>{item.status}</em>
+          </div>)}
         </div>
       </Reveal>
     </div>
