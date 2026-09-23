@@ -74,10 +74,10 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       )}
     </PageHero>
 
-    <section className="content-section product-overview-section">
-      <div className="shell content-grid">
+    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : ''}`}>
+      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : ''}`}>
         <Reveal>
-          <div>
+          <div className={slug === 'checklists' ? 'checklist-overview-copy' : undefined}>
             <span className="eyebrow">{comingSoon ? 'PRODUCT ROADMAP' : 'WHAT IT DOES'}</span>
             <h2>{feature.short}</h2>
             <p>{detail.overview}</p>
@@ -88,18 +88,40 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
           </div>
         </Reveal>
         <Reveal delay={90}>
-          <div className="content-panel dark">
-            <span className="eyebrow light">CONNECTED WORKFLOW</span>
-            {detail.workflow.map((item, i) =>
-              <div className="detector-row" key={item.title}>
-                <div>
-                  <Icon name={i === 0 ? 'book' : i === detail.workflow.length - 1 ? 'shield' : iconMap[slug] ?? 'check'} />
-                  <span><small>STEP {String(i + 1).padStart(2, '0')}</small><b style={{fontSize:16}}>{item.title}</b></span>
-                </div>
-                <em>{i === detail.workflow.length - 1 ? 'Outcome' : 'Recorded'}</em>
+          {slug === 'checklists' ? (
+            <div className="checklist-workflow-panel">
+              <div className="checklist-workflow-head">
+                <span className="eyebrow light">CHECKLIST WORKFLOW</span>
+                <strong>From standard to verified action</strong>
               </div>
-            )}
-          </div>
+              {detail.workflow.map((item, i) =>
+                <div className="checklist-workflow-row" key={item.title}>
+                  <span className="checklist-workflow-icon">
+                    <Icon name={i === 0 ? 'book' : i === detail.workflow.length - 1 ? 'shield' : 'check'} />
+                  </span>
+                  <div className="checklist-workflow-copy">
+                    <small>STEP {String(i + 1).padStart(2, '0')}</small>
+                    <strong>{item.title}</strong>
+                    <p>{item.text}</p>
+                  </div>
+                  <em>{['Configured','Assigned','Completed','Flagged','Verified'][i]}</em>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="content-panel dark">
+              <span className="eyebrow light">CONNECTED WORKFLOW</span>
+              {detail.workflow.map((item, i) =>
+                <div className="detector-row" key={item.title}>
+                  <div>
+                    <Icon name={i === 0 ? 'book' : i === detail.workflow.length - 1 ? 'shield' : iconMap[slug] ?? 'check'} />
+                    <span><small>STEP {String(i + 1).padStart(2, '0')}</small><b style={{fontSize:16}}>{item.title}</b></span>
+                  </div>
+                  <em>{i === detail.workflow.length - 1 ? 'Outcome' : 'Recorded'}</em>
+                </div>
+              )}
+            </div>
+          )}
         </Reveal>
       </div>
     </section>
