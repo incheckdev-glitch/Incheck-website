@@ -12,9 +12,7 @@ const iconMap: Record<string, IconName> = {
   checklists: 'check',
   journal: 'report',
   audits: 'search',
-  'corrective-actions': 'alert',
   sops: 'book',
-  analytics: 'chart',
   'ai-intelligence': 'spark',
   reports: 'report',
 };
