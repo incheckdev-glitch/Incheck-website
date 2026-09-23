@@ -12,7 +12,7 @@ import { clientLogos } from '@/lib/client-logos';
 
 export const metadata: Metadata = {
   title: 'InCheck 360',
-  description: 'InCheck 360 connects human checks, corrective actions, verification, evidence, analytics and IoT monitoring across multi-location operations.',
+  description: 'InCheck 360 connects human checks, operational follow-up, verification, evidence, reporting and IoT monitoring across multi-location operations.',
   alternates: { canonical: '/' },
 };
 
