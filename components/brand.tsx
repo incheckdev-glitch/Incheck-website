@@ -1,16 +1,14 @@
 import Link from 'next/link';
 
-export function Brand() {
+export function Brand({ compact = false }: { compact?: boolean }) {
   return (
-    <Link href="/" className="brand" aria-label="InCheck 360 home">
+    <Link href="/" className={`brand official-brand ${compact ? 'compact' : ''}`} aria-label="InCheck 360 home">
       <img
-        className="brand-logo"
-        src="/brand/incheck360-logo.webp"
+        src="/brand/incheck360-logo.png"
         alt="InCheck 360"
-        width="566"
-        height="153"
-        loading="eager"
-        decoding="async"
+        width="610"
+        height="200"
+        className="official-brand-logo"
       />
     </Link>
   );
