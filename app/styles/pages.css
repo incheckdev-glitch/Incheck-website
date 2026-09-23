@@ -546,3 +546,48 @@
     grid-column:2;
   }
 }
+
+
+.official-store-card{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:190px;
+  padding:28px;
+}
+
+.official-store-card .store-badge-image{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:58px;
+  object-fit:contain;
+}
+
+.official-store-card .google-play-badge{
+  height:72px;
+  margin-left:-10px;
+}
+
+.official-store-card p{
+  margin:14px 0 0;
+  color:#a9bfd5;
+  font-size:13px;
+}
+
+@media(max-width:640px){
+  .official-store-card{
+    min-height:auto;
+    padding:22px;
+  }
+
+  .official-store-card .store-badge-image{
+    height:54px;
+  }
+
+  .official-store-card .google-play-badge{
+    height:66px;
+    margin-left:-9px;
+  }
+}
