@@ -51,26 +51,24 @@ export default function DownloadAppPage() {
 
           <div className="download-store-grid">
             <Reveal>
-              <a className="download-store-card" href={APP_STORE_URL} target="_blank" rel="noreferrer">
-                <div className="download-store-mark apple-mark"></div>
-                <div>
-                  <small>Download on the</small>
-                  <strong>App Store</strong>
-                  <p>For iPhone and iPad</p>
-                </div>
-                <span className="download-store-arrow"><Icon name="arrow" size={20}/></span>
+              <a className="download-store-card official-store-card" href={APP_STORE_URL} target="_blank" rel="noreferrer" aria-label="Download InCheck 360 on the App Store">
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  className="store-badge-image app-store-badge"
+                />
+                <p>For iPhone and iPad</p>
               </a>
             </Reveal>
 
             <Reveal delay={80}>
-              <a className="download-store-card" href={GOOGLE_PLAY_URL} target="_blank" rel="noreferrer">
-                <div className="download-store-mark play-mark">▶</div>
-                <div>
-                  <small>Get it on</small>
-                  <strong>Google Play</strong>
-                  <p>For Android phones and tablets</p>
-                </div>
-                <span className="download-store-arrow"><Icon name="arrow" size={20}/></span>
+              <a className="download-store-card official-store-card" href={GOOGLE_PLAY_URL} target="_blank" rel="noreferrer" aria-label="Get InCheck 360 on Google Play">
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  className="store-badge-image google-play-badge"
+                />
+                <p>For Android phones and tablets</p>
               </a>
             </Reveal>
           </div>
