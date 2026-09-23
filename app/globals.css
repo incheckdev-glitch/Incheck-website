@@ -77,3 +77,101 @@
     border-radius:18px !important;
   }
 }
+
+
+/* Final cross-device responsiveness pass */
+html,body{max-width:100%;overflow-x:hidden}
+main,section,header,footer,nav,div{min-width:0}
+img,video,canvas{max-width:100%;height:auto}
+
+.mobile-menu{
+  max-height:calc(100vh - 68px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+}
+
+@media(max-width:1050px){
+  .shell{width:min(100% - 36px,1180px)}
+  .subhero-inner,.content-grid,.contact-grid,.split-layout,.detector-layout,.intelligence-layout{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  .subhero-inner{gap:42px}
+  .subhero-copy{max-width:820px}
+  .subhero-visual{width:100%;min-width:0}
+  .simple-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-brand{grid-column:1/-1}
+}
+
+@media(max-width:820px){
+  .section,.content-section{padding:74px 0}
+  .subhero{padding:120px 0 68px}
+  .subhero-inner{gap:34px}
+  .subhero-copy h1{font-size:clamp(42px,8vw,56px);line-height:1.02}
+  .subhero-copy p{font-size:16px;line-height:1.65}
+  .platform-rich-heading,.content-grid h2{font-size:clamp(34px,6vw,44px)}
+  .simple-card-grid,.stat-strip,.about-dual-grid,.about-mission-grid,.download-store-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  .download-app-account-inner{flex-direction:column;align-items:flex-start}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:640px){
+  .shell{width:min(100% - 24px,1180px)}
+  .site-header{height:68px}
+  .nav-shell{gap:8px}
+  .site-header .official-brand-logo,.site-header .brand-logo{width:132px!important}
+  .subhero{padding:106px 0 56px}
+  .subhero-inner{gap:28px}
+  .subhero-copy h1{font-size:clamp(36px,10.5vw,44px);line-height:1.02}
+  .subhero-copy p{font-size:15.5px}
+  .hero-actions{display:grid;grid-template-columns:1fr;width:100%}
+  .hero-actions .button{width:100%;min-height:46px}
+  .content-section{padding:64px 0}
+  .platform-rich-heading,.content-grid h2{font-size:clamp(32px,9vw,38px)}
+  .platform-rich-copy,.content-grid p{font-size:15.5px;line-height:1.68}
+  .content-panel,.simple-card,.architecture-card,.about-focus-card,.about-mission-card,.plan-card{
+    border-radius:18px;
+  }
+  .content-panel{padding:20px}
+  .simple-card{padding:20px}
+  .platform-architecture,.product-detail-grid,.connection-grid,.industry-workflow-grid,.recommended-grid,.integration-flow-grid,.detector-deep-flow,.resource-grid,.plans-grid,.upcoming-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  .comparison-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .comparison-table{min-width:760px}
+  .download-store-card{
+    grid-template-columns:54px minmax(0,1fr);
+    gap:16px;
+    min-height:0;
+    padding:20px;
+  }
+  .download-store-arrow{grid-column:2}
+  .checklist-product-hero img,
+  .journal-product-hero img,
+  .reference-material-product-hero img,
+  .detectors-product-hero img,
+  .reports-product-hero img,
+  .roadmap-product-hero img,
+  .food-safety-product-hero img,
+  .detector-monitoring-visual img{
+    width:100%!important;
+    max-width:100%!important;
+    margin-left:0!important;
+  }
+  .footer-grid{grid-template-columns:minmax(0,1fr)!important}
+  .footer-brand{grid-column:auto}
+}
+
+@media(max-width:430px){
+  .site-header .nav-actions>.button.primary{display:none}
+  .site-header .official-brand-logo,.site-header .brand-logo{width:140px!important}
+  .mobile-toggle{padding:7px}
+  .subhero-copy h1{font-size:clamp(34px,11vw,40px)}
+  .eyebrow{font-size:10px;letter-spacing:.13em}
+  .download-app-phone{width:210px}
+  .download-app-screen{min-height:345px;padding:20px 15px}
+  .download-store-card strong{font-size:21px}
+}
