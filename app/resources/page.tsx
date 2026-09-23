@@ -17,7 +17,7 @@ export default function Resources() {
       <PageHero
         eyebrow="RESOURCES"
         title="Practical guidance for stronger operational control."
-        text="Focused articles on food safety, execution, monitoring, audits and multi-location operations—written for the teams doing the work."
+        text="Focused articles on food safety, execution, monitoring, audit readiness and multi-location operations—written for the teams doing the work."
       />
       <section className="content-section resource-library">
         <div className="shell">

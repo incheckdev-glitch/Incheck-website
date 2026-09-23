@@ -16,7 +16,7 @@ export const features: Feature[] = [
     title: 'Checklists & Tasks',
     short: 'Turn standards into consistent daily execution.',
     description: 'Build structured operational and food-safety checklists by location, role, user and shift, with scheduling, validation, evidence and exception follow-through.',
-    bullets: ['Recurring and scheduled checks', 'Structured inputs and evidence', 'Role- and location-based assignment', 'Due time, expiry and completion tracking'],
+    bullets: ['Recurring and scheduled checks', 'Structured inputs and evidence', 'Role- and location-based assignment', 'Due time, expiry and completion tracking', 'Configured reminders, alerts and shared-device workflows'],
     tone: 'blue',
     status: 'live',
   },
@@ -144,9 +144,12 @@ export const industries = [
 export const faqs = [
   ['What is InCheck 360?', 'InCheck 360 is an operational control platform connecting digital checklists, Journal records, corrective actions, Reference Materials, smart detectors, dashboards and operational evidence across multi-location teams.'],
   ['Is InCheck 360 only for restaurants?', 'No. The platform is particularly strong in food service and hospitality, while the same structured execution model can support central kitchens, food manufacturing, retail and other multi-site operations.'],
-  ['Can workflows differ by location or role?', 'Yes. Checklists, tasks and operational references can be configured around locations, roles, users, shifts and operational needs.'],
+  ['Can workflows differ by location, role or shift?', 'Yes. Checklists, tasks and references can be configured around locations, roles, users, shifts and operating requirements. Personal and shared-device execution, including QR-based access, can be supported where configured.'],
+  ['How do reminders, alerts and corrective actions work?', 'Configured reminders and operational notifications can help surface due, incomplete or exception-based work. When an issue requires follow-up, it can move into an owned corrective action with evidence and verification.'],
   ['How do smart detectors fit with manual checks?', 'They complement each other. Human checks capture process and context, while connected detectors provide continuous environmental readings between scheduled checks.'],
   ['Does InCheck 360 support HACCP and ISO 22000?', 'InCheck 360 can support the digital execution, monitoring, documentation and verification around HACCP-based controls and ISO 22000-aligned food-safety management processes. It does not itself provide certification or guarantee legal compliance.'],
+  ['What does onboarding look like?', 'Implementation depends on the selected plan and scope. It can include workflow configuration, account setup, training, onboarding and ongoing Customer Success support. InCheck Lite does not include account setup and onboarding by default.'],
+  ['How is access controlled?', 'Users can be configured around roles, locations and operating responsibilities. Specific security, hosting and access requirements can be reviewed as part of implementation and commercial scope.'],
   ['Which modules are coming soon?', 'The dedicated Audit Management module and AI Data Analytics are currently positioned as coming soon.'],
   ['Can InCheck 360 integrate with other systems?', 'Integration scope depends on the customer environment. Selected master data and transaction data can be exchanged with ERP or other systems while operational evidence and follow-up remain in InCheck 360.'],
 ];

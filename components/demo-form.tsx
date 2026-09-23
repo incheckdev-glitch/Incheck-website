@@ -107,7 +107,7 @@ export function DemoForm() {
           </button>
           {status === 'email' && <p className="demo-note" role="status">Your email application has opened with the request prepared. Send the email to complete your request.</p>}
           {status === 'error' && <p className="demo-note error" role="alert">We could not send the request. Please email info@incheck360.nl and we will arrange the demo directly.</p>}
-          {!endpoint && status === 'idle' && <p className="demo-note">Submitting prepares an email to info@incheck360.nl. A direct form endpoint can be enabled later without changing this page.</p>}
+          {!endpoint && status === 'idle' && <p className="demo-note">Submitting prepares an email to info@incheck360.nl so you can review and send your request.</p>}
         </div>
       </form>
     </div>

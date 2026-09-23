@@ -37,6 +37,15 @@ const inputControls = [
   ['Role & location rules','Deliver the right workflow to the right team, site, role or shift.'],
 ];
 
+const executionControls = [
+  ['Reminders & alerts','Surface due, incomplete and exception-based work through configured operational notifications.'],
+  ['Personal + shared devices','Support different frontline device models, including QR-based shared-device access where configured.'],
+  ['User traceability','Keep user, role, location and timestamp context connected to the operational record.'],
+  ['Exception handling','Move failed controls into visible follow-up instead of leaving them buried in completed forms.'],
+  ['Evidence requirements','Require photos, signatures, values or comments where the operating control needs stronger proof.'],
+  ['Central standards, local execution','Define common controls centrally while adapting assignment and schedules to each location.'],
+];
+
 export default function PlatformPage(){return <>
   <PageHero eyebrow="THE INCHECK 360 PLATFORM" title="One operational layer from daily checks to verified closure." text="Bring checklists, Journal records, Reference Materials, corrective actions, continuous monitoring, evidence and reporting into one connected operational record.">
     <div className="mini-console"><div className="mini-console-head"><strong>Operations overview</strong><span>All locations</span></div><div className="mini-console-grid"><div className="mini-console-card"><span>Checklist completion</span><strong>92%</strong></div><div className="mini-console-card"><span>Open actions</span><strong>12</strong></div><div className="mini-console-card"><span>Detector status</span><strong>Normal</strong></div><div className="mini-console-card"><span>Audit trail</span><strong>Ready</strong></div></div></div>
@@ -125,6 +134,17 @@ export default function PlatformPage(){return <>
           </div>
         </div>
       </Reveal>
+    </div>
+  </section>
+
+  <section className="content-section" style={{background:'#f5f9fd'}}>
+    <div className="shell">
+      <span className="eyebrow">EXECUTION CONTROLS</span>
+      <h2 className="platform-rich-heading">The workflow around the checklist matters as much as the checklist itself.</h2>
+      <p className="platform-rich-copy">InCheck 360 combines assignment, access, reminders, evidence and exception handling so recurring work stays connected to accountability.</p>
+      <div className="product-detail-grid">
+        {executionControls.map(([title,text],i) => <Reveal key={title} delay={(i%3)*45}><div className="product-detail-card"><span className="product-detail-index">{String(i+1).padStart(2,'0')}</span><h3>{title}</h3><p>{text}</p></div></Reveal>)}
+      </div>
     </div>
   </section>
 

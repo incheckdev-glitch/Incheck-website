@@ -42,7 +42,7 @@ export default function BookDemoPage() {
           </div>
           <div className="demo-scheduling-note">
             <strong>Scheduling</strong>
-            <p>The page is ready for a Microsoft Teams / Outlook scheduling link when your calendar integration is available. No placeholder calendar is shown today.</p>
+            <p>After your request is reviewed, our team will contact you to arrange a suitable meeting time. Meetings can be held online, including through Microsoft Teams.</p>
           </div>
         </div>
         <DemoForm />

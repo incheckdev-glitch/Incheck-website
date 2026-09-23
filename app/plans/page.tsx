@@ -157,6 +157,22 @@ export default function PlansPage() {
         </div>
       </section>
 
+      <section className="content-section">
+        <div className="shell">
+          <span className="eyebrow">IMPLEMENTATION & SUPPORT</span>
+          <h2 className="platform-rich-heading">The plan defines the software scope. Implementation defines how it fits your operation.</h2>
+          <p className="platform-rich-copy">Implementation depth depends on the selected plan and project requirements. InCheck Lite includes initial training but does not include Account Setup & Onboarding by default. InCheck Basic and InCheck Detect include Account Setup & Onboarding and Dedicated Customer Success.</p>
+          <div className="platform-architecture">
+            {[
+              ['01','Scope','Understand the locations, workflows, users and controls in scope.'],
+              ['02','Configure','Set up the relevant checklists, references, assignments and operating rules.'],
+              ['03','Train','Prepare operational users and management for the workflows they will use.'],
+              ['04','Launch & follow up','Go live, review adoption and strengthen the setup as the operation evolves.'],
+            ].map(([no,title,text]) => <div className="architecture-card" key={no}><span className="architecture-index">{no}</span><h3>{title}</h3><p>{text}</p></div>)}
+          </div>
+        </div>
+      </section>
+
       <section className="content-section upcoming-section">
         <div className="shell">
           <div className="upcoming-head">

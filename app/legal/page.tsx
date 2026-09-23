@@ -21,7 +21,7 @@ export default function LegalPage() {
           {companyInfo.registrationNumber && <div><small>Registration number</small><strong>{companyInfo.registrationNumber}</strong></div>}
           {companyInfo.vatNumber && <div><small>VAT number</small><strong>{companyInfo.vatNumber}</strong></div>}
         </div>
-        <p className="legal-disclosure">Registration, VAT and street-address details are intentionally not displayed unless they are explicitly configured from approved company records.</p>
+        <p className="legal-disclosure">For formal contracting, registration or invoicing details not shown on this public page, contact <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>.</p>
       </div>
     </section>
   );

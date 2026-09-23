@@ -3,7 +3,7 @@ import { PageHero } from '@/components/page-hero';
 
 export const metadata: Metadata = {
   title: 'Contact InCheck 360',
-  description: 'Contact InCheck 360 to discuss operational control, food safety, audits, corrective actions, monitoring or multi-location workflows.',
+  description: 'Contact InCheck 360 to discuss operational control, food safety, assurance, corrective actions, monitoring, integrations or multi-location workflows.',
   alternates: { canonical: '/contact' },
 };
 

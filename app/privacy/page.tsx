@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <h2>Why we use this information</h2>
         <p>We use information you provide to respond to enquiries, arrange demonstrations, understand business requirements, maintain business correspondence and protect the website from misuse.</p>
         <h2>Sharing and service providers</h2>
-        <p>Information may be processed by service providers that support website hosting, email delivery, security or business operations. We do not publish a claim that personal information is sold to advertisers.</p>
+        <p>Information may be processed by service providers that support website hosting, email delivery, security or business operations. Information submitted through this website is used for the business and service-related purposes described in this notice.</p>
         <h2>Retention</h2>
         <p>We keep business enquiries and related correspondence only as long as reasonably needed for the purpose for which they were collected, legal obligations or legitimate business recordkeeping.</p>
         <h2>Your questions</h2>

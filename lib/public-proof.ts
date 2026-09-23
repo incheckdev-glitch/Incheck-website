@@ -41,9 +41,7 @@ export const proofStats: ProofStat[] = [
   {
     value: '72%',
     label: 'fewer checklist violations',
-    detail: 'Observed in selected customer operations after implementing structured digital checks, corrective actions and follow-up.',
-    href: '/case-studies/checklist-violations-reduction',
-    linkLabel: 'View Case Study',
+    detail: 'Up to 72% fewer checklist violations observed in selected customer operations after structured digital checks and follow-up.',
   },
 ];
 
@@ -72,6 +70,8 @@ export const operationalUseCases = [
 
 export const comparisonRows = [
   ['Task execution', 'Manual tracking', 'Basic completion', 'Scheduled workflows, due time, expiry and ownership'],
+  ['Reminders & escalation', 'Manual follow-up', 'Basic notifications', 'Configured reminders, exception visibility and corrective follow-up'],
+  ['Multi-user flexibility', 'Paper handover', 'Often device-limited', 'Personal and shared-device workflows with QR-based access where configured'],
   ['Data quality', 'Free text / paper', 'Limited validation', 'Photos, signatures, ranges, QR and structured inputs'],
   ['Visibility', 'After-the-fact', 'Limited dashboards', 'Cross-location status, exceptions and performance'],
   ['Corrective action', 'Email / chat follow-up', 'Separate task', 'Exception → owner → evidence → verified closure'],
@@ -87,5 +87,5 @@ export const foodSafetyControls = [
   { stage: 'Preparation', controls: 'Hygiene, cross-contamination, preparation controls', evidence: 'Checklist · photo · timestamp', action: 'Immediate correction' },
   { stage: 'Cooking & holding', controls: 'Critical temperature and holding checks', evidence: 'Validated numeric entry', action: 'Out-of-range escalation' },
   { stage: 'Cleaning', controls: 'Sanitation routines and verification', evidence: 'Completion · evidence · sign-off', action: 'Re-clean · verify' },
-  { stage: 'Management review', controls: 'Audit findings, trends and recurring exceptions', evidence: 'Dashboard · report · audit trail', action: 'CAPA / ownership / follow-up' },
+  { stage: 'Management review', controls: 'Inspection findings, trends and recurring exceptions', evidence: 'Dashboard · report · audit trail', action: 'CAPA / ownership / follow-up' },
 ];
