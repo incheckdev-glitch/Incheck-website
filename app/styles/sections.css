@@ -53,13 +53,10 @@
   overflow:hidden;
 }
 .client-proof .client-proof-head{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:40px;
+  display:block;
   margin-bottom:30px;
 }
-.client-proof .client-proof-head>div{max-width:700px}
+.client-proof .client-proof-head>div{max-width:760px}
 .client-proof .client-proof-head .eyebrow{margin-bottom:10px;color:#75bbff}
 .client-proof .client-proof-head h2{
   font-family:var(--font-manrope);
@@ -70,12 +67,12 @@
   color:#fff;
 }
 .client-proof .client-proof-head p{
-  margin:0;
+  margin:14px 0 0;
   color:#9eb4c9;
   font-size:13px;
-  max-width:320px;
+  max-width:620px;
   line-height:1.6;
-  text-align:right;
+  text-align:left;
 }
 .client-logo-rail{
   width:100%;
