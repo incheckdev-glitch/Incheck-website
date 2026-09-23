@@ -65,7 +65,7 @@ export default function Home() {
 
     <section className="section usecase-section">
       <div className="shell">
-        <Reveal><SectionHeading eyebrow="WHAT IT CONTROLS" title="Daily execution, food safety, audits and monitoring in one operating layer." text="Use the platform where recurring work, evidence, exceptions and follow-up need to stay visible across locations."/></Reveal>
+        <Reveal><SectionHeading eyebrow="WHAT IT CONTROLS" title="Daily execution, food safety, assurance and monitoring in one operating layer." text="Use the platform where recurring work, evidence, exceptions and follow-up need to stay visible across locations."/></Reveal>
         <div className="usecase-grid">
           {operationalUseCases.map((useCase, i) => <Reveal key={useCase.area} delay={i*60}>
             <div className="usecase-card">
@@ -87,7 +87,7 @@ export default function Home() {
     <section className="section intelligence-section"><div className="shell intelligence-layout">
       <Reveal><div><span className="eyebrow light">WHY IT IS DIFFERENT</span><h2>Human checks + IoT + follow-through.</h2><p>InCheck 360 combines frontline context with continuous detector data, corrective actions, verification and analytics instead of leaving each part in a separate system.</p><Link href="/platform" className="button white">Explore the Platform <Icon name="arrow" size={17}/></Link></div></Reveal>
       <Reveal delay={100}><div className="data-map">
-        <div className="data-node people"><Icon name="users"/><b>Human checks</b><small>Checklists · Audits · Context</small></div>
+        <div className="data-node people"><Icon name="users"/><b>Human checks</b><small>Checklists · Journal · Context</small></div>
         <div className="data-node equipment"><Icon name="thermo"/><b>IoT detectors</b><small>Readings · Thresholds · Trends</small></div>
         <div className="data-node standards"><Icon name="shield"/><b>Follow-through</b><small>Actions · Evidence · Verify</small></div>
         <div className="data-core"><span>InCheck</span><strong>360</strong><small>One operational view</small></div>
@@ -115,7 +115,7 @@ export default function Home() {
 
     <section className="section food-section"><div className="shell split-layout">
       <Reveal><div className="food-visual"><div className="food-orbit one"/><div className="food-orbit two"/><div className="food-score"><span>FOOD SAFETY</span><strong>360°</strong><small>Checks + action + monitoring</small></div><div className="floating-chip chip-a"><Icon name="thermo"/> Temperature controls</div><div className="floating-chip chip-b"><Icon name="camera"/> Evidence capture</div><div className="floating-chip chip-c"><Icon name="shield"/> Verified closure</div></div></Reveal>
-      <Reveal delay={80}><div><span className="eyebrow">FOOD SAFETY IN EXECUTION</span><h2>Put HACCP-related controls inside the daily operation.</h2><p>Support receiving, storage, hygiene, sanitation and temperature workflows while keeping failed checks and follow-up traceable.</p><ul className="check-list"><li>Receiving inspections</li><li>Storage & temperature controls</li><li>Cleaning & sanitation verification</li><li>Audit findings & CAPA follow-up</li><li>Continuous detector monitoring</li><li>Audit-ready history</li></ul><Link className="button primary" href="/food-safety">Explore Food Safety <Icon name="arrow" size={17}/></Link></div></Reveal>
+      <Reveal delay={80}><div><span className="eyebrow">FOOD SAFETY IN EXECUTION</span><h2>Put HACCP-related controls inside the daily operation.</h2><p>Support receiving, storage, hygiene, sanitation and temperature workflows while keeping failed checks and follow-up traceable.</p><ul className="check-list"><li>Receiving inspections</li><li>Storage & temperature controls</li><li>Cleaning & sanitation verification</li><li>Exceptions & corrective-action follow-up</li><li>Continuous detector monitoring</li><li>Audit-ready history</li></ul><Link className="button primary" href="/food-safety">Explore Food Safety <Icon name="arrow" size={17}/></Link></div></Reveal>
     </div></section>
 
     <section className="proof-section">
