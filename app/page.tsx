@@ -114,7 +114,7 @@ export default function Home() {
     </section>
 
     <section className="section food-section"><div className="shell split-layout">
-      <Reveal><div className="food-visual"><div className="food-orbit one"/><div className="food-orbit two"/><div className="food-score"><span>FOOD SAFETY</span><strong>360°</strong><small>Checks + action + monitoring</small></div><div className="floating-chip chip-a"><Icon name="thermo"/> Temperature controls</div><div className="floating-chip chip-b"><Icon name="camera"/> Evidence capture</div><div className="floating-chip chip-c"><Icon name="shield"/> Verified closure</div></div></Reveal>
+      <Reveal><div className="food-product-frame"><img src="/product/food-receiving-checklist.webp" alt="InCheck 360 Food Receiving From Supplier checklist template" loading="lazy" decoding="async" width="1180" height="1248"/></div></Reveal>
       <Reveal delay={80}><div><span className="eyebrow">FOOD SAFETY IN EXECUTION</span><h2>Put HACCP-related controls inside the daily operation.</h2><p>Support receiving, storage, hygiene, sanitation and temperature workflows while keeping failed checks and follow-up traceable.</p><ul className="check-list"><li>Receiving inspections</li><li>Storage & temperature controls</li><li>Cleaning & sanitation verification</li><li>Exceptions & corrective-action follow-up</li><li>Continuous detector monitoring</li><li>Audit-ready history</li></ul><Link className="button primary" href="/food-safety">Explore Food Safety <Icon name="arrow" size={17}/></Link></div></Reveal>
     </div></section>
 
