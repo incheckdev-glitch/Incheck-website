@@ -11,7 +11,7 @@ import { comparisonRows, operationalUseCases } from '@/lib/public-proof';
 import { clientLogos } from '@/lib/client-logos';
 
 export const metadata: Metadata = {
-  title: 'Operational Control Platform',
+  title: 'InCheck 360',
   description: 'InCheck 360 connects human checks, corrective actions, verification, evidence, analytics and IoT monitoring across multi-location operations.',
   alternates: { canonical: '/' },
 };
