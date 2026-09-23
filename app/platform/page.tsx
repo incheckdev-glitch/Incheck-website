@@ -48,7 +48,7 @@ const executionControls = [
 
 export default function PlatformPage(){return <>
   <PageHero eyebrow="THE INCHECK 360 PLATFORM" title="One operational layer from daily checks to verified closure." text="Bring checklists, Journal records, Reference Materials, corrective actions, continuous monitoring, evidence and reporting into one connected operational record.">
-    <div className="mini-console"><div className="mini-console-head"><strong>Operations overview</strong><span>All locations</span></div><div className="mini-console-grid"><div className="mini-console-card"><span>Checklist completion</span><strong>92%</strong></div><div className="mini-console-card"><span>Open actions</span><strong>12</strong></div><div className="mini-console-card"><span>Detector status</span><strong>Normal</strong></div><div className="mini-console-card"><span>Audit trail</span><strong>Ready</strong></div></div></div>
+    <div className="solution-hero-image-card"><img src="/images/platform/incheck360-platform-hero.webp" alt="InCheck 360 platform shown across desktop, laptop and mobile screens with checklists, detectors, corrective actions, reports and multi-location visibility." /></div>
   </PageHero>
 
   <section className="content-section">
