@@ -302,3 +302,247 @@
     border-radius:20px;
   }
 }
+
+
+/* Download app page */
+.download-app-visual{
+  min-height:360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.download-app-phone{
+  width:250px;
+  padding:10px;
+  border-radius:36px;
+  background:#020b14;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 32px 70px rgba(0,0,0,.34);
+  transform:rotate(3deg);
+}
+
+.download-app-phone-top{
+  height:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.download-app-phone-top span{
+  width:72px;
+  height:7px;
+  border-radius:999px;
+  background:#162536;
+}
+
+.download-app-screen{
+  min-height:410px;
+  border-radius:28px;
+  padding:24px 18px;
+  background:linear-gradient(180deg,#f8fbff,#eaf4ff);
+  color:#112c47;
+}
+
+.download-app-brand{
+  color:#0877e6;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.05em;
+  margin-bottom:30px;
+}
+
+.download-app-screen>strong{
+  display:block;
+  font-family:var(--font-manrope);
+  font-size:25px;
+  letter-spacing:-.04em;
+}
+
+.download-app-screen>small{
+  display:block;
+  color:#6b7e91;
+  line-height:1.5;
+  margin:7px 0 22px;
+}
+
+.download-app-screen-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px;
+  margin-top:10px;
+  border:1px solid #d8e5f1;
+  border-radius:14px;
+  background:#fff;
+  font-size:12px;
+  font-weight:750;
+}
+
+.download-app-screen-card b{
+  color:#0877e6;
+  font-size:10px;
+}
+
+.download-app-heading{
+  max-width:760px;
+  margin-bottom:34px;
+}
+
+.download-app-heading h2{
+  font-family:var(--font-manrope);
+  font-size:clamp(38px,4vw,56px);
+  line-height:1.05;
+  letter-spacing:-.045em;
+  margin:0;
+}
+
+.download-app-heading p{
+  max-width:650px;
+  color:#66798d;
+  font-size:17px;
+  line-height:1.7;
+  margin:16px 0 0;
+}
+
+.download-store-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.download-store-card{
+  min-height:190px;
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr) auto;
+  gap:22px;
+  align-items:center;
+  padding:28px;
+  border-radius:24px;
+  background:#071d37;
+  border:1px solid #163b61;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 22px 52px rgba(7,29,55,.15);
+  transition:.24s ease;
+}
+
+.download-store-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 28px 62px rgba(7,29,55,.22);
+}
+
+.download-store-mark{
+  width:64px;
+  height:64px;
+  display:grid;
+  place-items:center;
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.10);
+  font-size:34px;
+  line-height:1;
+}
+
+.download-store-card small{
+  display:block;
+  color:#9ebdd9;
+  font-size:11px;
+  margin-bottom:3px;
+}
+
+.download-store-card strong{
+  display:block;
+  font-family:var(--font-manrope);
+  color:#fff;
+  font-size:28px;
+  line-height:1.1;
+}
+
+.download-store-card p{
+  margin:8px 0 0;
+  color:#a9bfd5;
+  font-size:13px;
+}
+
+.download-store-arrow{
+  color:#7fc2ff;
+}
+
+.download-app-account{
+  padding:70px 0;
+  background:linear-gradient(135deg,#06182f,#0a3764);
+  color:#fff;
+}
+
+.download-app-account-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+}
+
+.download-app-account-inner>div{
+  max-width:760px;
+}
+
+.download-app-account h2{
+  font-family:var(--font-manrope);
+  font-size:clamp(32px,3vw,46px);
+  line-height:1.08;
+  letter-spacing:-.04em;
+  margin:10px 0 12px;
+}
+
+.download-app-account p{
+  color:#b7cbe0;
+  line-height:1.7;
+  margin:0;
+}
+
+@media(max-width:900px){
+  .download-store-grid{
+    grid-template-columns:1fr;
+  }
+
+  .download-app-account-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
+@media(max-width:640px){
+  .download-app-visual{
+    min-height:315px;
+  }
+
+  .download-app-phone{
+    width:225px;
+  }
+
+  .download-app-screen{
+    min-height:365px;
+  }
+
+  .download-store-card{
+    grid-template-columns:58px minmax(0,1fr);
+    padding:22px;
+    border-radius:20px;
+  }
+
+  .download-store-mark{
+    width:54px;
+    height:54px;
+    border-radius:15px;
+    font-size:28px;
+  }
+
+  .download-store-card strong{
+    font-size:23px;
+  }
+
+  .download-store-arrow{
+    grid-column:2;
+  }
+}
