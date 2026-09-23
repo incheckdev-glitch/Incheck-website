@@ -1064,3 +1064,71 @@
     max-width:580px;
   }
 }
+
+
+/* Smart Detectors continuous monitoring section */
+.detector-monitoring-grid{
+  grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr);
+  gap:72px;
+  align-items:center;
+}
+
+.detector-monitoring-copy{
+  max-width:610px;
+}
+
+.detector-monitoring-copy h2{
+  max-width:590px;
+}
+
+.detector-monitoring-copy > p{
+  max-width:600px;
+}
+
+.detector-monitoring-visual{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+.detector-monitoring-visual img{
+  display:block;
+  width:112%;
+  max-width:720px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 26px 42px rgba(7,29,55,.18));
+}
+
+@media(max-width:1050px){
+  .detector-monitoring-grid{
+    grid-template-columns:1fr;
+    gap:44px;
+  }
+
+  .detector-monitoring-copy{
+    max-width:760px;
+  }
+
+  .detector-monitoring-visual{
+    justify-content:flex-start;
+  }
+
+  .detector-monitoring-visual img{
+    width:100%;
+    max-width:760px;
+  }
+}
+
+@media(max-width:640px){
+  .detector-monitoring-visual{
+    justify-content:center;
+  }
+
+  .detector-monitoring-visual img{
+    width:108%;
+    max-width:560px;
+  }
+}
