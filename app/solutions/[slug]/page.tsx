@@ -46,7 +46,7 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
 
   return <>
     <PageHero
-      eyebrow="INDUSTRY SOLUTION"
+      eyebrow="INDUSTRY"
       title={industry.title}
       text={industry.description}
       primary="Book a Demo"
