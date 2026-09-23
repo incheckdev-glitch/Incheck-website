@@ -631,3 +631,124 @@
     max-width:420px;
   }
 }
+
+
+/* Blog card visual polish */
+.blog-card{
+  overflow:hidden;
+}
+
+.blog-card-visual{
+  position:relative;
+  min-height:178px;
+  display:flex;
+  align-items:flex-end;
+  padding:18px 20px;
+  background:
+    linear-gradient(180deg,rgba(5,22,44,.05),rgba(5,22,44,.68)),
+    linear-gradient(135deg,#0a2b50,#0b72d3);
+  background-size:cover;
+  background-position:center;
+}
+
+.blog-card-visual::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(130deg,rgba(255,255,255,.04),transparent 50%);
+  pointer-events:none;
+}
+
+.blog-card-visual span{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(5,22,44,.72);
+  border:1px solid rgba(255,255,255,.16);
+  color:#fff;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+
+.blog-horecava-2026-successful-presence{
+  background:
+    linear-gradient(180deg,rgba(5,22,44,.04),rgba(5,22,44,.72)),
+    radial-gradient(circle at 72% 28%,rgba(62,166,255,.7),transparent 30%),
+    linear-gradient(135deg,#071d37,#0a559f);
+}
+
+.blog-horecava-2026-successful-presence::before{
+  content:'HORECAVA 2026';
+  position:absolute;
+  top:22px;
+  left:20px;
+  color:#fff;
+  font-family:var(--font-manrope);
+  font-size:25px;
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+
+.blog-horecava-2026-startup-lab{
+  background:
+    linear-gradient(180deg,rgba(5,22,44,.02),rgba(5,22,44,.68)),
+    radial-gradient(circle at 30% 30%,rgba(49,215,211,.45),transparent 32%),
+    linear-gradient(135deg,#0a2747,#075aa9);
+}
+
+.blog-horecava-2026-startup-lab::before{
+  content:'STARTUP LAB';
+  position:absolute;
+  top:22px;
+  left:20px;
+  color:#fff;
+  font-family:var(--font-manrope);
+  font-size:25px;
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+
+.blog-new-star-transforming-fb-operations{
+  background-image:
+    linear-gradient(180deg,rgba(5,22,44,.08),rgba(5,22,44,.68)),
+    url('/images/food-safety/incheck360-food-safety-hero.webp');
+}
+
+.blog-from-gut-feeling-to-data-driven{
+  background-image:
+    linear-gradient(180deg,rgba(5,22,44,.08),rgba(5,22,44,.66)),
+    url('/images/solutions/restaurants-qsr-hero.webp');
+}
+
+.blog-smarter-environmental-monitoring{
+  background-image:
+    linear-gradient(180deg,rgba(5,22,44,.06),rgba(5,22,44,.7)),
+    url('/images/detectors/incheck360-detectors-hero.webp');
+}
+
+.blog-card .resource-top{
+  min-height:58px;
+  background:#092848;
+}
+
+.blog-card .resource-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.blog-card .resource-body .text-link{
+  margin-top:auto;
+  padding-top:12px;
+}
+
+@media(max-width:700px){
+  .blog-card-visual{
+    min-height:160px;
+  }
+}
