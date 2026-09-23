@@ -20,12 +20,12 @@ export default function Blogs() {
       />
       <section className="content-section resource-library">
         <div className="shell">
-          <div className="resource-library-head">
+          <div className="resource-library-head blog-library-head">
             <div>
               <span className="eyebrow">BLOGS</span>
               <h2>Latest from InCheck 360.</h2>
+              <p className="blog-library-intro">Company updates, operational thinking and practical articles for hospitality and food-service teams.</p>
             </div>
-            <p>Company updates, operational thinking and practical articles for hospitality and food-service teams.</p>
           </div>
           <div className="resource-grid">
             {blogArticles.map((article) => (
