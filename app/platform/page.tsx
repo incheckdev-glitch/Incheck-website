@@ -103,8 +103,19 @@ export default function PlatformPage(){return <>
         </div>
       </Reveal>
       <Reveal delay={100}>
-        <div className="platform-mobile-checklist-visual">
-          <img src="/images/platform/incheck360-mobile-checklist.webp" alt="InCheck 360 mobile checklist showing receiving temperature and food item fields." />
+        <div className="operational-record-panel">
+          <div className="operational-record-head"><strong>Operational record</strong><span>Connected</span></div>
+          {[
+            {title:'Checklist completed', icon:'check', status:'Recorded'},
+            {title:'Exception identified', icon:'alert', status:'Recorded'},
+            {title:'Corrective action assigned', icon:'report', status:'Recorded'},
+            {title:'Evidence uploaded', icon:'report', status:'Recorded'},
+            {title:'Manager verified', icon:'shield', status:'Closed'},
+          ].map((item,i)=><div className="operational-record-row" key={item.title}>
+            <span className="operational-record-icon"><Icon name={item.icon as IconName}/></span>
+            <div className="operational-record-copy"><small>STEP {String(i+1).padStart(2,'0')}</small><strong>{item.title}</strong></div>
+            <em className={item.status==='Closed'?'is-closed':''}>{item.status}</em>
+          </div>)}
         </div>
       </Reveal>
     </div>
@@ -113,14 +124,8 @@ export default function PlatformPage(){return <>
   <section className="content-section platform-input-section">
     <div className="shell content-grid">
       <Reveal>
-        <div className="content-panel dark">
-          <span className="eyebrow light">STRUCTURED INPUTS</span>
-          <div className="input-preview">
-            <div className="input-preview-row"><span>Chiller temperature</span><strong>3.1°C</strong><em>Within range</em></div>
-            <div className="input-preview-row"><span>Photo evidence</span><strong>Attached</strong><em>Verified</em></div>
-            <div className="input-preview-row"><span>Cleaning sign-off</span><strong>Signed</strong><em>10:42</em></div>
-            <div className="input-preview-row danger"><span>Prep room temperature</span><strong>8.7°C</strong><em>Action required</em></div>
-          </div>
+        <div className="platform-mobile-checklist-visual platform-mobile-checklist-structured">
+          <img src="/images/platform/incheck360-mobile-checklist.webp" alt="InCheck 360 mobile checklist showing structured receiving temperature and food item fields." />
         </div>
       </Reveal>
       <Reveal delay={80}>
