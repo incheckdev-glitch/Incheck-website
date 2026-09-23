@@ -6,4 +6,72 @@
 @import "./styles/intelligence-polish.css";
 @import "./styles/detector-real.css";
 @import "./styles/client-logo-fix.css";
-@import "./styles/industry-card-images.css";
+
+/* Final industries image cards override */
+.industries-section .industry-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+}
+
+.industries-section .industry-card{
+  min-height:0 !important;
+  aspect-ratio:1000/599 !important;
+  padding:0 !important;
+  border-radius:24px !important;
+  overflow:hidden !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  box-shadow:0 18px 45px rgba(7,27,51,.10) !important;
+}
+
+.industries-section .industry-card::before{
+  display:none !important;
+  content:none !important;
+}
+
+.industries-section .industry-card > *{
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+
+.industries-section .industry-card.industry-0{
+  background-image:url('/images/industries/restaurants-qsr-card.webp') !important;
+}
+
+.industries-section .industry-card.industry-1{
+  background-image:url('/images/industries/hotels-hospitality-card.webp') !important;
+}
+
+.industries-section .industry-card.industry-2{
+  background-image:url('/images/industries/central-kitchens-card.webp') !important;
+}
+
+.industries-section .industry-card.industry-3{
+  background-image:url('/images/industries/food-manufacturing-card.webp') !important;
+}
+
+.industries-section .industry-card.industry-4{
+  background-image:url('/images/industries/retail-card.webp') !important;
+}
+
+.industries-section .industry-card.industry-5{
+  background-image:url('/images/industries/multi-site-operations-card.webp') !important;
+}
+
+@media(max-width:980px){
+  .industries-section .industry-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+
+@media(max-width:640px){
+  .industries-section .industry-grid{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  .industries-section .industry-card{
+    border-radius:18px !important;
+  }
+}
