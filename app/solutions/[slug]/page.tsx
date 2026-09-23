@@ -34,6 +34,8 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
   const detail = solutionDetails[slug];
   if (!industry || !detail) notFound();
 
+  const heroImage = slug === 'restaurants-qsr' ? '/images/solutions/restaurants-qsr-hero.webp' : null;
+
   return <>
     <PageHero
       eyebrow="INDUSTRY SOLUTION"
@@ -44,15 +46,28 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
       secondary="Explore the Platform"
       secondaryHref="/platform"
     >
-      <div className="mini-console">
-        <div className="mini-console-head"><strong>{industry.title}</strong><span>Operational view</span></div>
-        <div className="mini-console-grid">
-          <div className="mini-console-card"><span>Standards</span><strong>Central</strong></div>
-          <div className="mini-console-card"><span>Execution</span><strong>Local</strong></div>
-          <div className="mini-console-card"><span>Exceptions</span><strong>Visible</strong></div>
-          <div className="mini-console-card"><span>Closure</span><strong>Traceable</strong></div>
+      {heroImage ? (
+        <div className="solution-hero-image-card">
+          <img
+            src={heroImage}
+            alt={`${industry.title} operations powered by InCheck 360`}
+            width="1536"
+            height="1152"
+            loading="eager"
+            decoding="async"
+          />
         </div>
-      </div>
+      ) : (
+        <div className="mini-console">
+          <div className="mini-console-head"><strong>{industry.title}</strong><span>Operational view</span></div>
+          <div className="mini-console-grid">
+            <div className="mini-console-card"><span>Standards</span><strong>Central</strong></div>
+            <div className="mini-console-card"><span>Execution</span><strong>Local</strong></div>
+            <div className="mini-console-card"><span>Exceptions</span><strong>Visible</strong></div>
+            <div className="mini-console-card"><span>Closure</span><strong>Traceable</strong></div>
+          </div>
+        </div>
+      )}
     </PageHero>
 
     <section className="content-section">
