@@ -31,16 +31,6 @@ export const features: Feature[] = [
     status: 'live',
   },
   {
-    slug: 'corrective-actions',
-    eyebrow: 'Verified closure',
-    title: 'Corrective Actions',
-    short: 'Finding the issue is only the beginning.',
-    description: 'Turn failed controls and findings into assigned action, clear accountability, corrective evidence and verified closure.',
-    bullets: ['Assignment and ownership', 'Priorities and due dates', 'Evidence of correction', 'Verification before closure'],
-    tone: 'orange',
-    status: 'live',
-  },
-  {
     slug: 'sops',
     eyebrow: 'Knowledge',
     title: 'Reference Materials',
@@ -58,16 +48,6 @@ export const features: Feature[] = [
     description: 'Connect temperature and environmental detectors to centralize continuous readings, device status, alerts, trends and multi-location visibility.',
     bullets: ['Temperature and humidity monitoring', 'Device and no-reading status visibility', 'Threshold alerts', 'Historical trends and evidence'],
     tone: 'green',
-    status: 'live',
-  },
-  {
-    slug: 'analytics',
-    eyebrow: 'Visibility',
-    title: 'Dashboards & Analytics',
-    short: 'See where standards hold—and where attention is needed.',
-    description: 'Bring checklist, action, journal and monitoring data together into a management view for completion, exceptions, trends and cross-location performance.',
-    bullets: ['Cross-location dashboards', 'Completion and trend analysis', 'Open action visibility', 'Filterable operational reporting'],
-    tone: 'violet',
     status: 'live',
   },
   {
@@ -119,13 +99,13 @@ export const industries = [
     slug: 'central-kitchens',
     title: 'Central Kitchens',
     subtitle: 'Control critical processes at scale.',
-    description: 'Digitize receiving, production, sanitation, storage and temperature workflows with traceable evidence and corrective actions.',
+    description: 'Digitize receiving, production, sanitation, storage and temperature workflows with traceable evidence and issue follow-up.',
   },
   {
     slug: 'food-manufacturing',
     title: 'Food Manufacturing',
     subtitle: 'Structured execution around recurring controls.',
-    description: 'Support production checks, food-safety routines, environmental monitoring, corrective action and documentation across production and storage environments.',
+    description: 'Support production checks, food-safety routines, environmental monitoring, issue follow-up and documentation across production and storage environments.',
   },
   {
     slug: 'retail',
@@ -142,10 +122,10 @@ export const industries = [
 ];
 
 export const faqs = [
-  ['What is InCheck 360?', 'InCheck 360 is an operational control platform connecting digital checklists, Journal records, corrective actions, Reference Materials, smart detectors, dashboards and operational evidence across multi-location teams.'],
+  ['What is InCheck 360?', 'InCheck 360 is an operational control platform connecting digital checklists, Journal records, Reference Materials, smart detectors, reporting and operational evidence across multi-location teams.'],
   ['Is InCheck 360 only for restaurants?', 'No. The platform is particularly strong in food service and hospitality, while the same structured execution model can support central kitchens, food manufacturing, retail and other multi-site operations.'],
   ['Can workflows differ by location, role or shift?', 'Yes. Checklists, tasks and references can be configured around locations, roles, users, shifts and operating requirements. Personal and shared-device execution, including QR-based access, can be supported where configured.'],
-  ['How do reminders, alerts and corrective actions work?', 'Configured reminders and operational notifications can help surface due, incomplete or exception-based work. When an issue requires follow-up, it can move into an owned corrective action with evidence and verification.'],
+  ['How do reminders, alerts and issue follow-up work?', 'Configured reminders and operational notifications can help surface due, incomplete or exception-based work. Teams can then document follow-up, evidence and verification within the relevant operational workflow.'],
   ['How do smart detectors fit with manual checks?', 'They complement each other. Human checks capture process and context, while connected detectors provide continuous environmental readings between scheduled checks.'],
   ['Does InCheck 360 support HACCP and international standards?', 'Yes. InCheck 360 provides International Standards Support by helping teams digitize execution, monitoring, documentation and verification around HACCP-based controls and international standards-aligned food-safety and operational processes. It does not itself provide certification or guarantee legal compliance.'],
   ['What does onboarding look like?', 'Implementation depends on the selected plan and scope. It can include workflow configuration, account setup, training, onboarding and ongoing Customer Success support. InCheck Lite does not include account setup and onboarding by default.'],
