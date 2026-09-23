@@ -56,11 +56,11 @@ export default function Home() {
     <section className="section cycle-section"><div className="shell">
       <Reveal><SectionHeading eyebrow="HOW IT WORKS" title="Check. Identify. Act. Verify." text="A simple operating cycle that keeps the issue connected to the work—from the first observation to confirmed closure."/></Reveal>
       <div className="cycle-grid">{[
-        ['check','Check','Capture the right operational data at the right time.'],
-        ['search','Identify','Surface failed standards, exceptions and abnormal readings.'],
-        ['alert','Act','Assign ownership, priority and the required corrective action.'],
-        ['shield','Verify','Confirm the response before the issue is closed.'],
-      ].map(([icon,title,text],i)=><Reveal key={title} delay={i*80}><div className={`cycle-card ${i===3?'verify-card':''}`}><span className="step-no">0{i+1}</span><div className={`icon-box tone-${i}`}><Icon name={icon as IconName}/></div><h3>{title}</h3><p>{text}</p>{i<3 && <span className="cycle-arrow" aria-hidden="true">→</span>}</div></Reveal>)}</div>
+        ['Check','Capture the right operational data at the right time.'],
+        ['Identify','Surface failed standards, exceptions and abnormal readings.'],
+        ['Act','Assign ownership, priority and the required corrective action.'],
+        ['Verify','Confirm the response before the issue is closed.'],
+      ].map(([title,text],i)=><Reveal key={title} delay={i*80}><div className={`cycle-card ${i===3?'verify-card':''}`}><span className="step-no">0{i+1}</span><h3>{title}</h3><p>{text}</p>{i<3 && <span className="cycle-arrow" aria-hidden="true">→</span>}</div></Reveal>)}</div>
     </div></section>
 
     <section className="section usecase-section">
