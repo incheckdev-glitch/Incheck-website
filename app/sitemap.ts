@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blogs',
     '/plans',
     '/partners',
-    '/integrations',
     '/about',
     '/contact',
     '/book-demo',
