@@ -13,7 +13,9 @@ export const metadata: Metadata = {
 
 export default function FoodSafety(){return <>
 <PageHero eyebrow="FOOD SAFETY" title="Make food-safety controls part of the work—not a separate paperwork exercise." text="Digitize recurring checks, temperature controls, receiving inspections, sanitation, corrective actions, SOP access and audit evidence across every location.">
-  <div className="mini-console"><div className="mini-console-head"><strong>Food safety control centre</strong><span>Live</span></div><div className="mini-console-grid"><div className="mini-console-card"><span>Hygiene checks</span><strong>On track</strong></div><div className="mini-console-card"><span>Temperature logs</span><strong>Live</strong></div><div className="mini-console-card"><span>Open findings</span><strong>4</strong></div><div className="mini-console-card"><span>Evidence</span><strong>Linked</strong></div></div></div>
+  <div className="food-safety-product-hero">
+    <img src="/images/food-safety/incheck360-food-safety-hero.webp" alt="Kitchen team completing digital food-safety checks and temperature verification during daily operations." />
+  </div>
 </PageHero>
 
 <section className="content-section">
