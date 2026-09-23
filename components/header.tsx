@@ -16,7 +16,18 @@ const productLinks = [
   ['AI Data Analytics · Coming soon', '/product/ai-intelligence'],
 ];
 const industryLinks = [
-  ['Restaurants & QSR', '/solutions/restaurants'], ['Hotels & hospitality', '/solutions/hospitality'], ['Central kitchens', '/solutions/central-kitchens'], ['Food manufacturing', '/solutions/food-manufacturing'], ['Retail', '/solutions/retail'], ['Multi-site operations', '/solutions/multi-site'],
+  ['Restaurants & QSR', '/solutions/restaurants'],
+  ['Hotels & hospitality', '/solutions/hospitality'],
+  ['Central kitchens', '/solutions/central-kitchens'],
+  ['Food manufacturing', '/solutions/food-manufacturing'],
+  ['Retail', '/solutions/retail'],
+  ['Multi-site operations', '/solutions/multi-site'],
+];
+
+const companyLinks = [
+  ['About', '/about'],
+  ['Blogs', '/blogs'],
+  ['Contact', '/contact'],
 ];
 
 export function Header() {
@@ -37,12 +48,10 @@ export function Header() {
           <div className="nav-group"><button>Product <span>⌄</span></button><div className="mega-menu">{productLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>Explore →</small></Link>)}</div></div>
           <div className="nav-group"><button>Industries <span>⌄</span></button><div className="mega-menu compact">{industryLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>View →</small></Link>)}</div></div>
           <Link href="/food-safety">Food Safety</Link>
-          <Link href="/smart-detectors">Smart Detectors</Link>
           <Link href="/plans">Plans</Link>
-          <Link href="/download-app">Download App</Link>
           <Link href="/partners">Partners</Link>
-          <Link href="/blogs">Blogs</Link>
-          <Link href="/about">About</Link>
+          <div className="nav-group"><button>Company <span>⌄</span></button><div className="mega-menu compact company-menu">{companyLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>View →</small></Link>)}</div></div>
+          <Link href="/download-app">Download App</Link>
         </nav>
         <div className="nav-actions">
           <a className="button ghost small desktop-only" href="https://app.incheck360.com/" target="_blank" rel="noreferrer">Login</a>
@@ -53,8 +62,14 @@ export function Header() {
       {open && <div className="mobile-menu" id="mobile-navigation">
         <div className="shell">
           <strong>Product</strong>{productLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
-          <strong>Industries</strong>{industryLinks.slice(0,4).map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
-          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link><Link onClick={()=>setOpen(false)} href="/smart-detectors">Smart Detectors</Link><Link onClick={()=>setOpen(false)} href="/plans">Plans</Link><Link onClick={()=>setOpen(false)} href="/download-app">Download App</Link><Link onClick={()=>setOpen(false)} href="/partners">Partners</Link><Link onClick={()=>setOpen(false)} href="/blogs">Blogs</Link><Link onClick={()=>setOpen(false)} href="/about">About</Link><Link onClick={()=>setOpen(false)} href="/contact">Contact</Link><Link onClick={()=>setOpen(false)} href="/book-demo">Book a Demo</Link>
+          <strong>Industries</strong>{industryLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
+          <strong>Explore</strong>
+          <Link onClick={()=>setOpen(false)} href="/food-safety">Food Safety</Link>
+          <Link onClick={()=>setOpen(false)} href="/plans">Plans</Link>
+          <Link onClick={()=>setOpen(false)} href="/partners">Partners</Link>
+          <Link onClick={()=>setOpen(false)} href="/download-app">Download App</Link>
+          <strong>Company</strong>{companyLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
+          <Link onClick={()=>setOpen(false)} href="/book-demo">Book a Demo</Link>
         </div>
       </div>}
     </header>
