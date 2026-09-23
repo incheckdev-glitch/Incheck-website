@@ -55,7 +55,7 @@ export default function Home() {
     </section>
 
     <section className="section cycle-section"><div className="shell">
-      <Reveal><SectionHeading eyebrow="HOW IT WORKS" title="Check. Identify. Act. Verify." text="A simple operating cycle that keeps the issue connected to the work—from the first observation to confirmed closure."/></Reveal>
+      <Reveal><SectionHeading eyebrow="HOW IT WORKS" title="From Check to Verified Closure." text="A simple operating cycle that keeps the issue connected to the work—from the first observation to confirmed closure."/></Reveal>
       <div className="cycle-grid">{[
         ['Check','Capture the right operational data at the right time.'],
         ['Identify','Surface failed standards, exceptions and abnormal readings.'],
