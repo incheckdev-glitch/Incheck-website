@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: article.summary,
       type: 'article',
       url: `/blogs/${article.slug}`,
+      publishedTime: new Date(article.date).toISOString(),
     },
   };
 }
