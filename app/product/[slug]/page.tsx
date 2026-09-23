@@ -92,10 +92,10 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       )}
     </PageHero>
 
-    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : slug === 'journal' ? 'journal-overview-section' : slug === 'sops' ? 'reference-overview-section' : slug === 'reports' ? 'reports-overview-section' : ''}`}>
-      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : slug === 'journal' ? 'journal-overview-grid' : slug === 'sops' ? 'reference-overview-grid' : slug === 'reports' ? 'reports-overview-grid' : ''}`}>
+    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : slug === 'journal' ? 'journal-overview-section' : slug === 'sops' ? 'reference-overview-section' : slug === 'reports' ? 'reports-overview-section' : (slug === 'audits' || slug === 'ai-intelligence') ? 'roadmap-overview-section' : ''}`}>
+      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : slug === 'journal' ? 'journal-overview-grid' : slug === 'sops' ? 'reference-overview-grid' : slug === 'reports' ? 'reports-overview-grid' : (slug === 'audits' || slug === 'ai-intelligence') ? 'roadmap-overview-grid' : ''}`}>
         <Reveal>
-          <div className={slug === 'checklists' ? 'checklist-overview-copy' : slug === 'journal' ? 'journal-overview-copy' : slug === 'sops' ? 'reference-overview-copy' : slug === 'reports' ? 'reports-overview-copy' : undefined}>
+          <div className={slug === 'checklists' ? 'checklist-overview-copy' : slug === 'journal' ? 'journal-overview-copy' : slug === 'sops' ? 'reference-overview-copy' : slug === 'reports' ? 'reports-overview-copy' : (slug === 'audits' || slug === 'ai-intelligence') ? 'roadmap-overview-copy' : undefined}>
             <span className="eyebrow">{comingSoon ? 'PRODUCT ROADMAP' : 'WHAT IT DOES'}</span>
             <h2>{feature.short}</h2>
             <p>{detail.overview}</p>
@@ -183,6 +183,46 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
                     <p>{item.text}</p>
                   </div>
                   <em>{['Captured','Linked','Traceable','Exportable'][i]}</em>
+                </div>
+              )}
+            </div>
+          ) : slug === 'audits' ? (
+            <div className="roadmap-workflow-panel audit-roadmap-workflow">
+              <div className="roadmap-workflow-head">
+                <span className="eyebrow light">AUDIT WORKFLOW</span>
+                <strong>From planned inspection to verified closure</strong>
+              </div>
+              {detail.workflow.map((item, i) =>
+                <div className="roadmap-workflow-row" key={item.title}>
+                  <span className="roadmap-workflow-icon">
+                    <Icon name={i === 0 ? 'book' : i === 1 ? 'search' : i === 2 ? 'report' : i === 3 ? 'shield' : 'check'} />
+                  </span>
+                  <div className="roadmap-workflow-copy">
+                    <small>STEP {String(i + 1).padStart(2, '0')}</small>
+                    <strong>{item.title}</strong>
+                    <p>{item.text}</p>
+                  </div>
+                  <em>{['Planned','Captured','Assigned','Verified','Reported'][i]}</em>
+                </div>
+              )}
+            </div>
+          ) : slug === 'ai-intelligence' ? (
+            <div className="roadmap-workflow-panel ai-roadmap-workflow">
+              <div className="roadmap-workflow-head">
+                <span className="eyebrow light">AI ANALYTICS WORKFLOW</span>
+                <strong>From operational data to decision support</strong>
+              </div>
+              {detail.workflow.map((item, i) =>
+                <div className="roadmap-workflow-row" key={item.title}>
+                  <span className="roadmap-workflow-icon">
+                    <Icon name={i === 0 ? 'report' : i === 1 ? 'spark' : i === 2 ? 'spark' : 'shield'} />
+                  </span>
+                  <div className="roadmap-workflow-copy">
+                    <small>STEP {String(i + 1).padStart(2, '0')}</small>
+                    <strong>{item.title}</strong>
+                    <p>{item.text}</p>
+                  </div>
+                  <em>{['Collected','Analyzed','Surfaced','Reviewed'][i]}</em>
                 </div>
               )}
             </div>
