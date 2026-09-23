@@ -27,10 +27,109 @@
   background:linear-gradient(180deg,rgba(6,24,47,0) 55%,rgba(6,24,47,.12));
 }
 
+/* Operating model card */
+.operating-model-panel{
+  padding:34px 36px !important;
+  border-radius:30px !important;
+  background:linear-gradient(145deg,#071d37,#082744 70%,#06213b) !important;
+  border:1px solid rgba(151,198,238,.20) !important;
+  box-shadow:0 28px 70px rgba(0,0,0,.22) !important;
+}
+
+.operating-model-list{
+  margin-top:20px;
+  display:grid;
+  gap:0;
+}
+
+.operating-step{
+  display:grid;
+  grid-template-columns:64px 1fr auto;
+  gap:20px;
+  align-items:center;
+  padding:22px 0;
+  border-top:1px solid rgba(255,255,255,.11);
+}
+
+.operating-step:first-child{
+  border-top:0;
+}
+
+.operating-step-icon{
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  color:#8fcaff;
+  background:rgba(143,202,255,.08);
+  border:1px solid rgba(143,202,255,.16);
+}
+
+.operating-step-copy small{
+  display:block;
+  color:#8fcaff;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.operating-step-copy b{
+  display:block;
+  color:#fff;
+  font-size:21px;
+  line-height:1.12;
+  letter-spacing:-.025em;
+}
+
+.operating-step-copy p{
+  margin:7px 0 0 !important;
+  color:#a9bfd5 !important;
+  font-size:13px !important;
+  line-height:1.5 !important;
+  max-width:410px;
+}
+
+.operating-step-badge{
+  justify-self:end;
+  white-space:nowrap;
+  color:#33e2a3;
+  background:rgba(27,209,145,.12);
+  border:1px solid rgba(27,209,145,.18);
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-style:normal;
+  font-weight:750;
+}
+
 @media(max-width:900px){
   .solution-hero-image-card,
   .solution-hero-image-card img{
     min-height:300px;
+  }
+}
+
+@media(max-width:700px){
+  .operating-model-panel{
+    padding:24px !important;
+    border-radius:24px !important;
+  }
+  .operating-step{
+    grid-template-columns:48px 1fr;
+    gap:14px;
+  }
+  .operating-step-badge{
+    grid-column:2;
+    justify-self:start;
+    margin-top:4px;
+  }
+  .operating-step-icon{
+    width:44px;
+    height:44px;
+    border-radius:14px;
   }
 }
 
