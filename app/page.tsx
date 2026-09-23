@@ -60,7 +60,7 @@ export default function Home() {
         ['search','Identify','Surface failed standards, exceptions and abnormal readings.'],
         ['alert','Act','Assign ownership, priority and the required corrective action.'],
         ['shield','Verify','Confirm the response before the issue is closed.'],
-      ].map(([icon,title,text],i)=><Reveal key={title} delay={i*80}><div className="cycle-card"><span className="step-no">0{i+1}</span><div className={`icon-box tone-${i}`}><Icon name={icon as IconName}/></div><h3>{title}</h3><p>{text}</p>{i<3 && <span className="cycle-arrow">→</span>}</div></Reveal>)}</div>
+      ].map(([icon,title,text],i)=><Reveal key={title} delay={i*80}><div className={`cycle-card ${i===3?'verify-card':''}`}><span className="step-no">0{i+1}</span><div className={`icon-box tone-${i}`}><Icon name={icon as IconName}/></div><h3>{title}</h3><p>{text}</p>{i<3 && <span className="cycle-arrow" aria-hidden="true">→</span>}</div></Reveal>)}</div>
     </div></section>
 
     <section className="section usecase-section">
