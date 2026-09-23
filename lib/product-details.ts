@@ -54,7 +54,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Included in InCheck Basic, InCheck Detect and relevant custom configurations. Available for Lite as an optional add-on.',
   },
   audits: {
-    overview: 'The dedicated Audit Management module is being developed for deeper structured audits, findings, evidence, follow-up and verification. Teams can already use structured checklists for inspection-style execution today; the dedicated audit workflow will add a purpose-built assurance layer.',
+    overview: 'Audit Management is being developed as a dedicated assurance workflow for planning audits, recording findings, capturing evidence, assigning follow-up and verifying closure. Inspection-style execution is already possible through Checklists today; this module will add a purpose-built audit layer with a clearer end-to-end record.'
     capabilities: [
       { title: 'Structured audit programs', text: 'Planned support for organized audit sections, questions and repeatable inspection structures.' },
       { title: 'Findings & evidence', text: 'Capture the finding together with notes, photos and supporting evidence.' },
@@ -63,15 +63,15 @@ export const productDetails: Record<string, ProductDetail> = {
       { title: 'Verification', text: 'Support confirmation of corrective evidence before a finding is considered closed.' },
       { title: 'Audit reporting', text: 'Create a clear audit record from inspection through final status.' }],
     workflow: [
-      { title: 'Plan the audit', text: 'Select the audit structure, location and scope.' },
-      { title: 'Inspect & capture', text: 'Record answers, findings, notes and evidence.' },
-      { title: 'Assign findings', text: 'Route required corrections to an accountable owner.' },
-      { title: 'Verify closure', text: 'Review the corrective evidence before final closure.' },
-      { title: 'Report', text: 'Keep the audit trail and result available for management review.' }],
+      { title: 'Plan the audit', text: 'Define the audit template, location, scope, schedule and responsible auditor.' },
+      { title: 'Inspect & capture', text: 'Complete the audit, record findings and attach notes, photos and supporting evidence at source.' },
+      { title: 'Assign follow-up', text: 'Route each finding that requires action to an accountable owner with clear follow-up.' },
+      { title: 'Verify closure', text: 'Review submitted evidence and confirm the response before the finding is closed.' },
+      { title: 'Report & review', text: 'Preserve the completed audit, findings, evidence and closure history for management review.' }],
     useCases: ['Internal food-safety audits','Brand-standard audits','Operational inspections','Multi-location assurance reviews','Supplier / site inspections'],
     management: ['Audit status','Findings by location','Open follow-up','Evidence trail','Closure status','Audit reports'],
     connections: ['Checklists & Tasks','Reference Materials','Reports & Audit Trail'],
-    availability: 'Coming Soon. The dedicated Audit Management module is not presented as generally available today.',
+    availability: 'Coming soon. Inspection-style workflows can be executed with Checklists today; the dedicated Audit Management module is still in development.'
   },
   sops: {
     overview: 'Reference Materials centralizes SOPs, procedures, manuals, training content and operational guidance in one structured library. Organize material around the way teams work so current instructions are easier to find during execution instead of being scattered across shared drives, local copies and binders.',
@@ -112,7 +112,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Supports operational evidence and audit readiness across the platform. Certification and regulatory compliance remain the responsibility of the operating organization.'
   },
   'ai-intelligence': {
-    overview: 'AI Data Analytics is an upcoming intelligence layer intended to help teams extract more value from the structured operational data already collected in InCheck 360. It is being positioned as decision support, not as a replacement for qualified operational or food-safety judgment.',
+    overview: 'AI Data Analytics is being developed to turn InCheck 360 operational data into clearer management signals. It will help surface recurring issues, changing patterns and areas that deserve attention, while keeping the final operational decision with qualified teams.'
     capabilities: [
       { title: 'Recurring-issue detection', text: 'Identify repeated operational problems and non-conformities across records.' },
       { title: 'Trend summaries', text: 'Summarize meaningful changes and patterns across locations and periods.' },
@@ -121,13 +121,13 @@ export const productDetails: Record<string, ProductDetail> = {
       { title: 'Operational summaries', text: 'Turn larger volumes of structured data into easier management review.' },
       { title: 'Evidence intelligence roadmap', text: 'The roadmap includes deeper analysis of operational evidence where technically and operationally appropriate.' }],
     workflow: [
-      { title: 'Collect structured data', text: 'Operational records continue to come from the normal InCheck 360 workflow.' },
-      { title: 'Analyze patterns', text: 'The intelligence layer reviews the available history for meaningful signals.' },
-      { title: 'Surface insights', text: 'Management receives clearer summaries and areas for review.' },
-      { title: 'Human decision', text: 'Qualified teams decide what action is appropriate in the real operation.' }],
+      { title: 'Build the data foundation', text: 'Checklists, Journal records, detector history and reports provide the structured operational data for analysis.' },
+      { title: 'Analyze patterns', text: 'The intelligence layer reviews historical activity for recurring issues, shifts in performance and unusual patterns.' },
+      { title: 'Surface insights', text: 'Management receives concise signals, summaries and priority areas that warrant closer review.' },
+      { title: 'Support the decision', text: 'Qualified teams review the insight in context and decide what operational response is appropriate.' }],
     useCases: ['Recurring non-conformities','Multi-location trend review','Management summaries','Operational risk review','Performance-pattern detection'],
     management: ['Summarized patterns','Priority areas for review','Recurring issue visibility','Cross-location signals'],
     connections: ['Reports & Audit Trail','Checklists & Tasks','Smart Detectors'],
-    availability: 'Coming Soon. AI Data Analytics is not presented as a generally available production module today.',
+    availability: 'Coming soon. AI Data Analytics is in development and is not yet presented as a generally available production module.'
   },
 };
