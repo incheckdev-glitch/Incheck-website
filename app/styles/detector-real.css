@@ -1,0 +1,43 @@
+/* Real Smart Detectors product screenshot */
+.detector-product-frame{
+  position:relative;
+  width:min(860px,58vw);
+  margin-left:auto;
+  border-radius:24px;
+  padding:10px;
+  background:linear-gradient(135deg,rgba(82,171,255,.42),rgba(13,72,137,.16));
+  border:1px solid rgba(107,188,255,.45);
+  box-shadow:0 34px 90px rgba(0,0,0,.32),0 0 80px rgba(23,126,236,.20);
+  overflow:hidden;
+}
+.detector-product-frame:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,rgba(255,255,255,.18),transparent 22%,transparent 70%,rgba(72,176,255,.12));
+  pointer-events:none;
+  z-index:2;
+}
+.detector-product-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 18px 52px rgba(0,0,0,.22);
+}
+.detector-layout{
+  grid-template-columns:.76fr 1.24fr;
+  gap:78px;
+}
+.detector-section h2{
+  max-width:560px;
+}
+@media(max-width:1150px){
+  .detector-layout{grid-template-columns:1fr;gap:44px}
+  .detector-product-frame{width:100%;margin:0 auto}
+}
+@media(max-width:700px){
+  .detector-product-frame{border-radius:18px;padding:6px;width:100%}
+  .detector-product-frame img{border-radius:12px}
+}
