@@ -175,3 +175,212 @@ img,video,canvas{max-width:100%;height:auto}
   .download-app-screen{min-height:345px;padding:20px 15px}
   .download-store-card strong{font-size:21px}
 }
+
+
+/* Final mobile/tablet image placement QA */
+@media(max-width:1050px){
+  .subhero-visual,
+  .hero-visual-wrap{
+    width:100%;
+    min-width:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .food-product-frame,
+  .detector-product-frame,
+  .story-flow{
+    width:100%;
+    max-width:760px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .solution-hero-image-card,
+  .checklist-product-hero,
+  .journal-product-hero,
+  .reference-material-product-hero,
+  .detectors-product-hero,
+  .reports-product-hero,
+  .roadmap-product-hero,
+  .food-safety-product-hero,
+  .download-app-real-visual,
+  .detector-monitoring-visual{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media(max-width:700px){
+  .subhero-visual,
+  .hero-visual-wrap{
+    min-height:0!important;
+    overflow:visible;
+  }
+
+  .solution-hero-image-card{
+    width:100%;
+    max-width:100%;
+    min-height:0!important;
+    aspect-ratio:16/10;
+    border-radius:18px;
+  }
+
+  .solution-hero-image-card img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-width:100%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    margin:0!important;
+    transform:none!important;
+  }
+
+  .checklist-product-hero,
+  .journal-product-hero,
+  .reference-material-product-hero,
+  .detectors-product-hero,
+  .reports-product-hero,
+  .roadmap-product-hero,
+  .food-safety-product-hero,
+  .download-app-real-visual,
+  .detector-monitoring-visual,
+  .platform-mobile-checklist-visual{
+    width:100%;
+    min-height:0!important;
+    padding:8px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center!important;
+    overflow:visible;
+  }
+
+  .checklist-product-hero img,
+  .journal-product-hero img,
+  .reference-material-product-hero img,
+  .detectors-product-hero img,
+  .reports-product-hero img,
+  .roadmap-product-hero img,
+  .food-safety-product-hero img,
+  .detector-monitoring-visual img{
+    display:block;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0 auto!important;
+    transform:none!important;
+  }
+
+  .platform-mobile-checklist-visual img{
+    display:block;
+    width:auto!important;
+    max-width:min(82vw,320px)!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0 auto!important;
+  }
+
+  .download-app-real-visual img{
+    display:block;
+    width:auto!important;
+    max-width:min(92vw,420px)!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0 auto!important;
+    filter:drop-shadow(0 20px 34px rgba(0,0,0,.20));
+  }
+
+  .food-product-frame,
+  .detector-product-frame,
+  .story-flow{
+    width:100%!important;
+    max-width:100%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    overflow:hidden;
+  }
+
+  .food-product-frame img,
+  .detector-product-frame img,
+  .story-flow img{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+  }
+
+  .story-flow{
+    padding:8px!important;
+    border-radius:18px;
+  }
+
+  .story-flow img{
+    border-radius:12px!important;
+  }
+
+  .blog-card-visual{
+    min-height:0!important;
+    aspect-ratio:16/9;
+    background-size:cover!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+
+  .industries-section .industry-card{
+    background-size:cover!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+
+  .client-logo-card .client-logo-image{
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+
+  .faq-brand-logo{
+    display:block;
+    width:min(190px,65vw)!important;
+    max-width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+
+  .official-store-card .store-badge-image{
+    width:auto!important;
+    max-width:100%!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+  }
+}
+
+@media(max-width:430px){
+  .solution-hero-image-card{
+    aspect-ratio:4/3;
+  }
+
+  .blog-card-visual{
+    aspect-ratio:16/10;
+  }
+
+  .food-product-frame,
+  .detector-product-frame,
+  .story-flow{
+    border-radius:14px!important;
+  }
+
+  .download-app-real-visual img{
+    max-width:min(94vw,360px)!important;
+  }
+}
