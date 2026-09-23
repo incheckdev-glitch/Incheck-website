@@ -83,15 +83,21 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
           </div>
         </Reveal>
         <Reveal delay={90}>
-          <div className="content-panel dark">
+          <div className="content-panel dark operating-model-panel">
             <span className="eyebrow light">ONE OPERATING MODEL</span>
-            {[
-              ['01','Set the standard','Define what should happen, where and when.'],
-              ['02','Execute locally','Guide teams through repeatable workflows and evidence capture.'],
-              ['03','Surface exceptions','Identify failed controls, missed work and abnormal conditions.'],
-              ['04','Assign follow-up','Move required action to a clear owner and due date.'],
-              ['05','Review & verify','Keep the response and evidence visible to management.'],
-            ].map(([no,title,text]) => <div className="detector-row" key={no}><div><Icon name={no==='01'?'book':no==='03'?'alert':no==='05'?'shield':'check'}/><span><small>STEP {no}</small><b style={{fontSize:16}}>{title}</b></span></div><em>{no==='05'?'Review':'Recorded'}</em></div>)}
+            <div className="operating-model-list">
+              {[
+                ['01','Standardize','Define the routine, checklist, timing and owner.','Defined'],
+                ['02','Execute','Teams complete checks at site level with guided workflows.','Completed'],
+                ['03','Capture','Photos, notes, readings and exceptions are recorded.','Flagged'],
+                ['04','Act','Failed standards become assigned corrective actions.','Assigned'],
+                ['05','Verify','Managers review evidence before closure.','Verified'],
+              ].map(([no,title,text,status]) => <div className="operating-step" key={no}>
+                <div className="operating-step-icon"><Icon name={no==='01'?'book':no==='03'?'alert':no==='05'?'shield':'check'} /></div>
+                <div className="operating-step-copy"><small>STEP {no}</small><b>{title}</b><p>{text}</p></div>
+                <em className="operating-step-badge">{status}</em>
+              </div>)}
+            </div>
           </div>
         </Reveal>
       </div>
