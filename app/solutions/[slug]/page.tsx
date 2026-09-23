@@ -36,7 +36,7 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
 
   const heroImages: Record<string, string> = {
     restaurants: '/images/solutions/restaurants-qsr-hero.webp',
-    hospitality: '/images/solutions/hotels-hospitality-hero.webp',
+    hospitality: '/images/solutions/hotels-hospitality-hero.png.webp',
   };
   const heroImage = heroImages[slug] ?? null;
 
