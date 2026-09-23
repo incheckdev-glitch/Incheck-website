@@ -809,3 +809,43 @@
     margin-top:-2px;
   }
 }
+
+
+/* Reference Materials product hero */
+.reference-material-product-hero{
+  width:100%;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+.reference-material-product-hero img{
+  display:block;
+  width:116%;
+  max-width:760px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 26px 42px rgba(0,0,0,.22));
+}
+
+@media(max-width:1050px){
+  .reference-material-product-hero{
+    min-height:340px;
+  }
+  .reference-material-product-hero img{
+    width:100%;
+    max-width:720px;
+  }
+}
+
+@media(max-width:640px){
+  .reference-material-product-hero{
+    min-height:250px;
+  }
+  .reference-material-product-hero img{
+    width:108%;
+    max-width:560px;
+  }
+}
