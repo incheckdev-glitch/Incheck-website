@@ -144,12 +144,19 @@ export default function Home() {
     <section className="section customer-story-section">
       <div className="shell customer-story">
         <Reveal><div className="customer-story-copy"><span className="eyebrow light">CUSTOMER SPOTLIGHT</span><div className="story-brand">BOSPORUS</div><h2>A team recognized for food-safety performance.</h2><p>InCheck 360 has publicly highlighted its support of the Bosporus Restaurant team, which earned third place at the 2025 Dubai Municipality Elite Food Safety Awards.</p><p className="story-note">This spotlight reflects the customer relationship and published recognition. It does not claim that software alone caused the award result.</p></div></Reveal>
-        <Reveal delay={100}><div className="story-flow">{[
-          ['01','Standardize','Translate recurring controls into usable routines.'],
-          ['02','Capture','Record checks and exceptions at source.'],
-          ['03','Act','Assign responsibility when a standard is missed.'],
-          ['04','Verify','Confirm the response before closure.'],
-        ].map(([no,title,text]) => <div className="story-step" key={no}><span>{no}</span><div><strong>{title}</strong><p>{text}</p></div></div>)}</div></Reveal>
+        <Reveal delay={100}>
+          <div className="story-flow" aria-label="Bosporus process visual">
+            <img
+              src="/images/bosporus-process.png.png"
+              alt="Bosporus process visual"
+              loading="lazy"
+              decoding="async"
+              width="1024"
+              height="1024"
+              style={{display:'block',width:'100%',height:'auto',borderRadius:'16px'}}
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
 
