@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://incheck360.com'),
   applicationName: 'InCheck 360',
   title: { default: 'InCheck 360', template: '%s | InCheck 360' },
-  description: 'InCheck 360 connects human checks, corrective actions, verification, evidence, analytics and IoT monitoring across multi-location operations.',
+  description: 'InCheck 360 connects human checks, operational follow-up, verification, evidence, reporting and IoT monitoring across multi-location operations.',
   icons: {
     icon: [{ url: '/favicon.svg?v=3', type: 'image/svg+xml' }],
     shortcut: ['/favicon.svg?v=3'],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'InCheck 360',
     title: 'InCheck 360',
-    description: 'Operational control across people, processes and equipment—from checks and exceptions to corrective action and verification.',
+    description: 'Operational control across people, processes and equipment—from checks and exceptions to documented follow-up and verification.',
     url: '/',
     images: [{ url: '/brand/incheck360-logo.png', width: 610, height: 200, alt: 'InCheck 360' }],
   },
