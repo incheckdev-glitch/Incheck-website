@@ -95,7 +95,7 @@ export default function Home() {
     </div></section>
 
     <section className="section detector-section"><div className="detector-grid-bg"/><div className="shell detector-layout">
-      <Reveal><div><span className="eyebrow light">SMART DETECTORS</span><h2>A manual reading shows one moment. Monitoring shows what happened between moments.</h2><p>Connect temperature and environmental detectors for continuous visibility across chillers, freezers, storage areas and other critical environments.</p><Link className="button white" href="/smart-detectors">Explore Smart Detectors <Icon name="arrow" size={18}/></Link><div className="detector-points"><span>24/7 monitoring</span><span>Configurable thresholds</span><span>Historical trends</span><span>Multi-location view</span></div></div></Reveal>
+      <Reveal><div><span className="eyebrow light">SMART DETECTORS</span><h2>Manual checks capture moments. Detectors monitor the gaps.</h2><p>Track temperature, humidity, thresholds and device status across critical storage areas.</p><Link className="button white" href="/smart-detectors">Explore Smart Detectors <Icon name="arrow" size={18}/></Link><div className="detector-points"><span>24/7 monitoring</span><span>Configurable thresholds</span><span>Historical trends</span><span>Multi-location view</span></div></div></Reveal>
       <Reveal delay={120}><div className="detector-product-frame"><img src="/product/smart-detectors-dashboard-only.webp" alt="InCheck 360 Smart Detectors dashboard showing detector alerts, temperature, humidity and connection status" loading="lazy" decoding="async" width="1361" height="678"/></div></Reveal>
     </div></section>
 
