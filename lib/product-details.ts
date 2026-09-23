@@ -102,7 +102,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Available now as part of the operational follow-through layer.',
   },
   sops: {
-    overview: 'Reference Materials gives teams a controlled operational library for SOPs, procedures, manuals, standards, training documents and supporting guidance. The goal is to put the current standard close to the work instead of leaving it in shared drives and binders.',
+    overview: 'Reference Materials centralizes SOPs, procedures, manuals, training content and operational guidance in one structured library. Organize material around the way teams work so current instructions are easier to find during execution instead of being scattered across shared drives, local copies and binders.',
     capabilities: [
       { title: 'Central reference library', text: 'Keep approved operational documents and guidance in one accessible location.' },
       { title: 'Role & location relevance', text: 'Organize material around the teams, departments and locations that need it.' },
@@ -112,15 +112,15 @@ export const productDetails: Record<string, ProductDetail> = {
       { title: 'Checklist support', text: 'Use reference material to support the standards teams are expected to execute in checklists.' },
     ],
     workflow: [
-      { title: 'Publish the standard', text: 'Add the SOP, procedure, guide or supporting document.' },
-      { title: 'Organize access', text: 'Make the material relevant to the appropriate operating context.' },
-      { title: 'Use in execution', text: 'Teams consult the standard while completing operational work.' },
-      { title: 'Maintain one source', text: 'Keep guidance centralized as procedures evolve.' },
+      { title: 'Organize the library', text: 'Create folders around locations, departments, processes or topics so material stays easy to navigate.' },
+      { title: 'Upload current material', text: 'Add SOPs, procedures, manuals, training documents and other operational references to the right folder.' },
+      { title: 'Access at work', text: 'Teams open the relevant reference material while carrying out day-to-day operational work.' },
+      { title: 'Keep guidance current', text: 'Update the centralized source as procedures, instructions or operating standards change.' },
     ],
     useCases: ['Food-safety SOPs','Cleaning procedures','Equipment instructions','Brand standards','Training references','Emergency / operating guides'],
     management: ['Central document visibility','Consistent operating standards','Reduced local-document fragmentation','Support for onboarding and training'],
     connections: ['Checklists & Tasks','Journal','Corrective Actions','Audit Management'],
-    availability: 'Available now. Reference Materials is included across the current plan structure.',
+    availability: 'Included across the current plan structure.'
   },
   analytics: {
     overview: 'Dashboards & Analytics turns day-to-day execution data into a management view. Teams can review completion, exceptions, open follow-up and operational patterns across locations without reading individual records one by one.',
