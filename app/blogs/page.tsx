@@ -36,7 +36,7 @@ export default function Blogs() {
                   <span>{article.category}</span>
                 </div>
                 <div className="resource-top">
-                  <span>{article.category}</span>
+                  <span>{article.readingTime}</span>
                   <small>{article.date}</small>
                 </div>
                 <div className="resource-body">
