@@ -78,10 +78,10 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       )}
     </PageHero>
 
-    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : ''}`}>
-      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : ''}`}>
+    <section className={`content-section product-overview-section ${slug === 'checklists' ? 'checklist-overview-section' : slug === 'journal' ? 'journal-overview-section' : ''}`}>
+      <div className={`shell content-grid ${slug === 'checklists' ? 'checklist-overview-grid' : slug === 'journal' ? 'journal-overview-grid' : ''}`}>
         <Reveal>
-          <div className={slug === 'checklists' ? 'checklist-overview-copy' : undefined}>
+          <div className={slug === 'checklists' ? 'checklist-overview-copy' : slug === 'journal' ? 'journal-overview-copy' : undefined}>
             <span className="eyebrow">{comingSoon ? 'PRODUCT ROADMAP' : 'WHAT IT DOES'}</span>
             <h2>{feature.short}</h2>
             <p>{detail.overview}</p>
@@ -109,6 +109,26 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
                     <p>{item.text}</p>
                   </div>
                   <em>{['Configured','Assigned','Completed','Flagged','Verified'][i]}</em>
+                </div>
+              )}
+            </div>
+          ) : slug === 'journal' ? (
+            <div className="journal-workflow-panel">
+              <div className="journal-workflow-head">
+                <span className="eyebrow light">JOURNAL WORKFLOW</span>
+                <strong>From observation to accountable follow-up</strong>
+              </div>
+              {detail.workflow.map((item, i) =>
+                <div className="journal-workflow-row" key={item.title}>
+                  <span className="journal-workflow-icon">
+                    <Icon name={i === 0 ? 'search' : i === 1 ? 'report' : i === 2 ? 'check' : 'shield'} />
+                  </span>
+                  <div className="journal-workflow-copy">
+                    <small>STEP {String(i + 1).padStart(2, '0')}</small>
+                    <strong>{item.title}</strong>
+                    <p>{item.text}</p>
+                  </div>
+                  <em>{['Observed','Logged','Reviewed','Actioned'][i]}</em>
                 </div>
               )}
             </div>
