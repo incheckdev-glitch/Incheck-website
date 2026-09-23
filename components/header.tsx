@@ -14,6 +14,7 @@ const productLinks = [
   ['Reports & audit trail', '/product/reports'],
   ['Audit Management · Coming soon', '/product/audits'],
   ['AI Data Analytics · Coming soon', '/product/ai-intelligence'],
+  ['Download App', '/download-app'],
 ];
 const industryLinks = [
   ['Restaurants & QSR', '/solutions/restaurants'], ['Hotels & hospitality', '/solutions/hospitality'], ['Central kitchens', '/solutions/central-kitchens'], ['Food manufacturing', '/solutions/food-manufacturing'], ['Retail', '/solutions/retail'], ['Multi-site operations', '/solutions/multi-site'],
