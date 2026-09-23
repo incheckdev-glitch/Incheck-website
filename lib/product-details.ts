@@ -37,7 +37,7 @@ export const productDetails: Record<string, ProductDetail> = {
     availability: 'Included in InCheck Lite, Basic and Detect, subject to each plan’s limits.',
   },
   journal: {
-    overview: 'Journal gives teams a structured place for operational observations that do not belong inside a recurring checklist. It keeps shift notes, incidents, recurring concerns and location updates in an accessible operating history instead of scattered notebooks or chat messages.',
+    overview: 'Journal captures the operational context that sits between recurring checks. Teams can record shift notes, incidents, observations and location updates in one searchable history, keeping important context out of scattered messages and notebooks.',
     capabilities: [
       { title: 'Operational observations', text: 'Record events, observations and important context as they happen during daily operations.' },
       { title: 'Shift & location updates', text: 'Preserve handover information and location-specific notes in one structured history.' },
@@ -47,15 +47,15 @@ export const productDetails: Record<string, ProductDetail> = {
       { title: 'Management history', text: 'Give managers a searchable operational history that complements checklist and corrective-action records.' },
     ],
     workflow: [
-      { title: 'Observe', text: 'A team member identifies an event, issue or operational update.' },
-      { title: 'Record', text: 'The observation is captured against the relevant operating context.' },
-      { title: 'Review', text: 'Managers can review the history alongside other operational records.' },
-      { title: 'Follow up', text: 'Where action is needed, the observation can inform the next operational response.' },
+      { title: 'Observe', text: 'A team member notices an event, issue, handover point or operational update that needs to be preserved.' },
+      { title: 'Record', text: 'Capture the note, photo or message with the relevant user, location and time context.' },
+      { title: 'Review', text: 'Managers review the entry and conversation alongside the wider operational record.' },
+      { title: 'Follow up', text: 'Continue the conversation or move the issue into the appropriate operational follow-up when action is required.' },
     ],
     useCases: ['Shift notes','Operational incidents','Location updates','Recurring observations','Manager handover','Unplanned events'],
     management: ['Chronological operating context','Location history','Recurring concerns','Shift-to-shift visibility','Supporting context for management review'],
     connections: ['Checklists & Tasks','Corrective Actions','Dashboards & Analytics','Reports & Audit Trail'],
-    availability: 'Available now in InCheck Basic, InCheck Detect and relevant custom configurations. It can be added to Lite as an optional add-on.',
+    availability: 'Included in InCheck Basic, InCheck Detect and relevant custom configurations. Available for Lite as an optional add-on.',
   },
   audits: {
     overview: 'The dedicated Audit Management module is being developed for deeper structured audits, findings, evidence, corrective action and verification. Teams can already use structured checklists for inspection-style execution today; the dedicated audit workflow will add a purpose-built assurance layer.',
