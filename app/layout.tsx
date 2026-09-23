@@ -10,19 +10,29 @@ const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', displa
 export const metadata: Metadata = {
   metadataBase: new URL('https://incheck360.com'),
   applicationName: 'InCheck 360',
-  title: { default: 'InCheck 360 | Operational Control Platform', template: '%s | InCheck 360' },
+  title: { default: 'InCheck 360', template: '%s | InCheck 360' },
   description: 'InCheck 360 connects human checks, corrective actions, verification, evidence, analytics and IoT monitoring across multi-location operations.',
+  icons: {
+    icon: [
+      { url: '/brand/incheck360-logo.png', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: ['/brand/incheck360-logo.png'],
+    apple: [{ url: '/brand/incheck360-logo.png', type: 'image/png' }],
+  },
   openGraph: {
     type: 'website',
     siteName: 'InCheck 360',
-    title: 'InCheck 360 | Operational Control Platform',
+    title: 'InCheck 360',
     description: 'Operational control across people, processes and equipment—from checks and exceptions to corrective action and verification.',
     url: '/',
+    images: [{ url: '/brand/incheck360-logo.png', width: 610, height: 200, alt: 'InCheck 360' }],
   },
   twitter: {
     card: 'summary',
-    title: 'InCheck 360 | Operational Control Platform',
+    title: 'InCheck 360',
     description: 'Operational control across people, processes and equipment.',
+    images: ['/brand/incheck360-logo.png'],
   },
   robots: { index: true, follow: true },
 };
