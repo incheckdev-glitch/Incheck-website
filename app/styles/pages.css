@@ -755,3 +755,31 @@
     min-height:160px;
   }
 }
+
+
+/* Demo form verification */
+.demo-captcha{
+  margin:18px 0 16px;
+  min-height:65px;
+}
+
+.demo-captcha>div{
+  max-width:100%;
+}
+
+.demo-honeypot{
+  position:absolute!important;
+  left:-10000px!important;
+  width:1px!important;
+  height:1px!important;
+  overflow:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+@media(max-width:420px){
+  .demo-captcha{
+    overflow-x:auto;
+    padding-bottom:2px;
+  }
+}
