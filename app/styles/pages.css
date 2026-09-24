@@ -551,10 +551,11 @@
 .official-store-card{
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
+  align-items:center;
   justify-content:center;
   min-height:190px;
   padding:28px;
+  text-align:center;
 }
 
 .official-store-card .store-badge-image{
@@ -567,13 +568,14 @@
 
 .official-store-card .google-play-badge{
   height:72px;
-  margin-left:-10px;
+  margin-left:0;
 }
 
 .official-store-card p{
   margin:14px 0 0;
   color:#a9bfd5;
   font-size:13px;
+  text-align:center;
 }
 
 @media(max-width:640px){
@@ -588,7 +590,7 @@
 
   .official-store-card .google-play-badge{
     height:66px;
-    margin-left:-9px;
+    margin-left:0;
   }
 }
 
