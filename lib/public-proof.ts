@@ -21,7 +21,6 @@ export const publicClients = [
   'Sibon',
   'Skirt',
   'Soul Kitchen',
-  'The Chain',
   'UNI',
   'Zahret',
 ];
