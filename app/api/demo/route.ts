@@ -39,10 +39,11 @@ export async function POST(request: Request) {
     }
 
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-    const resendApiKey = process.env.RESEND_API_KEY;
-    const fromEmail = process.env.DEMO_FROM_EMAIL || 'InCheck 360 Website <noreply@incheck360.nl>';
+    const mailtrapApiToken = process.env.MAILTRAP_API_TOKEN;
+    const fromEmail = process.env.DEMO_FROM_EMAIL || 'noreply@incheck360.nl';
+    const fromName = process.env.DEMO_FROM_NAME || 'InCheck 360 Website';
 
-    if (!turnstileSecret || !resendApiKey) {
+    if (!turnstileSecret || !mailtrapApiToken) {
       console.error('Demo form server configuration is incomplete.');
       return NextResponse.json({ error: 'Form service is not configured.' }, { status: 503 });
     }
@@ -68,17 +69,24 @@ export async function POST(request: Request) {
     const safeCompany = escapeHtml(company);
     const safeLocations = escapeHtml(locations);
 
-    const emailResponse = await fetch('https://api.resend.com/emails', {
+    const emailResponse = await fetch('https://send.api.mailtrap.io/api/send', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${resendApiKey}`,
+        Authorization: `Bearer ${mailtrapApiToken}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: fromEmail,
-        to: [RECIPIENT],
-        reply_to: email,
+        from: {
+          email: fromEmail,
+          name: fromName,
+        },
+        to: [{ email: RECIPIENT }],
+        reply_to: {
+          email,
+          name,
+        },
         subject: `InCheck 360 demo request — ${company}`,
+        category: 'demo-request',
         html: `
           <div style="font-family:Arial,sans-serif;color:#102a43;line-height:1.6">
             <h2 style="margin:0 0 18px">New InCheck 360 demo request</h2>
@@ -107,7 +115,7 @@ export async function POST(request: Request) {
 
     if (!emailResponse.ok) {
       const errorText = await emailResponse.text();
-      console.error('Resend demo email failed:', errorText);
+      console.error('Mailtrap demo email failed:', errorText);
       return NextResponse.json({ error: 'Email delivery failed.' }, { status: 502 });
     }
 
