@@ -1623,3 +1623,60 @@
     border-radius:22px;
   }
 }
+
+
+/* Platform hero: transparent device composition, no enclosing card */
+.platform-hero-transparent.solution-hero-image-card{
+  min-height:0;
+  overflow:visible;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.platform-hero-transparent.solution-hero-image-card:after{
+  display:none;
+}
+
+.platform-hero-transparent.solution-hero-image-card img{
+  width:112%;
+  max-width:760px;
+  height:auto;
+  min-height:0;
+  margin-left:-4%;
+  object-fit:contain;
+  object-position:center;
+  filter:drop-shadow(0 28px 48px rgba(0,0,0,.22));
+}
+
+@media(max-width:1050px){
+  .platform-hero-transparent.solution-hero-image-card{
+    display:flex;
+    justify-content:center;
+  }
+
+  .platform-hero-transparent.solution-hero-image-card img{
+    width:100%;
+    max-width:760px;
+    margin-left:0;
+  }
+}
+
+@media(max-width:640px){
+  .platform-hero-transparent.solution-hero-image-card{
+    aspect-ratio:auto;
+    min-height:0!important;
+    padding:6px 0;
+  }
+
+  .platform-hero-transparent.solution-hero-image-card img{
+    width:108%!important;
+    max-width:560px!important;
+    height:auto!important;
+    min-height:0!important;
+    margin-left:-4%!important;
+    object-fit:contain!important;
+    transform:none!important;
+  }
+}
