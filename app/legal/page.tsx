@@ -17,6 +17,7 @@ export default function LegalPage() {
           <div><small>Company</small><strong>{companyInfo.name}</strong></div>
           <div><small>Location</small><strong>{companyInfo.city}, {companyInfo.country}</strong></div>
           <div><small>Contact</small><strong><a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a></strong></div>
+          <div><small>Phone</small><strong><a href="tel:+3197010280855">{companyInfo.phone}</a></strong></div>
           {companyInfo.streetAddress && <div><small>Registered address</small><strong>{companyInfo.streetAddress}</strong></div>}
           {companyInfo.registrationNumber && <div><small>Registration number</small><strong>{companyInfo.registrationNumber}</strong></div>}
           {companyInfo.vatNumber && <div><small>VAT number</small><strong>{companyInfo.vatNumber}</strong></div>}
