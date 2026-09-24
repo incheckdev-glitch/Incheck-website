@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: { default: 'InCheck 360', template: '%s | InCheck 360' },
   description: 'InCheck 360 connects human checks, operational follow-up, verification, evidence, reporting and IoT monitoring across multi-location operations.',
   icons: {
-    icon: [{ url: '/favicon.svg?v=4', type: 'image/svg+xml' }],
-    shortcut: ['/favicon.svg?v=4'],
-    apple: [{ url: '/brand/incheck360-logo.png', type: 'image/png' }],
+    icon: [{ url: '/brand/incheck360-logo.png?v=5', type: 'image/png' }],
+    shortcut: ['/brand/incheck360-logo.png?v=5'],
+    apple: [{ url: '/brand/incheck360-logo.png?v=5', type: 'image/png' }],
   },
   openGraph: {
     type: 'website',
