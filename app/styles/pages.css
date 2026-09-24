@@ -719,7 +719,7 @@
 .blog-new-star-transforming-fb-operations{
   background-image:
     linear-gradient(180deg,rgba(5,22,44,.08),rgba(5,22,44,.68)),
-    url('/images/food-safety/incheck360-food-safety-hero.webp');
+    url('/images/food-safety/incheck360-food-safety-hero-fixed.webp');
 }
 
 .blog-from-gut-feeling-to-data-driven{
@@ -781,5 +781,27 @@
   .demo-captcha{
     overflow-x:auto;
     padding-bottom:2px;
+  }
+}
+
+
+/* Blog image framing */
+.blog-new-star-transforming-fb-operations{
+  background-position:center 42%;
+}
+
+.blog-from-gut-feeling-to-data-driven{
+  background-position:center 38%;
+}
+
+.blog-smarter-environmental-monitoring{
+  background-position:center 34%;
+}
+
+@media(max-width:700px){
+  .blog-new-star-transforming-fb-operations,
+  .blog-from-gut-feeling-to-data-driven,
+  .blog-smarter-environmental-monitoring{
+    background-position:center;
   }
 }
