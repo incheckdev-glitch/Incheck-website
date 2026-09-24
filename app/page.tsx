@@ -172,7 +172,6 @@ export default function Home() {
           <div className="faq-redesign-grid">
             <Reveal>
               <div className="faq-left-panel">
-                <img src="/brand/incheck360-logo.png" alt="InCheck 360" className="faq-brand-logo" loading="lazy" decoding="async"/>
                 <span className="eyebrow">QUESTIONS, ANSWERED</span>
                 <h2>Questions teams ask before getting started.</h2>
                 <p>Get quick answers to common questions about InCheck 360, so you can feel confident about what comes next.</p>
