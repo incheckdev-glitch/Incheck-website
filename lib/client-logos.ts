@@ -3,8 +3,6 @@ export const clientLogos = [
   { name: 'Angelina Paris', src: '/clients/angelina-paris.png' },
   { name: 'BAB Mansour', src: '/clients/bab-mansour.png' },
   { name: 'Bachir Ice Cream', src: '/clients/bachir-ice-cream.png' },
-  { name: 'Beirut Khanum', src: '/clients/beirut-khanum.png' },
-  { name: 'Beit Wared', src: '/clients/beit-wared.png' },
   { name: 'Black Spoon', src: '/clients/black-spoon.png' },
   { name: 'Boubess Group', src: '/clients/boubess-group.png' },
   { name: 'Box For Less', src: '/clients/box-for-less.jpeg' },
@@ -31,9 +29,7 @@ export const clientLogos = [
   { name: 'Sibon', src: '/clients/sibon.png' },
   { name: 'Skirt', src: '/clients/skirt.png' },
   { name: 'Soul Kitchen', src: '/clients/soul-kitchen.png' },
-  { name: 'The Chain', src: '/clients/the-chain.png' },
   { name: 'Tre Saj', src: '/clients/tre-saj.png' },
   { name: 'WatchHouse', src: '/clients/watchhouse.png' },
-  { name: 'Yummy Junction', src: '/clients/yummy-junction.jfif' },
   { name: 'Zahret Lebnan', src: '/clients/zahret-lebanan.png' },
 ] as const;
