@@ -55,7 +55,14 @@ export default function PartnersPage() {
         primaryHref="/contact"
         secondary="Explore the Platform"
         secondaryHref="/platform"
-      />
+      >
+        <div className="partner-hero-visual" aria-hidden="true">
+          <img
+            src="/images/partners/incheck360-partner-handshake-transparent.webp"
+            alt=""
+          />
+        </div>
+      </PageHero>
 
       <section className="content-section">
         <div className="shell content-grid">
