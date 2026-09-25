@@ -57,11 +57,37 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal delay={90}>
-            <div className="content-panel dark">
-              <span className="eyebrow light">ONE OPERATING PICTURE</span>
-              <div className="simple-card" style={{marginTop:18}}><Icon name="users"/><h3>People</h3><p>Clear responsibilities by role, location and shift.</p></div>
-              <div className="simple-card" style={{marginTop:12}}><Icon name="check"/><h3>Processes</h3><p>Recurring controls translated into practical digital execution.</p></div>
-              <div className="simple-card" style={{marginTop:12}}><Icon name="report"/><h3>Operational data</h3><p>Evidence and history organized for review instead of scattered across tools.</p></div>
+            <div className="content-panel dark about-operating-panel">
+              <div className="about-operating-head">
+                <span className="eyebrow light">ONE OPERATING PICTURE</span>
+                <p>Three connected layers keep daily execution clear from the frontline to management review.</p>
+              </div>
+              <div className="about-operating-list">
+                <div className="about-operating-card">
+                  <span className="about-operating-icon"><Icon name="users"/></span>
+                  <div>
+                    <span className="about-operating-index">01</span>
+                    <h3>People</h3>
+                    <p>Clear responsibilities by role, location and shift.</p>
+                  </div>
+                </div>
+                <div className="about-operating-card">
+                  <span className="about-operating-icon"><Icon name="check"/></span>
+                  <div>
+                    <span className="about-operating-index">02</span>
+                    <h3>Processes</h3>
+                    <p>Recurring controls translated into practical digital execution.</p>
+                  </div>
+                </div>
+                <div className="about-operating-card">
+                  <span className="about-operating-icon"><Icon name="report"/></span>
+                  <div>
+                    <span className="about-operating-index">03</span>
+                    <h3>Operational data</h3>
+                    <p>Evidence and history organized for review instead of scattered across tools.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
