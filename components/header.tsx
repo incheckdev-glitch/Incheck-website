@@ -50,7 +50,7 @@ export function Header() {
           <Link href="/food-safety">Food Safety</Link>
           <Link href="/plans">Plans</Link>
           <Link href="/partners">Partners</Link>
-          <div className="nav-group"><button>Company <span>⌄</span></button><div className="mega-menu compact company-menu">{companyLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>View →</small></Link>)}</div></div>
+          <div className="nav-group"><button>Discover <span>⌄</span></button><div className="mega-menu compact company-menu">{companyLinks.map(([t,h]) => <Link key={h} href={h}>{t}<small>View →</small></Link>)}</div></div>
           <Link href="/download-app">Download App</Link>
         </nav>
         <div className="nav-actions">
@@ -68,7 +68,7 @@ export function Header() {
           <Link onClick={()=>setOpen(false)} href="/plans">Plans</Link>
           <Link onClick={()=>setOpen(false)} href="/partners">Partners</Link>
           <Link onClick={()=>setOpen(false)} href="/download-app">Download App</Link>
-          <strong>Company</strong>{companyLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
+          <strong>Discover</strong>{companyLinks.map(([t,h]) => <Link onClick={()=>setOpen(false)} key={h} href={h}>{t}</Link>)}
           <Link onClick={()=>setOpen(false)} href="/book-demo">Book a Demo</Link>
         </div>
       </div>}
