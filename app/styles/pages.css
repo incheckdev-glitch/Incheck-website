@@ -805,3 +805,10 @@
 .about-operating-card p{margin:0!important;color:#667b90!important;font-size:14px!important;line-height:1.55!important}
 @media(max-width:1050px){.about-operating-panel{max-width:760px}.about-operating-card{grid-template-columns:50px 1fr}}
 @media(max-width:700px){.about-operating-panel{padding:22px;border-radius:22px}.about-operating-head{padding-bottom:18px}.about-operating-card{grid-template-columns:44px 1fr;padding:17px;gap:13px}.about-operating-icon{width:42px;height:42px}.about-operating-card h3{font-size:18px}}
+
+
+/* partner hero */
+.partner-hero-visual{height:100%;min-height:430px;display:flex;align-items:center;justify-content:flex-end;position:relative}
+.partner-hero-visual img{display:block;width:min(680px,115%);max-width:none;height:auto;object-fit:contain;filter:drop-shadow(0 24px 36px rgba(0,0,0,.22));transform:translateX(4%)}
+@media(max-width:1050px){.partner-hero-visual{min-height:300px;justify-content:center}.partner-hero-visual img{width:min(720px,100%);max-width:100%;transform:none}}
+@media(max-width:700px){.partner-hero-visual{min-height:210px;margin-top:6px}.partner-hero-visual img{width:115%;max-width:none;margin-left:-7.5%;}}
